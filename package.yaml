@@ -8,6 +8,7 @@ dependencies:
   - tasty
   - tasty-hunit
   - tasty-hspec
+  - tasty-golden
   - hspec
   - HUnit
   - bytestring

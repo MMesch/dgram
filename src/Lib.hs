@@ -29,14 +29,6 @@ data Task = Task
   }
   deriving (Show)
 
-data Runner = Runner
-  { runnerName :: RunnerType,
-    description :: Text,
-    extensions :: [Text],
-    standardOptions :: Text
-  }
-  deriving (Show)
-
 convertWith :: Task -> IO ()
 convertWith Task {..} = do
   let runner = case runnerType of

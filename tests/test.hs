@@ -1,19 +1,24 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 import Test.Tasty
 import Test.Tasty.HUnit
 
 import Data.List
 import Data.Ord
+import Lib
+import Test.Tasty.Golden
 
 main = defaultMain tests
 
 tests :: TestTree
-tests = testGroup "Tests" [unitTests]
+tests = testGroup "Tests" [goldenTests]
 
-unitTests = testGroup "Unit tests"
-  [ testCase "List comparison (different length)" $
-      [1, 2, 3] `compare` [1,2] @?= GT
-
-  -- the following test does not hold
-  , testCase "List comparison (same length)" $
-      [1, 2, 3] `compare` [1,2,2] @?= LT
+goldenTests = testGroup "Golden tests"
+  [ let infile = "./tests/data/vegalite.vl"
+        goldenfile = "./tests/golden/vegalite.svg"
+        outfile = "tests/output/vegalite.svg"
+    in
+        goldenVsFile "test vega lite example" goldenfile outfile $
+          convertWith Task {format=SVG, runnerType=Nothing, infile=infile,
+                 outfile=outfile, extraOptions=""}
   ]
