@@ -5,6 +5,11 @@ dependencies:
   - hourglass
   - aeson
   - yaml
+  - tasty
+  - tasty-hunit
+  - tasty-hspec
+  - hspec
+  - HUnit
   - bytestring
   - text
   - filepath
@@ -18,3 +23,8 @@ executables:
     dependencies: lib
 library:
   source-dirs:   src
+tests:
+  ddgram-test-suite:
+    main: test.hs
+    source-dirs: tests
+    dependencies: lib
