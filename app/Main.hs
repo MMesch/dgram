@@ -8,14 +8,12 @@ import Options.Applicative
 cmdOptions :: Parser Task 
 cmdOptions =
   Task
-    <$> option auto
+    <$> optional (option auto
       ( long "format"
-          <> showDefault
-          <> value SVG
           <> metavar "FORMAT"
           <> help ("The format of the output file. Possibilities: " 
             <> intercalate ", " (show <$> enumFrom SVG))
-      )
+      ))
     <*> optional (option auto
       ( long "runnerType"
           <> metavar "FORMAT"

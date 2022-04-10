@@ -18,11 +18,11 @@ import Prelude
 
 data Format = SVG | PDF | PNG deriving (Read, Show, Enum)
 
-data RunnerType = VegaLite | Vega | GraphViz deriving (Read, Show, Enum)
+data Runner = VegaLite | Vega | GraphViz deriving (Read, Show, Enum)
 
 data Task = Task
-  { format :: Format,
-    runnerType :: Maybe RunnerType,
+  { maybeFormat :: Maybe Format,
+    maybeRunner :: Maybe Runner,
     infile :: FilePath,
     outfile :: FilePath,
     extraOptions :: Text
@@ -31,13 +31,20 @@ data Task = Task
 
 convertWith :: Task -> IO ()
 convertWith Task {..} = do
-  let runner = case runnerType of
+  let runner = case maybeRunner of
         Just x -> x
         Nothing -> case takeExtension infile of
           ".vl" -> VegaLite
           ".vg" -> Vega
           ".dot" -> GraphViz
           _ -> VegaLite
+      format = case maybeFormat of
+         Just x -> x
+         Nothing -> case takeExtension outfile of
+           ".svg" -> SVG
+           ".pdf" -> PDF
+           ".png" -> PNG
+           _ -> SVG
   print $ "RUNNER used: " <> show runner
   let (exec, args) = case runner of
         VegaLite ->
