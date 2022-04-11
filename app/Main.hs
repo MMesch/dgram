@@ -2,7 +2,8 @@
 
 import Prelude
 import CLI
-import Lib
+import Convert
+import Types
 
 main :: IO ()
 main = do

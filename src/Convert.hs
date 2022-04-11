@@ -1,20 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
 
-module Lib where
+module Convert where
 
 import Data.Maybe (fromMaybe)
 import System.FilePath (takeExtension)
 import System.Process
 import Prelude
 import Types
-
-{-
-   This module contains the converter datatype and associated functions.
-   A converter is an executable (configured to be available on path), with
-   possible theme/configuration. It can be invoked with a set of common options.
-   The actual runners are configured in a YAML file for easy contributions.
--}
 
 convertWith :: ConvertOptions -> IO ()
 convertWith ConvertOptions {..} = do

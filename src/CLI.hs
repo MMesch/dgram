@@ -2,7 +2,7 @@ module CLI where
 
 import Data.List (intercalate)
 import Data.Semigroup ((<>))
-import Lib
+import Convert
 import Options.Applicative
 import Prelude
 import Types
