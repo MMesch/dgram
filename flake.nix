@@ -40,7 +40,10 @@
                       fi
                     done
                   '';})
+            nodePackages.mermaid-cli
             nixpkgsFor.${system}.graphviz
+            nixpkgsFor.${system}.plantuml
+            nixpkgsFor.${system}.svgbob
           ];
           shellHook = ''hpack'';
         });

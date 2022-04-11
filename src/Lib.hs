@@ -17,14 +17,17 @@ convertWith ConvertOptions {..} = do
           ".vl" -> VegaLite
           ".vg" -> Vega
           ".dot" -> GraphViz
-          _ -> VegaLite
+          ".mmd" -> Mermaid
+          ".puml" -> Plantuml
+          ".bob" -> Svgbob
+          _ -> error "unknown input format"
       format = case maybeFormat of
          Just x -> x
          Nothing -> case takeExtension outfile of
            ".svg" -> SVG
            ".pdf" -> PDF
            ".png" -> PNG
-           _ -> SVG
+           _ -> error "unknown output format"
   print $ "RUNNER used: " <> show runner
   let (exec, args) = case runner of
         VegaLite ->
@@ -48,6 +51,21 @@ convertWith ConvertOptions {..} = do
                 PNG -> "-Tpng"
               exec = "dot"
               args = [formatOption, infile, "-o" <> outfile]
+           in (exec, args)
+        Mermaid ->
+          let
+              exec = "mmdc"
+              args = ["-i" <> infile, "-o" <> outfile]
+           in (exec, args)
+        Svgbob ->
+          let
+              exec = "svgbob"
+              args = [infile, "-o" <> outfile]
+           in (exec, args)
+        Plantuml ->
+          let
+              exec = "plantuml"
+              args = [infile]
            in (exec, args)
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""

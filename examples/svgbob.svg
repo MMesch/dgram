@@ -1,0 +1,3030 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="7248">
+    <style>
+        line, path, circle, rect, polygon{stroke:black;stroke-width:2;stroke-opacity:1;fill-opacity:1;stroke-linecap:round;stroke-linejoin:miter;}text{font-family:Iosevka Fixed, monospace;font-size:14px;}rect.backdrop{stroke:none;fill:white;}.broken{stroke-dasharray:8;}.filled{fill:black;}.bg_filled{fill:white;}.nofill{fill:white;}.end_marked_arrow{marker-end:url(#arrow);}.start_marked_arrow{marker-start:url(#arrow);}.end_marked_diamond{marker-end:url(#diamond);}.start_marked_diamond{marker-start:url(#diamond);}.end_marked_circle{marker-end:url(#circle);}.start_marked_circle{marker-start:url(#circle);}.end_marked_open_circle{marker-end:url(#open_circle);}.start_marked_open_circle{marker-start:url(#open_circle);}.end_marked_big_open_circle{marker-end:url(#big_open_circle);}.start_marked_big_open_circle{marker-start:url(#big_open_circle);}
+        <!--separator-->
+        .r1{ 
+    fill: papayawhip;
+ }
+.r2{ 
+    fill: crimson;
+ }
+.a{ 
+    stroke-dasharray: 8;
+    fill: lightblue;
+ }
+.b{ 
+    stroke: blue;
+ }
+.bigrect{ 
+    fill: yellow;
+    stroke: red;
+ }
+.red{ 
+    fill:red;
+    stroke:blue;
+ }
+    </style>
+    <defs>
+        <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,0 0,4 4,2 0,0"></polygon>
+        </marker>
+        <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+        </marker>
+        <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="filled"></circle>
+        </marker>
+        <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
+        </marker>
+        <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
+        </marker>
+    </defs>
+    <rect class="backdrop" x="0" y="0" width="760" height="7248"></rect>
+    <rect x="68" y="312" width="56" height="32" class="solid nofill" rx="0"></rect>
+    <rect x="156" y="312" width="56" height="32" class="solid nofill" rx="4"></rect>
+    <path d="M 88,468 A 20,20 0,0,0 68,488" class="nofill"></path>
+    <circle cx="444" cy="568" r="24" class="nofill"></circle>
+    <circle cx="520" cy="568" r="28" class="nofill"></circle>
+    <path d="M 160,548 A 20,20 0,0,0 140,568" class="nofill"></path>
+    <circle cx="208" cy="568" r="20" class="nofill"></circle>
+    <circle cx="264" cy="568" r="20" class="nofill"></circle>
+    <path d="M 272,560 A 16,16 0,0,0 272,576" class="nofill"></path>
+    <circle cx="360" cy="568" r="20" class="nofill"></circle>
+    <circle cx="76" cy="568" r="8" class="nofill"></circle>
+    <circle cx="100" cy="656" r="36" class="nofill"></circle>
+    <circle cx="192" cy="656" r="40" class="nofill"></circle>
+    <circle cx="296" cy="664" r="44" class="nofill"></circle>
+    <circle cx="420" cy="664" r="48" class="nofill"></circle>
+    <circle cx="128" cy="768" r="52" class="nofill"></circle>
+    <rect x="146" y="1176" width="28" height="36" class="solid nofill" rx="0"></rect>
+    <rect x="150" y="1180" width="12" height="12" class="solid nofill" rx="0"></rect>
+    <rect x="166" y="1180" width="4" height="12" class="solid nofill" rx="0"></rect>
+    <rect x="150" y="1196" width="12" height="12" class="solid nofill" rx="0"></rect>
+    <rect x="166" y="1196" width="4" height="12" class="solid nofill" rx="0"></rect>
+    <path d="M 520,1876 A 20,20 0,0,0 500,1896" class="nofill"></path>
+    <rect x="92" y="2024" width="104" height="32" class="solid nofill" rx="4"></rect>
+    <rect x="228" y="2024" width="96" height="32" class="solid nofill" rx="4"></rect>
+    <rect x="364" y="2024" width="48" height="32" class="solid nofill" rx="4"></rect>
+    <text x="378" y="2044" >MMU</text>
+    <rect x="212" y="2248" width="16" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="212" y="2440" width="16" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="108" y="4184" width="16" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="140" y="4184" width="16" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="172" y="4184" width="16" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="308" y="4136" width="32" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="364" y="4136" width="32" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="412" y="4136" width="32" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="468" y="4136" width="32" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="540" y="4136" width="32" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="308" y="4200" width="104" height="32" class="solid nofill" rx="4"></rect>
+    <text x="322" y="4220" >Filesystem</text>
+    <rect x="444" y="4200" width="96" height="32" class="solid nofill" rx="4"></rect>
+    <text x="458" y="4220" >Scheduler</text>
+    <rect x="340" y="4280" width="40" height="32" class="solid nofill" rx="4"></rect>
+    <text x="354" y="4300" >IO</text>
+    <rect x="524" y="4280" width="80" height="32" class="solid nofill" rx="4"></rect>
+    <text x="538" y="4300" >Network</text>
+    <rect x="308" y="4360" width="320" height="32" class="solid nofill" rx="4"></rect>
+    <text x="458" y="4380" >HAL</text>
+    <rect x="596" y="4136" width="32" height="16" class="solid nofill" rx="4"></rect>
+    <rect x="580" y="4200" width="48" height="32" class="solid nofill" rx="4"></rect>
+    <text x="594" y="4220" >MMU</text>
+    <rect x="580" y="4528" width="24" height="48" class="solid nofill" rx="0"></rect>
+    <line x1="584" y1="4534" x2="600" y2="4534" class="solid"></line>
+    <line x1="584" y1="4538" x2="600" y2="4538" class="solid"></line>
+    <rect x="36" y="6584" width="560" height="448" class="broken nofill container" rx="4"></rect>
+    <rect x="68" y="6616" width="56" height="32" class="solid nofill r1" rx="0"></rect>
+    <rect x="156" y="6616" width="56" height="32" class="solid nofill r2" rx="4"></rect>
+    <rect x="340" y="6616" width="216" height="160" class="solid nofill bigrect" rx="4"></rect>
+    <circle cx="100" cy="6848" r="36" class="nofill a"></circle>
+    <text x="98" y="6844" >8</text>
+    <circle cx="192" cy="6848" r="40" class="nofill b"></circle>
+    <text x="186" y="6844" >9</text>
+    <circle cx="296" cy="6856" r="44" class="nofill red"></circle>
+    <text x="290" y="6860" >10</text>
+    <circle cx="416" cy="6856" r="44" class="nofill a b"></circle>
+    <text x="410" y="6860" >11</text>
+    <circle cx="128" cy="6960" r="52" class="nofill c"></circle>
+    <text x="122" y="6956" >12</text>
+    <text x="2" y="12" >Svgbob</text>
+    <text x="58" y="12" >is</text>
+    <text x="82" y="12" >a</text>
+    <text x="98" y="12" >diagramming</text>
+    <text x="194" y="12" >model</text>
+    <text x="2" y="28" >which</text>
+    <text x="50" y="28" >uses</text>
+    <text x="90" y="28" >a</text>
+    <text x="106" y="28" >set</text>
+    <text x="138" y="28" >of</text>
+    <text x="162" y="28" >typing</text>
+    <text x="218" y="28" >characters</text>
+    <text x="2" y="44" >to</text>
+    <text x="26" y="44" >approximate</text>
+    <text x="122" y="44" >the</text>
+    <text x="154" y="44" >intended</text>
+    <text x="226" y="44" >shape.</text>
+    <circle cx="68" cy="88" r="3" class="nofill"></circle>
+    <line x1="72" y1="88" x2="104" y2="88" class="solid"></line>
+    <circle cx="36" cy="120" r="3" class="filled"></circle>
+    <text x="2" y="188" >It</text>
+    <text x="26" y="188" >uses</text>
+    <text x="66" y="188" >a</text>
+    <text x="2" y="204" >which</text>
+    <text x="50" y="204" >are</text>
+    <text x="82" y="188" >combination</text>
+    <text x="178" y="188" >of</text>
+    <text x="202" y="188" >characters</text>
+    <text x="82" y="204" >readily</text>
+    <text x="146" y="204" >available</text>
+    <text x="226" y="204" >on</text>
+    <text x="250" y="204" >your</text>
+    <text x="290" y="204" >keyboards.</text>
+    <text x="2" y="236" >What</text>
+    <text x="42" y="236" >can</text>
+    <text x="74" y="236" >it</text>
+    <text x="98" y="236" >do?</text>
+    <circle cx="12" cy="264" r="3" class="nofill"></circle>
+    <text x="50" y="268" >Basic</text>
+    <text x="98" y="268" >shapes</text>
+    <line x1="56" y1="280" x2="64" y2="280" class="solid"></line>
+    <line x1="72" y1="280" x2="80" y2="280" class="solid"></line>
+    <line x1="88" y1="280" x2="96" y2="280" class="solid"></line>
+    <line x1="104" y1="280" x2="112" y2="280" class="solid"></line>
+    <line x1="120" y1="280" x2="128" y2="280" class="solid"></line>
+    <line x1="136" y1="280" x2="144" y2="280" class="solid"></line>
+    <line x1="152" y1="280" x2="160" y2="280" class="solid"></line>
+    <line x1="168" y1="280" x2="176" y2="280" class="solid"></line>
+    <line x1="184" y1="280" x2="192" y2="280" class="solid"></line>
+    <line x1="200" y1="280" x2="208" y2="280" class="solid"></line>
+    <line x1="216" y1="280" x2="224" y2="280" class="solid"></line>
+    <line x1="232" y1="280" x2="240" y2="280" class="solid"></line>
+    <line x1="248" y1="280" x2="256" y2="280" class="solid"></line>
+    <line x1="264" y1="280" x2="272" y2="280" class="solid"></line>
+    <line x1="280" y1="280" x2="288" y2="280" class="solid"></line>
+    <line x1="296" y1="280" x2="304" y2="280" class="solid"></line>
+    <line x1="312" y1="280" x2="320" y2="280" class="solid"></line>
+    <line x1="328" y1="280" x2="336" y2="280" class="solid"></line>
+    <line x1="344" y1="280" x2="352" y2="280" class="solid"></line>
+    <line x1="360" y1="280" x2="368" y2="280" class="solid"></line>
+    <line x1="376" y1="280" x2="384" y2="280" class="solid"></line>
+    <line x1="392" y1="280" x2="400" y2="280" class="solid"></line>
+    <line x1="408" y1="280" x2="416" y2="280" class="solid"></line>
+    <line x1="424" y1="280" x2="432" y2="280" class="solid"></line>
+    <line x1="440" y1="280" x2="448" y2="280" class="solid"></line>
+    <line x1="456" y1="280" x2="464" y2="280" class="solid"></line>
+    <text x="458" y="300" >.</text>
+    <text x="426" y="332" >.</text>
+    <text x="490" y="332" >.</text>
+    <text x="458" y="364" >.</text>
+    <line x1="472" y1="280" x2="480" y2="280" class="solid"></line>
+    <line x1="488" y1="280" x2="496" y2="280" class="solid"></line>
+    <line x1="504" y1="280" x2="512" y2="280" class="solid"></line>
+    <line x1="520" y1="280" x2="528" y2="280" class="solid"></line>
+    <line x1="536" y1="280" x2="544" y2="280" class="solid"></line>
+    <rect x="416" y="356" width="8" height="8" class="solid filled" rx="0"></rect>
+    <circle cx="348" cy="376" r="3" class="nofill"></circle>
+    <rect x="384" y="388" width="8" height="8" class="solid filled" rx="0"></rect>
+    <circle cx="436" cy="424" r="3" class="nofill"></circle>
+    <text x="314" y="428" >o.</text>
+    <line x1="324" y1="424" x2="340" y2="440" class="broken"></line>
+    <text x="338" y="444" >.</text>
+    <text x="394" y="460" >.</text>
+    <line x1="412" y1="476" x2="412" y2="480" class="solid"></line>
+    <text x="410" y="492" >:</text>
+    <line x1="412" y1="496" x2="412" y2="500" class="solid"></line>
+    <text x="418" y="508" >.</text>
+    <circle cx="484" cy="520" r="3" class="filled"></circle>
+    <circle cx="476" cy="456" r="4" class="nofill"></circle>
+    <text x="74" y="508" >&#39;</text>
+    <polygon points="240,500 248,504 240,508" class="filled"></polygon>
+    <polygon points="272,468 264,472 272,476" class="filled"></polygon>
+    <polygon points="336,468 344,472 336,476" class="filled"></polygon>
+    <polygon points="360,500 352,504 360,508" class="filled"></polygon>
+    <text x="146" y="588" >&#39;</text>
+    <circle cx="12" cy="888" r="3" class="nofill"></circle>
+    <text x="50" y="892" >Quick</text>
+    <text x="98" y="892" >logo</text>
+    <circle cx="76" cy="920" r="3" class="nofill"></circle>
+    <line x1="80" y1="920" x2="112" y2="920" class="solid"></line>
+    <circle cx="44" cy="952" r="3" class="filled"></circle>
+    <text x="138" y="892" >scribbles</text>
+    <circle cx="276" cy="968" r="3" class="filled"></circle>
+    <circle cx="172" cy="952" r="4" class="nofill"></circle>
+    <line x1="416" y1="952" x2="432" y2="952" class="solid"></line>
+    <circle cx="436" cy="952" r="3" class="filled"></circle>
+    <line x1="440" y1="952" x2="448" y2="952" class="solid"></line>
+    <text x="58" y="1100" >.::::.</text>
+    <circle cx="12" cy="1160" r="3" class="nofill"></circle>
+    <text x="50" y="1164" >Even</text>
+    <text x="90" y="1164" >unicode</text>
+    <text x="154" y="1164" >box</text>
+    <text x="186" y="1164" >drawing</text>
+    <text x="250" y="1164" >characters</text>
+    <text x="338" y="1164" >are</text>
+    <text x="370" y="1164" >supported</text>
+    <circle cx="12" cy="1288" r="3" class="nofill"></circle>
+    <text x="42" y="1292" >Grids</text>
+    <circle cx="12" cy="1752" r="3" class="nofill"></circle>
+    <text x="42" y="1756" >Graphics</text>
+    <text x="114" y="1756" >Diagram</text>
+    <circle cx="620" cy="1784" r="3" class="filled"></circle>
+    <line x1="520" y1="1848" x2="584" y2="1848" class="solid"></line>
+    <circle cx="588" cy="1848" r="3" class="filled"></circle>
+    <line x1="592" y1="1848" x2="656" y2="1848" class="solid"></line>
+    <text x="34" y="1804" >0</text>
+    <text x="98" y="1804" >3</text>
+    <circle cx="44" cy="1816" r="3" class="filled"></circle>
+    <line x1="42" y1="1820" x2="30" y2="1844" class="solid"></line>
+    <line x1="44" y1="1820" x2="44" y2="1876" class="solid"></line>
+    <line x1="48" y1="1816" x2="104" y2="1816" class="solid"></line>
+    <circle cx="108" cy="1816" r="3" class="filled"></circle>
+    <line x1="106" y1="1820" x2="94" y2="1844" class="solid"></line>
+    <line x1="108" y1="1820" x2="108" y2="1876" class="solid"></line>
+    <text x="18" y="1836" >1</text>
+    <text x="82" y="1836" >2</text>
+    <circle cx="28" cy="1848" r="3" class="filled"></circle>
+    <line x1="28" y1="1852" x2="28" y2="1908" class="solid"></line>
+    <line x1="32" y1="1848" x2="88" y2="1848" class="solid"></line>
+    <circle cx="92" cy="1848" r="3" class="filled"></circle>
+    <line x1="92" y1="1852" x2="92" y2="1908" class="solid"></line>
+    <text x="50" y="1868" >4</text>
+    <text x="114" y="1868" >7</text>
+    <circle cx="44" cy="1880" r="3" class="filled"></circle>
+    <line x1="42" y1="1884" x2="30" y2="1908" class="solid"></line>
+    <line x1="48" y1="1880" x2="104" y2="1880" class="solid"></line>
+    <circle cx="108" cy="1880" r="3" class="filled"></circle>
+    <line x1="106" y1="1884" x2="94" y2="1908" class="solid"></line>
+    <circle cx="28" cy="1912" r="3" class="filled"></circle>
+    <line x1="32" y1="1912" x2="88" y2="1912" class="solid"></line>
+    <circle cx="92" cy="1912" r="3" class="filled"></circle>
+    <text x="18" y="1932" >5</text>
+    <text x="82" y="1932" >6</text>
+    <text x="314" y="1804" >P</text>
+    <circle cx="332" cy="1800" r="3" class="filled"></circle>
+    <text x="306" y="1852" >v0</text>
+    <text x="418" y="1852" >v3</text>
+    <circle cx="324" cy="1864" r="3" class="filled"></circle>
+    <line x1="322" y1="1868" x2="294" y2="1924" class="solid"></line>
+    <line x1="328" y1="1864" x2="408" y2="1864" class="solid"></line>
+    <circle cx="412" cy="1864" r="3" class="filled"></circle>
+    <line x1="414" y1="1868" x2="442" y2="1924" class="solid"></line>
+    <text x="386" y="1884" >X</text>
+    <line x1="384" y1="1888" x2="382" y2="1892" class="solid"></line>
+    <circle cx="380" cy="1896" r="3" class="nofill"></circle>
+    <circle cx="292" cy="1928" r="3" class="filled"></circle>
+    <line x1="296" y1="1928" x2="440" y2="1928" class="solid"></line>
+    <circle cx="444" cy="1928" r="3" class="filled"></circle>
+    <text x="450" y="1804" >Eye</text>
+    <path d="M 480,1808 A 16,16 0,0,1 480,1824" class="nofill"></path>
+    <text x="162" y="1820" >+y</text>
+    <polygon points="192,1860 184,1864 192,1868" class="filled"></polygon>
+    <path d="M 160,1876 A 4,4 0,0,0 156,1884" class="nofill"></path>
+    <polygon points="159,1887 157,1883 155,1885" class="filled"></polygon>
+    <text x="178" y="1900" >⤴</text>
+    <text x="138" y="1932" >+z</text>
+    <text x="626" y="1820" >Reflection</text>
+    <text x="234" y="1884" >+x</text>
+    <text x="546" y="1900" >Refraction</text>
+    <circle cx="668" cy="1880" r="3" class="nofill"></circle>
+    <line x1="666" y1="1884" x2="646" y2="1924" class="solid"></line>
+    <line x1="670" y1="1884" x2="690" y2="1924" class="solid"></line>
+    <circle cx="644" cy="1928" r="3" class="nofill"></circle>
+    <line x1="648" y1="1928" x2="688" y2="1928" class="solid"></line>
+    <circle cx="692" cy="1928" r="3" class="nofill"></circle>
+    <text x="266" y="1932" >v1</text>
+    <text x="458" y="1932" >v2</text>
+    <circle cx="12" cy="1992" r="3" class="nofill"></circle>
+    <text x="42" y="1996" >CJK</text>
+    <text x="74" y="1996" >characters</text>
+    <line x1="212" y1="2016" x2="212" y2="2064" class="solid"></line>
+    <line x1="340" y1="2016" x2="340" y2="2064" class="solid"></line>
+    <circle cx="12" cy="2088" r="3" class="nofill"></circle>
+    <text x="50" y="2092" >Sequence</text>
+    <text x="122" y="2092" >Diagrams</text>
+    <text x="82" y="2140" >A</text>
+    <text x="146" y="2140" >B</text>
+    <text x="202" y="2140" >C</text>
+    <text x="226" y="2140" >D</text>
+    <circle cx="84" cy="2152" r="3" class="filled"></circle>
+    <line x1="88" y1="2152" x2="144" y2="2152" class="solid"></line>
+    <circle cx="148" cy="2152" r="3" class="filled"></circle>
+    <line x1="152" y1="2152" x2="192" y2="2152" class="solid"></line>
+    <circle cx="196" cy="2152" r="3" class="filled"></circle>
+    <line x1="200" y1="2152" x2="224" y2="2152" class="solid"></line>
+    <circle cx="228" cy="2152" r="3" class="filled"></circle>
+    <line x1="232" y1="2152" x2="264" y2="2152" class="solid"></line>
+    <circle cx="268" cy="2152" r="3" class="filled"></circle>
+    <text x="170" y="2204" >B</text>
+    <text x="338" y="2124" >F</text>
+    <text x="338" y="2156" >E</text>
+    <text x="338" y="2188" >G</text>
+    <text x="218" y="2204" >C</text>
+    <line x1="216" y1="2272" x2="208" y2="2288" class="solid"></line>
+    <line x1="224" y1="2272" x2="232" y2="2288" class="solid"></line>
+    <text x="82" y="2316" >Bob</text>
+    <text x="202" y="2332" >Alice</text>
+    <text x="130" y="2348" >hello</text>
+    <line x1="220" y1="2336" x2="220" y2="2416" class="solid"></line>
+    <text x="114" y="2396" >Is</text>
+    <line x1="120" y1="2408" x2="128" y2="2408" class="solid"></line>
+    <line x1="200" y1="2408" x2="208" y2="2408" class="solid"></line>
+    <text x="202" y="2428" >Alice</text>
+    <text x="82" y="2444" >Bob</text>
+    <line x1="216" y1="2464" x2="208" y2="2480" class="solid"></line>
+    <line x1="224" y1="2464" x2="232" y2="2480" class="solid"></line>
+    <text x="138" y="2396" >it</text>
+    <text x="162" y="2396" >ok?</text>
+    <line x1="136" y1="2408" x2="144" y2="2408" class="solid"></line>
+    <line x1="152" y1="2408" x2="160" y2="2408" class="solid"></line>
+    <line x1="168" y1="2408" x2="176" y2="2408" class="solid"></line>
+    <line x1="184" y1="2408" x2="192" y2="2408" class="solid"></line>
+    <text x="122" y="2572" >0</text>
+    <text x="82" y="2668" >1</text>
+    <text x="114" y="2764" >3</text>
+    <text x="178" y="2668" >4</text>
+    <text x="202" y="2684" >.</text>
+    <text x="250" y="2732" >.</text>
+    <text x="178" y="2780" >5</text>
+    <text x="226" y="2780" >6</text>
+    <text x="274" y="2780" >7</text>
+    <text x="42" y="2764" >2</text>
+    <circle cx="12" cy="2856" r="3" class="nofill"></circle>
+    <text x="42" y="2860" >Plot</text>
+    <text x="82" y="2860" >diagrams</text>
+    <circle cx="68" cy="2952" r="3" class="filled"></circle>
+    <text x="34" y="2908" >Uin</text>
+    <text x="42" y="2988" >Udc</text>
+    <line x1="140" y1="3008" x2="140" y2="3072" class="broken"></line>
+    <circle cx="68" cy="3048" r="3" class="filled"></circle>
+    <line x1="204" y1="3056" x2="204" y2="3104" class="broken"></line>
+    <text x="154" y="3084" >500ms</text>
+    <text x="226" y="3132" >Inactive</text>
+    <text x="106" y="3148" >Active</text>
+    <circle cx="68" cy="3160" r="3" class="filled"></circle>
+    <text x="2" y="3116" >Cpu.Qon</text>
+    <circle cx="12" cy="3192" r="3" class="nofill"></circle>
+    <text x="42" y="3196" >Railroad</text>
+    <text x="114" y="3196" >diagrams</text>
+    <circle cx="68" cy="3240" r="3" class="nofill"></circle>
+    <text x="138" y="3244" >elem</text>
+    <text x="218" y="3244" >;</text>
+    <text x="266" y="3244" >n</text>
+    <circle cx="332" cy="3240" r="3" class="nofill"></circle>
+    <line x1="112" y1="3304" x2="120" y2="3304" class="solid"></line>
+    <text x="162" y="3308" >x</text>
+    <line x1="208" y1="3304" x2="216" y2="3304" class="solid"></line>
+    <text x="162" y="3356" >,</text>
+    <text x="162" y="3420" >x</text>
+    <text x="218" y="3420" >,</text>
+    <text x="50" y="3500" >O</text>
+    <text x="106" y="3500" >struct</text>
+    <line x1="152" y1="3504" x2="160" y2="3504" class="solid"></line>
+    <text x="162" y="3500" >name</text>
+    <text x="234" y="3500" >:</text>
+    <line x1="256" y1="3504" x2="264" y2="3504" class="solid"></line>
+    <line x1="284" y1="3488" x2="284" y2="3504" class="solid"></line>
+    <text x="354" y="3500" >name</text>
+    <text x="426" y="3500" >:</text>
+    <text x="482" y="3500" >tpe</text>
+    <line x1="596" y1="3488" x2="596" y2="3504" class="solid"></line>
+    <text x="650" y="3500" >body</text>
+    <text x="746" y="3500" >O</text>
+    <text x="498" y="3548" >,</text>
+    <circle cx="12" cy="3608" r="3" class="nofill"></circle>
+    <text x="42" y="3612" >Statistical</text>
+    <text x="138" y="3612" >charts</text>
+    <text x="34" y="3660" >E</text>
+    <text x="34" y="3676" >D</text>
+    <text x="34" y="3692" >C</text>
+    <text x="34" y="3708" >B</text>
+    <text x="34" y="3724" >A</text>
+    <circle cx="260" cy="3656" r="3" class="filled"></circle>
+    <circle cx="212" cy="3672" r="3" class="filled"></circle>
+    <line x1="216" y1="3672" x2="232" y2="3672" class="solid"></line>
+    <circle cx="236" cy="3672" r="3" class="filled"></circle>
+    <line x1="240" y1="3672" x2="280" y2="3672" class="solid"></line>
+    <circle cx="284" cy="3672" r="3" class="filled"></circle>
+    <circle cx="164" cy="3688" r="3" class="filled"></circle>
+    <line x1="168" y1="3688" x2="184" y2="3688" class="solid"></line>
+    <circle cx="188" cy="3688" r="3" class="filled"></circle>
+    <circle cx="116" cy="3704" r="3" class="filled"></circle>
+    <line x1="120" y1="3704" x2="136" y2="3704" class="solid"></line>
+    <circle cx="140" cy="3704" r="3" class="filled"></circle>
+    <circle cx="68" cy="3720" r="3" class="filled"></circle>
+    <line x1="72" y1="3720" x2="88" y2="3720" class="solid"></line>
+    <circle cx="92" cy="3720" r="3" class="filled"></circle>
+    <text x="66" y="3740" >5</text>
+    <text x="82" y="3740" >10</text>
+    <text x="106" y="3740" >15</text>
+    <text x="130" y="3740" >20</text>
+    <text x="154" y="3740" >25</text>
+    <text x="178" y="3740" >30</text>
+    <text x="202" y="3740" >35</text>
+    <text x="226" y="3740" >40</text>
+    <text x="250" y="3740" >45</text>
+    <text x="274" y="3740" >50</text>
+    <text x="330" y="3660" >E</text>
+    <text x="330" y="3676" >D</text>
+    <text x="330" y="3692" >C</text>
+    <text x="330" y="3708" >B</text>
+    <text x="330" y="3724" >A</text>
+    <circle cx="556" cy="3656" r="3" class="nofill"></circle>
+    <line x1="556" y1="3660" x2="556" y2="3728" class="solid"></line>
+    <circle cx="508" cy="3672" r="3" class="nofill"></circle>
+    <line x1="508" y1="3676" x2="508" y2="3728" class="solid"></line>
+    <circle cx="532" cy="3672" r="3" class="nofill"></circle>
+    <line x1="532" y1="3676" x2="532" y2="3728" class="solid"></line>
+    <circle cx="580" cy="3672" r="3" class="nofill"></circle>
+    <circle cx="460" cy="3688" r="3" class="nofill"></circle>
+    <line x1="460" y1="3692" x2="460" y2="3728" class="solid"></line>
+    <circle cx="484" cy="3688" r="3" class="nofill"></circle>
+    <line x1="484" y1="3692" x2="484" y2="3728" class="solid"></line>
+    <circle cx="412" cy="3704" r="3" class="nofill"></circle>
+    <line x1="412" y1="3708" x2="412" y2="3728" class="solid"></line>
+    <circle cx="436" cy="3704" r="3" class="nofill"></circle>
+    <line x1="436" y1="3708" x2="436" y2="3728" class="solid"></line>
+    <circle cx="364" cy="3720" r="3" class="nofill"></circle>
+    <line x1="368" y1="3720" x2="384" y2="3720" class="solid"></line>
+    <circle cx="388" cy="3720" r="3" class="nofill"></circle>
+    <text x="362" y="3740" >5</text>
+    <text x="378" y="3740" >10</text>
+    <text x="402" y="3740" >15</text>
+    <text x="426" y="3740" >20</text>
+    <text x="450" y="3740" >25</text>
+    <text x="474" y="3740" >30</text>
+    <text x="498" y="3740" >35</text>
+    <text x="522" y="3740" >40</text>
+    <text x="546" y="3740" >45</text>
+    <text x="570" y="3740" >50</text>
+    <text x="18" y="3804" >85.67</text>
+    <text x="18" y="3820" >78.20</text>
+    <text x="18" y="3836" >70.73</text>
+    <text x="18" y="3852" >63.27</text>
+    <text x="18" y="3868" >55.80</text>
+    <text x="18" y="3884" >48.33</text>
+    <text x="18" y="3900" >40.87</text>
+    <text x="18" y="3916" >33.40</text>
+    <text x="18" y="3932" >25.93</text>
+    <text x="18" y="3948" >18.47</text>
+    <text x="18" y="3964" >11.00</text>
+    <text x="50" y="3996" >2011</text>
+    <text x="146" y="3996" >2012</text>
+    <text x="242" y="3996" >2013</text>
+    <text x="338" y="3996" >2014</text>
+    <text x="434" y="3996" >2015</text>
+    <text x="530" y="3996" >2016</text>
+    <circle cx="12" cy="4120" r="3" class="nofill"></circle>
+    <text x="50" y="4124" >Flow</text>
+    <text x="90" y="4124" >charts</text>
+    <text x="234" y="4156" >OS</text>
+    <text x="258" y="4156" >API</text>
+    <circle cx="12" cy="4440" r="3" class="nofill"></circle>
+    <text x="50" y="4444" >Block</text>
+    <text x="98" y="4444" >diagrams</text>
+    <text x="50" y="4492" >vncviewer</text>
+    <line x1="56" y1="4512" x2="72" y2="4512" class="solid"></line>
+    <text x="50" y="4524" >[</text>
+    <line x1="56" y1="4528" x2="72" y2="4528" class="solid"></line>
+    <text x="74" y="4524" >]</text>
+    <line x1="88" y1="4518" x2="96" y2="4518" class="solid"></line>
+    <line x1="88" y1="4522" x2="96" y2="4522" class="solid"></line>
+    <line x1="48" y1="4528" x2="40" y2="4544" class="solid"></line>
+    <text x="210" y="4492" >,</text>
+    <path d="M 224,4480 A 16,16 0,0,0 224,4496" class="nofill"></path>
+    <path d="M 192,4528 A 16,16 0,0,0 192,4544" class="nofill"></path>
+    <path d="M 240,4480 A 16,16 0,0,1 240,4496" class="nofill"></path>
+    <text x="250" y="4492" >,</text>
+    <text x="386" y="4508" >gateway</text>
+    <text x="530" y="4508" >vncserver</text>
+    <text x="298" y="4524" >)</text>
+    <line x1="376" y1="4528" x2="456" y2="4528" class="solid"></line>
+    <text x="282" y="4540" >.</text>
+    <line x1="288" y1="4536" x2="296" y2="4536" class="solid"></line>
+    <text x="298" y="4540" >&#39;</text>
+    <text x="370" y="4540" >[</text>
+    <line x1="376" y1="4544" x2="384" y2="4544" class="solid"></line>
+    <text x="386" y="4540" >...</text>
+    <line x1="408" y1="4544" x2="424" y2="4544" class="solid"></line>
+    <path d="M 240,4544 A 16,16 0,0,1 240,4560" class="nofill"></path>
+    <text x="250" y="4556" >.</text>
+    <line x1="568" y1="4560" x2="560" y2="4576" class="solid"></line>
+    <text x="202" y="4524" >internet</text>
+    <text x="202" y="4556" >&#39;</text>
+    <line x1="208" y1="4552" x2="216" y2="4552" class="solid"></line>
+    <text x="218" y="4556" >.</text>
+    <path d="M 232,4544 A 16,16 0,0,0 232,4560" class="nofill"></path>
+    <text x="242" y="4620" >Valveless</text>
+    <text x="226" y="4636" >Pulsejet</text>
+    <text x="298" y="4636" >engine</text>
+    <circle cx="420" cy="4712" r="3" class="nofill"></circle>
+    <line x1="420" y1="4716" x2="420" y2="4916" class="solid"></line>
+    <text x="338" y="4732" >&#39;</text>
+    <text x="338" y="4748" >.</text>
+    <text x="426" y="4780" >GND</text>
+    <circle cx="268" cy="4904" r="3" class="nofill"></circle>
+    <circle cx="372" cy="4904" r="3" class="filled"></circle>
+    <line x1="372" y1="4908" x2="372" y2="4948" class="solid"></line>
+    <line x1="376" y1="4904" x2="536" y2="4904" class="solid"></line>
+    <circle cx="540" cy="4904" r="4" class="nofill"></circle>
+    <text x="266" y="4924" >power</text>
+    <circle cx="420" cy="4920" r="3" class="filled"></circle>
+    <line x1="420" y1="4924" x2="420" y2="4948" class="solid"></line>
+    <line x1="424" y1="4920" x2="536" y2="4920" class="solid"></line>
+    <circle cx="540" cy="4920" r="4" class="nofill"></circle>
+    <text x="266" y="4940" >switch</text>
+    <circle cx="372" cy="4952" r="3" class="nofill"></circle>
+    <line x1="376" y1="4952" x2="416" y2="4952" class="solid"></line>
+    <circle cx="420" cy="4952" r="3" class="nofill"></circle>
+    <text x="186" y="4972" >HHO</text>
+    <text x="178" y="4988" >Generator</text>
+    <text x="370" y="4988" >+</text>
+    <line x1="416" y1="4984" x2="424" y2="4984" class="solid"></line>
+    <text x="370" y="5020" >Battery</text>
+    <text x="498" y="4700" >thrust</text>
+    <text x="154" y="4780" >fuel</text>
+    <text x="146" y="4796" >intake</text>
+    <line x1="200" y1="4784" x2="216" y2="4784" class="solid"></line>
+    <text x="218" y="4780" >^</text>
+    <text x="282" y="4780" >^</text>
+    <line x1="288" y1="4784" x2="304" y2="4784" class="solid"></line>
+    <text x="306" y="4780" >spark</text>
+    <text x="306" y="4796" >plug</text>
+    <text x="82" y="4956" >Water</text>
+    <text x="82" y="4972" >intake</text>
+    <text x="546" y="4988" >Solar</text>
+    <text x="594" y="4988" >panel</text>
+    <line x1="120" y1="5046" x2="176" y2="5046" class="solid"></line>
+    <line x1="120" y1="5050" x2="176" y2="5050" class="solid"></line>
+    <line x1="128" y1="5062" x2="168" y2="5062" class="solid"></line>
+    <line x1="128" y1="5066" x2="168" y2="5066" class="solid"></line>
+    <line x1="136" y1="5078" x2="160" y2="5078" class="solid"></line>
+    <line x1="136" y1="5082" x2="160" y2="5082" class="solid"></line>
+    <line x1="144" y1="5094" x2="152" y2="5094" class="solid"></line>
+    <line x1="144" y1="5098" x2="152" y2="5098" class="solid"></line>
+    <line x1="148" y1="5104" x2="148" y2="5248" class="solid"></line>
+    <text x="234" y="5132" >micro</text>
+    <text x="282" y="5132" >henry</text>
+    <text x="234" y="5148" >coil</text>
+    <text x="274" y="5148" >w</text>
+    <line x1="288" y1="5136" x2="280" y2="5152" class="solid"></line>
+    <text x="290" y="5148" >tuning</text>
+    <text x="202" y="5180" >&#39;</text>
+    <text x="282" y="5212" >pico</text>
+    <text x="322" y="5212" >farad</text>
+    <text x="370" y="5212" >cap</text>
+    <text x="178" y="5228" >(</text>
+    <path d="M 312,5216 A 16,16 0,0,0 312,5232" class="nofill"></path>
+    <text x="314" y="5228" >trimmable</text>
+    <path d="M 384,5216 A 16,16 0,0,1 384,5232" class="nofill"></path>
+    <text x="138" y="5292" >ground</text>
+    <text x="194" y="5292" >plane</text>
+    <path d="M 248,5280 A 16,16 0,0,0 248,5296" class="nofill"></path>
+    <text x="250" y="5292" >foil</text>
+    <path d="M 280,5280 A 16,16 0,0,1 280,5296" class="nofill"></path>
+    <text x="186" y="5068" >symbolic</text>
+    <text x="258" y="5068" >antenna</text>
+    <text x="346" y="5148" >lug</text>
+    <text x="66" y="5260" >PC</text>
+    <text x="66" y="5276" >Board</text>
+    <circle cx="12" cy="5368" r="3" class="nofill"></circle>
+    <text x="42" y="5372" >Mindmaps</text>
+    <circle cx="156" cy="5448" r="3" class="filled"></circle>
+    <circle cx="268" cy="5544" r="3" class="nofill"></circle>
+    <circle cx="284" cy="5544" r="3" class="nofill"></circle>
+    <circle cx="300" cy="5560" r="3" class="filled"></circle>
+    <circle cx="412" cy="5576" r="4" class="nofill"></circle>
+    <circle cx="300" cy="5592" r="3" class="nofill"></circle>
+    <circle cx="252" cy="5608" r="3" class="nofill"></circle>
+    <circle cx="276" cy="5608" r="3" class="nofill"></circle>
+    <circle cx="292" cy="5608" r="3" class="nofill"></circle>
+    <text x="106" y="5772" >Worklaod</text>
+    <polygon points="384,5764 392,5768 384,5772" class="filled"></polygon>
+    <text x="402" y="5404" >Alpha</text>
+    <text x="402" y="5436" >Initial</text>
+    <text x="466" y="5436" >Release</text>
+    <text x="82" y="5452" >Planning</text>
+    <text x="466" y="5468" >Patch</text>
+    <text x="514" y="5468" >1</text>
+    <text x="50" y="5484" >Initial</text>
+    <text x="114" y="5484" >research</text>
+    <circle cx="132" cy="5496" r="3" class="filled"></circle>
+    <text x="482" y="5500" >Patch</text>
+    <text x="530" y="5500" >2</text>
+    <text x="394" y="5516" >Beta</text>
+    <text x="450" y="5580" >.</text>
+    <text x="466" y="5580" >Release</text>
+    <text x="530" y="5580" >.</text>
+    <text x="410" y="5660" >Push</text>
+    <text x="450" y="5660" >backs</text>
+    <text x="442" y="5692" >Setbacks</text>
+    <text x="410" y="5724" >Reception</text>
+    <text x="130" y="5740" >Team</text>
+    <text x="402" y="5772" >Career</text>
+    <text x="458" y="5772" >change</text>
+    <text x="138" y="5804" >PTO</text>
+    <text x="138" y="5836" >Bug</text>
+    <circle cx="12" cy="5880" r="3" class="nofill"></circle>
+    <text x="50" y="5884" >It</text>
+    <text x="74" y="5884" >can</text>
+    <text x="106" y="5884" >do</text>
+    <text x="130" y="5884" >complex</text>
+    <text x="194" y="5884" >stuff</text>
+    <text x="242" y="5884" >such</text>
+    <text x="282" y="5884" >as</text>
+    <text x="306" y="5884" >circuit</text>
+    <text x="370" y="5884" >diagrams</text>
+    <text x="58" y="5932" >+10</text>
+    <line x1="80" y1="5928" x2="88" y2="5928" class="solid"></line>
+    <text x="90" y="5932" >15V</text>
+    <text x="226" y="5932" >0,047R</text>
+    <circle cx="52" cy="5944" r="3" class="filled"></circle>
+    <line x1="52" y1="5948" x2="52" y2="5968" class="solid"></line>
+    <line x1="56" y1="5944" x2="128" y2="5944" class="solid"></line>
+    <circle cx="132" cy="5944" r="3" class="nofill"></circle>
+    <line x1="136" y1="5944" x2="176" y2="5944" class="solid"></line>
+    <circle cx="180" cy="5944" r="3" class="nofill"></circle>
+    <circle cx="244" cy="5944" r="3" class="nofill"></circle>
+    <line x1="248" y1="5944" x2="264" y2="5944" class="solid"></line>
+    <circle cx="268" cy="5944" r="3" class="nofill"></circle>
+    <line x1="272" y1="5944" x2="344" y2="5944" class="solid"></line>
+    <circle cx="348" cy="5944" r="3" class="nofill"></circle>
+    <line x1="352" y1="5944" x2="384" y2="5944" class="solid"></line>
+    <circle cx="388" cy="5944" r="3" class="nofill"></circle>
+    <text x="34" y="5964" >+</text>
+    <line x1="32" y1="5976" x2="40" y2="5976" class="solid"></line>
+    <line x1="40" y1="5974" x2="64" y2="5974" class="solid"></line>
+    <line x1="40" y1="5978" x2="64" y2="5978" class="solid"></line>
+    <line x1="64" y1="5976" x2="72" y2="5976" class="solid"></line>
+    <line x1="32" y1="5992" x2="40" y2="5992" class="solid"></line>
+    <line x1="40" y1="5990" x2="64" y2="5990" class="solid"></line>
+    <line x1="40" y1="5994" x2="64" y2="5994" class="solid"></line>
+    <line x1="64" y1="5992" x2="72" y2="5992" class="solid"></line>
+    <text x="122" y="5996" >.</text>
+    <line x1="32" y1="6008" x2="40" y2="6008" class="solid"></line>
+    <line x1="40" y1="6006" x2="64" y2="6006" class="solid"></line>
+    <line x1="40" y1="6010" x2="64" y2="6010" class="solid"></line>
+    <line x1="64" y1="6008" x2="72" y2="6008" class="solid"></line>
+    <text x="106" y="6012" >470</text>
+    <line x1="132" y1="6000" x2="132" y2="6036" class="solid"></line>
+    <text x="146" y="6012" >+</text>
+    <line x1="32" y1="6024" x2="40" y2="6024" class="solid"></line>
+    <text x="114" y="6028" >uF</text>
+    <circle cx="132" cy="6040" r="3" class="nofill"></circle>
+    <text x="210" y="6044" >6</text>
+    <text x="250" y="6044" >7</text>
+    <text x="274" y="6044" >8</text>
+    <line x1="112" y1="6072" x2="152" y2="6072" class="solid"></line>
+    <line x1="120" y1="6076" x2="144" y2="6076" class="solid"></line>
+    <line x1="128" y1="6088" x2="136" y2="6088" class="solid"></line>
+    <text x="298" y="6092" >1</text>
+    <text x="122" y="6108" >GND</text>
+    <circle cx="348" cy="6104" r="3" class="nofill"></circle>
+    <text x="378" y="6124" >`</text>
+    <polygon points="384,6116 392,6120 384,6124" class="filled"></polygon>
+    <line x1="388" y1="6128" x2="388" y2="6148" class="solid"></line>
+    <text x="306" y="6156" >220R</text>
+    <circle cx="388" cy="6152" r="3" class="nofill"></circle>
+    <text x="474" y="6204" >BYV29</text>
+    <line x1="552" y1="6200" x2="560" y2="6200" class="solid"></line>
+    <text x="562" y="6204" >12V6</text>
+    <circle cx="452" cy="6216" r="3" class="nofill"></circle>
+    <line x1="452" y1="6220" x2="452" y2="6240" class="solid"></line>
+    <circle cx="500" cy="6216" r="3" class="nofill"></circle>
+    <line x1="500" y1="6220" x2="500" y2="6340" class="solid"></line>
+    <line x1="504" y1="6216" x2="536" y2="6216" class="solid"></line>
+    <circle cx="540" cy="6216" r="3" class="nofill"></circle>
+    <line x1="540" y1="6220" x2="540" y2="6256" class="solid"></line>
+    <line x1="544" y1="6216" x2="564" y2="6216" class="solid"></line>
+    <text x="578" y="6220" >OUT</text>
+    <line x1="104" y1="6232" x2="112" y2="6232" class="solid"></line>
+    <text x="138" y="6236" >+</text>
+    <text x="298" y="6236" >2</text>
+    <circle cx="316" cy="6248" r="3" class="nofill"></circle>
+    <text x="450" y="6252" >C</text>
+    <line x1="460" y1="6240" x2="460" y2="6288" class="solid"></line>
+    <line x1="96" y1="6264" x2="104" y2="6264" class="broken"></line>
+    <line x1="112" y1="6264" x2="120" y2="6264" class="broken"></line>
+    <line x1="128" y1="6264" x2="136" y2="6264" class="broken"></line>
+    <line x1="144" y1="6264" x2="152" y2="6264" class="broken"></line>
+    <line x1="160" y1="6264" x2="168" y2="6264" class="broken"></line>
+    <text x="306" y="6268" >GND</text>
+    <text x="450" y="6268" >C</text>
+    <line x1="528" y1="6264" x2="552" y2="6264" class="solid"></line>
+    <text x="298" y="6284" >3</text>
+    <text x="354" y="6284" >1nF</text>
+    <text x="450" y="6284" >C</text>
+    <rect x="528" y="6276" width="8" height="8" class="solid filled" rx="0"></rect>
+    <rect x="536" y="6276" width="8" height="8" class="solid filled" rx="0"></rect>
+    <line x1="540" y1="6284" x2="540" y2="6304" class="solid"></line>
+    <rect x="544" y="6276" width="8" height="8" class="solid filled" rx="0"></rect>
+    <line x1="452" y1="6288" x2="452" y2="6304" class="solid"></line>
+    <text x="554" y="6300" >+</text>
+    <text x="442" y="6316" >GND</text>
+    <text x="530" y="6316" >GND</text>
+    <text x="226" y="6332" >5</text>
+    <text x="266" y="6332" >4</text>
+    <circle cx="388" cy="6344" r="3" class="nofill"></circle>
+    <line x1="392" y1="6344" x2="496" y2="6344" class="solid"></line>
+    <circle cx="500" cy="6344" r="3" class="nofill"></circle>
+    <circle cx="236" cy="6376" r="3" class="filled"></circle>
+    <circle cx="428" cy="6376" r="3" class="nofill"></circle>
+    <text x="298" y="6396" >2k</text>
+    <text x="490" y="6396" >1k0</text>
+    <text x="418" y="6492" >GND</text>
+    <text x="290" y="5996" >2k2</text>
+    <text x="474" y="6028" >LED</text>
+    <text x="314" y="6044" >1k</text>
+    <text x="402" y="6092" >BC</text>
+    <text x="402" y="6108" >547</text>
+    <text x="474" y="6156" >IRF9Z34</text>
+    <text x="210" y="6188" >MC34063</text>
+    <text x="10" y="6236" >6000</text>
+    <text x="50" y="6236" >micro</text>
+    <text x="10" y="6252" >Farad,</text>
+    <text x="66" y="6252" >40V</text>
+    <text x="10" y="6268" >Capacitor</text>
+    <text x="402" y="6268" >30uH</text>
+    <text x="562" y="6268" >470</text>
+    <text x="570" y="6284" >uF</text>
+    <text x="450" y="6428" >5k6</text>
+    <text x="482" y="6428" >+</text>
+    <text x="498" y="6428" >3k3</text>
+    <text x="450" y="6444" >in</text>
+    <text x="474" y="6444" >Serie</text>
+    <circle cx="4" cy="6552" r="3" class="nofill"></circle>
+    <text x="34" y="6556" >Latest</text>
+    <text x="90" y="6556" >addition:</text>
+    <text x="170" y="6556" >Styling</text>
+    <text x="234" y="6556" >of</text>
+    <text x="258" y="6556" >tagged</text>
+    <text x="314" y="6556" >shapes</text>
+    <text x="26" y="7116" >Advantages:</text>
+    <line x1="8" y1="7144" x2="16" y2="7144" class="solid"></line>
+    <circle cx="20" cy="7144" r="3" class="filled"></circle>
+    <text x="34" y="7148" >Plain</text>
+    <text x="82" y="7148" >text</text>
+    <text x="122" y="7148" >format</text>
+    <text x="34" y="7164" >Ultimately</text>
+    <text x="122" y="7164" >portable,</text>
+    <text x="34" y="7180" >Degrades</text>
+    <text x="106" y="7180" >gracefully</text>
+    <text x="34" y="7196" >Even</text>
+    <text x="74" y="7196" >when</text>
+    <text x="114" y="7196" >not</text>
+    <text x="146" y="7196" >using</text>
+    <text x="194" y="7196" >a</text>
+    <text x="210" y="7196" >graphical</text>
+    <text x="290" y="7196" >renderer,</text>
+    <text x="370" y="7196" >it</text>
+    <text x="394" y="7196" >would</text>
+    <text x="442" y="7196" >still</text>
+    <text x="490" y="7196" >looks</text>
+    <text x="34" y="7212" >as</text>
+    <text x="58" y="7212" >text</text>
+    <text x="98" y="7212" >based</text>
+    <text x="146" y="7212" >diagrams.</text>
+    <text x="226" y="7212" >Paste</text>
+    <text x="274" y="7212" >the</text>
+    <text x="306" y="7212" >text</text>
+    <text x="346" y="7212" >in</text>
+    <text x="370" y="7212" >your</text>
+    <text x="410" y="7212" >source</text>
+    <text x="466" y="7212" >code.</text>
+    <text x="34" y="7228" >Easiest</text>
+    <text x="98" y="7228" >to</text>
+    <text x="122" y="7228" >use.</text>
+    <text x="162" y="7228" >Anyone</text>
+    <text x="218" y="7228" >knows</text>
+    <text x="266" y="7228" >how</text>
+    <text x="298" y="7228" >to</text>
+    <text x="322" y="7228" >edit</text>
+    <text x="362" y="7228" >text.</text>
+    <text x="202" y="7164" >backward</text>
+    <text x="274" y="7164" >compatible</text>
+    <text x="362" y="7164" >and</text>
+    <text x="394" y="7164" >future</text>
+    <text x="450" y="7164" >proof.</text>
+    <line x1="8" y1="7176" x2="16" y2="7176" class="solid"></line>
+    <circle cx="20" cy="7176" r="3" class="filled"></circle>
+    <text x="538" y="7196" >good</text>
+    <line x1="8" y1="7224" x2="16" y2="7224" class="solid"></line>
+    <circle cx="20" cy="7224" r="3" class="filled"></circle>
+    <text x="378" y="748" >.--------------.</text>
+    <text x="378" y="764" >| Don&#39;t draw me|</text>
+    <text x="378" y="780" >|              |</text>
+    <text x="378" y="796" >&#39;--------------&#39;</text>
+    <text x="2" y="3004" >Udc_OK</text>
+    <g>
+        <path d="M 64,72 A 8,8 0,0,0 58,76" class="nofill"></path>
+        <line x1="58" y1="76" x2="38" y2="116" class="solid"></line>
+        <line x1="64" y1="72" x2="88" y2="72" class="solid"></line>
+        <path d="M 88,72 A 3,3 0,0,1 90,76" class="nofill"></path>
+        <line x1="90" y1="76" x2="64" y2="128" class="solid"></line>
+        <line x1="52" y1="88" x2="64" y2="88" class="solid"></line>
+        <line x1="76" y1="104" x2="88" y2="104" class="solid"></line>
+        <polygon points="88,100 96,104 88,108" class="filled"></polygon>
+        <line x1="66" y1="92" x2="56" y2="112" class="solid"></line>
+        <line x1="56" y1="112" x2="72" y2="144" class="solid"></line>
+        <path d="M 32,104 A 8,8 0,0,0 26,108" class="nofill"></path>
+        <line x1="26" y1="108" x2="24" y2="112" class="solid"></line>
+        <line x1="32" y1="104" x2="44" y2="104" class="solid"></line>
+        <path d="M 24,112 A 16,16 0,0,0 24,128" class="nofill"></path>
+        <line x1="24" y1="128" x2="26" y2="132" class="solid"></line>
+        <path d="M 26,132 A 8,8 0,0,0 32,136" class="nofill"></path>
+        <line x1="32" y1="136" x2="40" y2="136" class="solid"></line>
+        <path d="M 40,136 A 8,8 0,0,1 46,140" class="nofill"></path>
+        <line x1="46" y1="140" x2="60" y2="168" class="solid"></line>
+        <line x1="72" y1="144" x2="60" y2="168" class="solid"></line>
+    </g>
+    <g>
+        <line x1="16" y1="264" x2="24" y2="264" class="solid"></line>
+        <polygon points="24,260 32,264 24,268" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 40,280 A 4,4 0,0,0 36,284" class="nofill"></path>
+        <line x1="36" y1="284" x2="36" y2="836" class="broken"></line>
+        <line x1="40" y1="280" x2="48" y2="280" class="solid"></line>
+        <path d="M 36,836 A 4,4 0,0,0 40,840" class="nofill"></path>
+        <line x1="40" y1="840" x2="560" y2="840" class="broken"></line>
+        <line x1="552" y1="280" x2="560" y2="280" class="solid"></line>
+        <path d="M 560,280 A 4,4 0,0,1 564,284" class="nofill"></path>
+        <line x1="564" y1="284" x2="564" y2="836" class="broken"></line>
+        <path d="M 564,836 A 4,4 0,0,1 560,840" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="460" y1="296" x2="428" y2="328" class="broken"></line>
+        <line x1="460" y1="296" x2="492" y2="328" class="broken"></line>
+        <line x1="428" y1="328" x2="460" y2="360" class="broken"></line>
+        <line x1="492" y1="328" x2="460" y2="360" class="broken"></line>
+    </g>
+    <g>
+        <line x1="80" y1="368" x2="136" y2="368" class="solid"></line>
+        <line x1="80" y1="368" x2="64" y2="400" class="solid"></line>
+        <line x1="136" y1="368" x2="152" y2="400" class="solid"></line>
+        <line x1="64" y1="400" x2="80" y2="432" class="solid"></line>
+        <line x1="152" y1="400" x2="136" y2="432" class="solid"></line>
+        <line x1="80" y1="432" x2="136" y2="432" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 256,312 A 8,8 0,0,0 250,316" class="nofill"></path>
+        <line x1="250" y1="316" x2="248" y2="320" class="solid"></line>
+        <line x1="256" y1="312" x2="304" y2="312" class="solid"></line>
+        <path d="M 304,312 A 8,8 0,0,1 310,316" class="nofill"></path>
+        <line x1="310" y1="316" x2="312" y2="320" class="solid"></line>
+        <path d="M 248,320 A 16,16 0,0,0 248,336" class="nofill"></path>
+        <path d="M 312,320 A 16,16 0,0,1 312,336" class="nofill"></path>
+        <line x1="248" y1="336" x2="250" y2="340" class="solid"></line>
+        <path d="M 250,340 A 8,8 0,0,0 256,344" class="nofill"></path>
+        <line x1="256" y1="344" x2="304" y2="344" class="solid"></line>
+        <line x1="312" y1="336" x2="310" y2="340" class="solid"></line>
+        <path d="M 310,340 A 8,8 0,0,1 304,344" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="232" y1="368" x2="296" y2="368" class="solid"></line>
+        <line x1="232" y1="368" x2="240" y2="384" class="solid"></line>
+        <line x1="296" y1="368" x2="304" y2="384" class="solid"></line>
+        <path d="M 240,384 A 16,16 0,0,1 240,400" class="nofill"></path>
+        <path d="M 304,384 A 16,16 0,0,1 304,400" class="nofill"></path>
+        <line x1="240" y1="400" x2="232" y2="416" class="solid"></line>
+        <line x1="232" y1="416" x2="296" y2="416" class="solid"></line>
+        <line x1="304" y1="400" x2="296" y2="416" class="solid"></line>
+    </g>
+    <g>
+        <line x1="368" y1="304" x2="350" y2="340" class="solid"></line>
+        <line x1="368" y1="304" x2="386" y2="340" class="solid"></line>
+        <path d="M 350,340 A 3,3 0,0,0 352,344" class="nofill"></path>
+        <line x1="352" y1="344" x2="384" y2="344" class="solid"></line>
+        <path d="M 386,340 A 3,3 0,0,1 384,344" class="nofill"></path>
+    </g>
+    <g>
+        <polygon points="519,332 526,324 526,335" class="filled"></polygon>
+        <line x1="522" y1="332" x2="502" y2="372" class="solid"></line>
+        <polygon points="502.8,380 502.8,372 497.2,372 497.2,380" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="550.8,348 550.8,340 545.2,340 545.2,348" class="filled"></polygon>
+        <line x1="546" y1="348" x2="526" y2="388" class="solid"></line>
+        <polygon points="529,388 522,396 522,385" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="519,364 526,356 526,367" class="filled"></polygon>
+        <line x1="522" y1="364" x2="504" y2="400" class="solid"></line>
+    </g>
+    <g>
+        <line x1="420" y1="364" x2="420" y2="404" class="solid"></line>
+        <polygon points="416,404 424,404 420,416" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="200" y1="368" x2="184" y2="400" class="solid"></line>
+        <line x1="200" y1="368" x2="216" y2="400" class="solid"></line>
+        <line x1="184" y1="400" x2="200" y2="432" class="solid"></line>
+        <line x1="216" y1="400" x2="200" y2="432" class="solid"></line>
+    </g>
+    <g>
+        <line x1="352" y1="376" x2="384" y2="376" class="solid"></line>
+        <polygon points="384,372 392,376 384,380" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="352,388 344,392 352,396" class="filled"></polygon>
+        <line x1="352" y1="392" x2="384" y2="392" class="solid"></line>
+    </g>
+    <g>
+        <polygon points="432,380 436,368 440,380" class="filled"></polygon>
+        <line x1="436" y1="380" x2="436" y2="420" class="solid"></line>
+    </g>
+    <g>
+        <polygon points="456,396 460,384 464,396" class="filled"></polygon>
+        <line x1="460" y1="396" x2="460" y2="432" class="broken"></line>
+    </g>
+    <g>
+        <line x1="476" y1="384" x2="476" y2="420" class="broken"></line>
+        <polygon points="472,420 480,420 476,432" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="344" y1="440" x2="380" y2="440" class="broken"></line>
+        <path d="M 380,440 A 8,8 0,0,1 388,448" class="nofill"></path>
+        <line x1="380" y1="440" x2="412" y2="472" class="broken"></line>
+    </g>
+    <g>
+        <polygon points="465,476 458,468 458,479" class="filled"></polygon>
+        <line x1="462" y1="476" x2="482" y2="516" class="solid"></line>
+    </g>
+    <g>
+        <line x1="424" y1="504" x2="456" y2="504" class="broken"></line>
+        <polygon points="456,500 464,504 456,508" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="478" y1="460" x2="498" y2="500" class="solid"></line>
+        <polygon points="495,500 502,508 502,497" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="88" y1="472" x2="168" y2="472" class="solid"></line>
+        <path d="M 168,472 A 8,8 0,0,1 174,476" class="nofill"></path>
+        <line x1="174" y1="476" x2="176" y2="480" class="solid"></line>
+        <path d="M 176,480 A 16,16 0,0,1 176,496" class="nofill"></path>
+        <line x1="176" y1="496" x2="174" y2="500" class="solid"></line>
+        <path d="M 144,504 A 8,8 0,0,0 138,508" class="nofill"></path>
+        <line x1="138" y1="508" x2="128" y2="528" class="solid"></line>
+        <line x1="144" y1="504" x2="168" y2="504" class="solid"></line>
+        <path d="M 174,500 A 8,8 0,0,1 168,504" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="80" y1="504" x2="124" y2="504" class="solid"></line>
+        <line x1="124" y1="504" x2="124" y2="532" class="solid"></line>
+    </g>
+    <g>
+        <line x1="104" y1="560" x2="120" y2="560" class="solid"></line>
+        <path d="M 104,560 A 16,16 0,0,0 104,576" class="nofill"></path>
+        <line x1="104" y1="576" x2="120" y2="576" class="solid"></line>
+        <path d="M 120,560 A 16,16 0,0,1 120,576" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 240,472 A 8,8 0,0,0 234,476" class="nofill"></path>
+        <line x1="234" y1="476" x2="232" y2="480" class="solid"></line>
+        <path d="M 232,480 A 16,16 0,0,0 232,496" class="nofill"></path>
+        <line x1="232" y1="496" x2="234" y2="500" class="solid"></line>
+        <path d="M 234,500 A 8,8 0,0,0 240,504" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 272,472 A 8,8 0,0,1 278,476" class="nofill"></path>
+        <line x1="278" y1="476" x2="280" y2="480" class="solid"></line>
+        <path d="M 280,480 A 16,16 0,0,1 280,496" class="nofill"></path>
+        <line x1="280" y1="496" x2="278" y2="500" class="solid"></line>
+        <path d="M 278,500 A 8,8 0,0,1 272,504" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 336,472 A 8,8 0,0,0 330,476" class="nofill"></path>
+        <line x1="330" y1="476" x2="328" y2="480" class="solid"></line>
+        <path d="M 328,480 A 16,16 0,0,0 328,496" class="nofill"></path>
+        <line x1="328" y1="496" x2="330" y2="500" class="solid"></line>
+        <path d="M 330,500 A 8,8 0,0,0 336,504" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 360,472 A 8,8 0,0,1 366,476" class="nofill"></path>
+        <line x1="366" y1="476" x2="368" y2="480" class="solid"></line>
+        <path d="M 368,480 A 16,16 0,0,1 368,496" class="nofill"></path>
+        <line x1="368" y1="496" x2="366" y2="500" class="solid"></line>
+        <path d="M 366,500 A 8,8 0,0,1 360,504" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 160,552 A 8,8 0,0,1 166,556" class="nofill"></path>
+        <line x1="166" y1="556" x2="168" y2="560" class="solid"></line>
+        <path d="M 168,560 A 16,16 0,0,1 168,576" class="nofill"></path>
+        <line x1="168" y1="576" x2="166" y2="580" class="solid"></line>
+        <line x1="152" y1="584" x2="160" y2="584" class="solid"></line>
+        <path d="M 166,580 A 8,8 0,0,1 160,584" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="280" y1="552" x2="296" y2="552" class="solid"></line>
+        <path d="M 296,552 A 8,8 0,0,1 302,556" class="nofill"></path>
+        <line x1="302" y1="556" x2="304" y2="560" class="solid"></line>
+        <path d="M 304,560 A 16,16 0,0,1 304,576" class="nofill"></path>
+        <line x1="304" y1="576" x2="302" y2="580" class="solid"></line>
+        <line x1="280" y1="584" x2="296" y2="584" class="solid"></line>
+        <path d="M 302,580 A 8,8 0,0,1 296,584" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 216,744 A 3,3 0,0,0 214,748" class="nofill"></path>
+        <line x1="214" y1="748" x2="236" y2="792" class="solid"></line>
+        <line x1="216" y1="744" x2="256" y2="744" class="solid"></line>
+        <path d="M 256,744 A 3,3 0,0,1 258,748" class="nofill"></path>
+        <line x1="258" y1="748" x2="236" y2="792" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 280,744 A 3,3 0,0,0 278,748" class="nofill"></path>
+        <line x1="278" y1="748" x2="298" y2="788" class="solid"></line>
+        <line x1="280" y1="744" x2="312" y2="744" class="solid"></line>
+        <path d="M 312,744 A 8,8 0,0,1 318,748" class="nofill"></path>
+        <line x1="318" y1="748" x2="338" y2="788" class="solid"></line>
+        <path d="M 298,788 A 8,8 0,0,0 304,792" class="nofill"></path>
+        <line x1="304" y1="792" x2="336" y2="792" class="solid"></line>
+        <path d="M 338,788 A 3,3 0,0,1 336,792" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="16" y1="888" x2="24" y2="888" class="solid"></line>
+        <polygon points="24,884 32,888 24,892" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 72,904 A 8,8 0,0,0 66,908" class="nofill"></path>
+        <line x1="66" y1="908" x2="46" y2="948" class="solid"></line>
+        <line x1="72" y1="904" x2="96" y2="904" class="solid"></line>
+        <path d="M 96,904 A 3,3 0,0,1 98,908" class="nofill"></path>
+        <line x1="98" y1="908" x2="72" y2="960" class="solid"></line>
+        <line x1="60" y1="920" x2="72" y2="920" class="solid"></line>
+        <line x1="84" y1="936" x2="96" y2="936" class="solid"></line>
+        <polygon points="96,932 104,936 96,940" class="filled"></polygon>
+        <line x1="74" y1="924" x2="64" y2="944" class="solid"></line>
+        <line x1="64" y1="944" x2="80" y2="976" class="solid"></line>
+        <path d="M 40,936 A 8,8 0,0,0 34,940" class="nofill"></path>
+        <line x1="34" y1="940" x2="32" y2="944" class="solid"></line>
+        <line x1="40" y1="936" x2="52" y2="936" class="solid"></line>
+        <path d="M 32,944 A 16,16 0,0,0 32,960" class="nofill"></path>
+        <line x1="32" y1="960" x2="34" y2="964" class="solid"></line>
+        <path d="M 34,964 A 8,8 0,0,0 40,968" class="nofill"></path>
+        <line x1="40" y1="968" x2="48" y2="968" class="solid"></line>
+        <path d="M 48,968 A 8,8 0,0,1 54,972" class="nofill"></path>
+        <line x1="54" y1="972" x2="68" y2="1000" class="solid"></line>
+        <line x1="80" y1="976" x2="68" y2="1000" class="solid"></line>
+    </g>
+    <g>
+        <line x1="276" y1="912" x2="292" y2="912" class="solid"></line>
+        <line x1="276" y1="912" x2="276" y2="928" class="solid"></line>
+        <line x1="276" y1="920" x2="292" y2="920" class="solid"></line>
+        <line x1="292" y1="912" x2="292" y2="968" class="solid"></line>
+        <path d="M 276,928 A 12,12 0,0,1 276,944" class="nofill"></path>
+        <line x1="276" y1="944" x2="276" y2="964" class="solid"></line>
+        <line x1="276" y1="952" x2="292" y2="952" class="solid"></line>
+        <line x1="292" y1="968" x2="280" y2="992" class="solid"></line>
+        <path d="M 256,936 A 4,4 0,0,0 252,940" class="nofill"></path>
+        <line x1="252" y1="940" x2="252" y2="964" class="solid"></line>
+        <line x1="256" y1="936" x2="292" y2="936" class="solid"></line>
+        <path d="M 252,964 A 16,16 0,0,0 254,972" class="nofill"></path>
+        <line x1="254" y1="972" x2="264" y2="992" class="solid"></line>
+        <line x1="264" y1="992" x2="280" y2="992" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 176,920 A 8,8 0,0,0 170,924" class="nofill"></path>
+        <line x1="170" y1="924" x2="144" y2="976" class="solid"></line>
+        <line x1="176" y1="920" x2="192" y2="920" class="solid"></line>
+        <path d="M 192,920 A 8,8 0,0,1 198,924" class="nofill"></path>
+        <line x1="198" y1="924" x2="204" y2="936" class="solid"></line>
+        <line x1="164" y1="936" x2="184" y2="936" class="solid"></line>
+        <path d="M 184,936 A 8,8 0,0,1 190,940" class="nofill"></path>
+        <line x1="190" y1="940" x2="192" y2="944" class="solid"></line>
+        <line x1="204" y1="936" x2="204" y2="952" class="solid"></line>
+        <path d="M 192,944 A 16,16 0,0,1 192,960" class="nofill"></path>
+        <line x1="204" y1="952" x2="182" y2="996" class="solid"></line>
+        <line x1="152" y1="960" x2="162" y2="980" class="solid"></line>
+        <line x1="144" y1="976" x2="154" y2="996" class="solid"></line>
+        <path d="M 162,980 A 8,8 0,0,0 168,984" class="nofill"></path>
+        <path d="M 154,996 A 8,8 0,0,0 160,1000" class="nofill"></path>
+        <line x1="160" y1="1000" x2="176" y2="1000" class="solid"></line>
+        <path d="M 182,996 A 8,8 0,0,1 176,1000" class="nofill"></path>
+        <line x1="172" y1="956" x2="172" y2="984" class="solid"></line>
+        <line x1="172" y1="968" x2="188" y2="968" class="solid"></line>
+        <line x1="192" y1="960" x2="182" y2="980" class="solid"></line>
+        <line x1="168" y1="984" x2="176" y2="984" class="solid"></line>
+        <path d="M 182,980 A 8,8 0,0,1 176,984" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 424,920 A 8,8 0,0,0 418,924" class="nofill"></path>
+        <line x1="418" y1="924" x2="408" y2="944" class="solid"></line>
+        <line x1="424" y1="920" x2="440" y2="920" class="solid"></line>
+        <path d="M 440,920 A 8,8 0,0,1 446,924" class="nofill"></path>
+        <line x1="446" y1="924" x2="456" y2="944" class="solid"></line>
+        <path d="M 408,944 A 16,16 0,0,0 408,960" class="nofill"></path>
+        <path d="M 456,944 A 16,16 0,0,1 456,960" class="nofill"></path>
+        <line x1="408" y1="960" x2="418" y2="980" class="solid"></line>
+        <line x1="456" y1="960" x2="446" y2="980" class="solid"></line>
+        <path d="M 418,980 A 8,8 0,0,0 424,984" class="nofill"></path>
+        <line x1="424" y1="984" x2="440" y2="984" class="solid"></line>
+        <path d="M 446,980 A 8,8 0,0,1 440,984" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="424" y1="928" x2="412" y2="952" class="solid"></line>
+        <line x1="412" y1="952" x2="424" y2="976" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 432,936 A 8,8 0,0,0 426,940" class="nofill"></path>
+        <line x1="426" y1="940" x2="424" y2="944" class="solid"></line>
+        <line x1="432" y1="936" x2="440" y2="936" class="solid"></line>
+        <path d="M 440,936 A 8,8 0,0,1 446,940" class="nofill"></path>
+        <line x1="446" y1="940" x2="448" y2="944" class="solid"></line>
+        <path d="M 424,944 A 16,16 0,0,0 424,960" class="nofill"></path>
+        <path d="M 448,944 A 16,16 0,0,1 448,960" class="nofill"></path>
+        <line x1="424" y1="960" x2="426" y2="964" class="solid"></line>
+        <path d="M 426,964 A 8,8 0,0,0 432,968" class="nofill"></path>
+        <line x1="432" y1="968" x2="440" y2="968" class="solid"></line>
+        <line x1="448" y1="960" x2="446" y2="964" class="solid"></line>
+        <path d="M 446,964 A 8,8 0,0,1 440,968" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 336,936 A 4,4 0,0,0 332,940" class="nofill"></path>
+        <line x1="332" y1="940" x2="332" y2="964" class="solid"></line>
+        <line x1="336" y1="936" x2="352" y2="936" class="solid"></line>
+        <path d="M 352,936 A 4,4 0,0,1 356,940" class="nofill"></path>
+        <path d="M 360,936 A 4,4 0,0,0 356,940" class="nofill"></path>
+        <line x1="356" y1="940" x2="356" y2="964" class="solid"></line>
+        <line x1="360" y1="936" x2="368" y2="936" class="solid"></line>
+        <path d="M 368,936 A 4,4 0,0,1 372,940" class="nofill"></path>
+        <line x1="372" y1="940" x2="372" y2="964" class="solid"></line>
+        <line x1="332" y1="952" x2="344" y2="952" class="solid"></line>
+        <polygon points="344,948 352,952 344,956" class="filled"></polygon>
+        <path d="M 332,964 A 4,4 0,0,0 336,968" class="nofill"></path>
+        <line x1="336" y1="968" x2="352" y2="968" class="solid"></line>
+        <path d="M 356,964 A 4,4 0,0,1 352,968" class="nofill"></path>
+        <path d="M 356,964 A 4,4 0,0,0 360,968" class="nofill"></path>
+        <line x1="360" y1="968" x2="368" y2="968" class="solid"></line>
+        <path d="M 372,964 A 4,4 0,0,1 368,968" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="344" y1="1024" x2="384" y2="1024" class="solid"></line>
+        <line x1="344" y1="1024" x2="340" y2="1032" class="solid"></line>
+        <line x1="340" y1="1032" x2="340" y2="1072" class="solid"></line>
+        <line x1="312" y1="1072" x2="340" y2="1072" class="solid"></line>
+        <line x1="312" y1="1072" x2="296" y2="1104" class="solid"></line>
+        <line x1="296" y1="1104" x2="312" y2="1136" class="solid"></line>
+        <line x1="368" y1="1040" x2="384" y2="1040" class="solid"></line>
+        <path d="M 384,1024 A 16,16 0,0,1 384,1040" class="nofill"></path>
+        <line x1="368" y1="1040" x2="364" y2="1048" class="solid"></line>
+        <line x1="364" y1="1048" x2="364" y2="1072" class="solid"></line>
+        <line x1="384" y1="1040" x2="392" y2="1056" class="solid"></line>
+        <line x1="364" y1="1072" x2="384" y2="1072" class="solid"></line>
+        <line x1="392" y1="1056" x2="384" y2="1072" class="solid"></line>
+    </g>
+    <g>
+        <line x1="392" y1="1024" x2="408" y2="1056" class="solid"></line>
+        <line x1="408" y1="1056" x2="392" y2="1088" class="solid"></line>
+        <line x1="384" y1="1088" x2="392" y2="1088" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 328,1072 A 16,16 0,0,0 328,1088" class="nofill"></path>
+        <line x1="328" y1="1088" x2="340" y2="1088" class="solid"></line>
+        <line x1="340" y1="1088" x2="340" y2="1104" class="solid"></line>
+    </g>
+    <g>
+        <line x1="364" y1="1088" x2="376" y2="1088" class="solid"></line>
+        <path d="M 376,1072 A 16,16 0,0,1 376,1088" class="nofill"></path>
+        <line x1="364" y1="1088" x2="364" y2="1120" class="solid"></line>
+    </g>
+    <g>
+        <line x1="320" y1="1088" x2="312" y2="1104" class="solid"></line>
+        <line x1="312" y1="1104" x2="320" y2="1120" class="solid"></line>
+        <line x1="320" y1="1120" x2="336" y2="1120" class="solid"></line>
+        <line x1="344" y1="1104" x2="336" y2="1120" class="solid"></line>
+        <path d="M 320,1120 A 16,16 0,0,0 320,1136" class="nofill"></path>
+        <line x1="320" y1="1136" x2="360" y2="1136" class="solid"></line>
+        <line x1="368" y1="1120" x2="360" y2="1136" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 64,1032 A 4,4 0,0,0 60,1036" class="nofill"></path>
+        <line x1="60" y1="1036" x2="60" y2="1072" class="solid"></line>
+        <line x1="64" y1="1032" x2="96" y2="1032" class="solid"></line>
+        <path d="M 96,1032 A 4,4 0,0,1 100,1036" class="nofill"></path>
+        <line x1="100" y1="1036" x2="100" y2="1072" class="solid"></line>
+        <line x1="36" y1="1072" x2="124" y2="1072" class="solid"></line>
+        <line x1="36" y1="1072" x2="36" y2="1092" class="solid"></line>
+        <path d="M 36,1092 A 4,4 0,0,0 40,1096" class="nofill"></path>
+        <line x1="40" y1="1096" x2="52" y2="1096" class="solid"></line>
+        <line x1="56" y1="1088" x2="104" y2="1088" class="solid"></line>
+        <line x1="56" y1="1088" x2="46" y2="1108" class="solid"></line>
+        <line x1="104" y1="1088" x2="114" y2="1108" class="solid"></line>
+        <line x1="108" y1="1096" x2="120" y2="1096" class="solid"></line>
+        <path d="M 46,1108 A 3,3 0,0,0 48,1112" class="nofill"></path>
+        <line x1="48" y1="1112" x2="112" y2="1112" class="solid"></line>
+        <path d="M 114,1108 A 3,3 0,0,1 112,1112" class="nofill"></path>
+        <line x1="104" y1="1080" x2="124" y2="1080" class="solid"></line>
+        <line x1="124" y1="1072" x2="124" y2="1092" class="solid"></line>
+        <path d="M 124,1092 A 4,4 0,0,1 120,1096" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="224" y1="1040" x2="232" y2="1040" class="solid"></line>
+        <path d="M 224,1040 A 16,16 0,0,0 224,1056" class="nofill"></path>
+        <line x1="224" y1="1056" x2="232" y2="1056" class="solid"></line>
+        <path d="M 232,1040 A 16,16 0,0,1 232,1056" class="nofill"></path>
+        <line x1="232" y1="1056" x2="240" y2="1072" class="solid"></line>
+        <path d="M 240,1072 A 16,16 0,0,1 240,1088" class="nofill"></path>
+        <line x1="224" y1="1104" x2="232" y2="1104" class="solid"></line>
+        <line x1="240" y1="1088" x2="232" y2="1104" class="solid"></line>
+        <path d="M 224,1104 A 16,16 0,0,0 224,1120" class="nofill"></path>
+        <line x1="224" y1="1120" x2="232" y2="1120" class="solid"></line>
+        <path d="M 232,1104 A 16,16 0,0,1 232,1120" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 200,1048 A 8,8 0,0,0 194,1052" class="nofill"></path>
+        <line x1="194" y1="1052" x2="184" y2="1072" class="solid"></line>
+        <line x1="200" y1="1048" x2="216" y2="1048" class="solid"></line>
+        <line x1="176" y1="1072" x2="184" y2="1072" class="solid"></line>
+        <path d="M 176,1072 A 16,16 0,0,0 176,1088" class="nofill"></path>
+        <line x1="176" y1="1088" x2="184" y2="1088" class="solid"></line>
+        <path d="M 184,1072 A 16,16 0,0,1 184,1088" class="nofill"></path>
+        <line x1="184" y1="1088" x2="194" y2="1108" class="solid"></line>
+        <path d="M 194,1108 A 8,8 0,0,0 200,1112" class="nofill"></path>
+        <line x1="200" y1="1112" x2="216" y2="1112" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 208,1064 A 8,8 0,0,0 202,1068" class="nofill"></path>
+        <line x1="202" y1="1068" x2="200" y2="1072" class="solid"></line>
+        <line x1="208" y1="1064" x2="216" y2="1064" class="solid"></line>
+        <path d="M 216,1064 A 8,8 0,0,1 222,1068" class="nofill"></path>
+        <line x1="222" y1="1068" x2="224" y2="1072" class="solid"></line>
+        <path d="M 200,1072 A 16,16 0,0,0 200,1088" class="nofill"></path>
+        <path d="M 224,1072 A 16,16 0,0,1 224,1088" class="nofill"></path>
+        <line x1="200" y1="1088" x2="202" y2="1092" class="solid"></line>
+        <path d="M 202,1092 A 8,8 0,0,0 208,1096" class="nofill"></path>
+        <line x1="208" y1="1096" x2="216" y2="1096" class="solid"></line>
+        <line x1="224" y1="1088" x2="222" y2="1092" class="solid"></line>
+        <path d="M 222,1092 A 8,8 0,0,1 216,1096" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="16" y1="1160" x2="24" y2="1160" class="solid"></line>
+        <polygon points="24,1156 32,1160 24,1164" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="100" y1="1176" x2="124" y2="1176" class="solid"></line>
+        <line x1="100" y1="1176" x2="100" y2="1208" class="solid"></line>
+        <line x1="116" y1="1176" x2="116" y2="1208" class="solid"></line>
+        <line x1="124" y1="1176" x2="124" y2="1208" class="solid"></line>
+        <line x1="100" y1="1192" x2="124" y2="1192" class="solid"></line>
+        <line x1="100" y1="1208" x2="124" y2="1208" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 104,1224 A 4,4 0,0,0 100,1228" class="nofill"></path>
+        <line x1="100" y1="1228" x2="100" y2="1252" class="solid"></line>
+        <line x1="104" y1="1224" x2="120" y2="1224" class="solid"></line>
+        <line x1="116" y1="1224" x2="116" y2="1256" class="solid"></line>
+        <path d="M 120,1224 A 4,4 0,0,1 124,1228" class="nofill"></path>
+        <line x1="124" y1="1228" x2="124" y2="1252" class="solid"></line>
+        <line x1="100" y1="1240" x2="124" y2="1240" class="solid"></line>
+        <path d="M 100,1252 A 4,4 0,0,0 104,1256" class="nofill"></path>
+        <line x1="104" y1="1256" x2="120" y2="1256" class="solid"></line>
+        <path d="M 124,1252 A 4,4 0,0,1 120,1256" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="194" y1="1176" x2="222" y2="1176" class="solid"></line>
+        <line x1="194" y1="1176" x2="194" y2="1208" class="solid"></line>
+        <line x1="198" y1="1176" x2="198" y2="1208" class="solid"></line>
+        <line x1="210" y1="1176" x2="210" y2="1208" class="solid"></line>
+        <line x1="214" y1="1176" x2="214" y2="1208" class="solid"></line>
+        <line x1="218" y1="1176" x2="218" y2="1208" class="solid"></line>
+        <line x1="222" y1="1176" x2="222" y2="1208" class="solid"></line>
+        <line x1="198" y1="1192" x2="218" y2="1192" class="solid"></line>
+        <line x1="194" y1="1208" x2="222" y2="1208" class="solid"></line>
+    </g>
+    <g>
+        <line x1="244" y1="1176" x2="268" y2="1176" class="solid"></line>
+        <line x1="244" y1="1176" x2="244" y2="1212" class="solid"></line>
+        <line x1="244" y1="1180" x2="268" y2="1180" class="solid"></line>
+        <line x1="260" y1="1180" x2="260" y2="1208" class="solid"></line>
+        <line x1="268" y1="1176" x2="268" y2="1212" class="solid"></line>
+        <line x1="244" y1="1192" x2="268" y2="1192" class="solid"></line>
+        <line x1="244" y1="1196" x2="268" y2="1196" class="solid"></line>
+        <line x1="244" y1="1208" x2="268" y2="1208" class="solid"></line>
+        <line x1="244" y1="1212" x2="268" y2="1212" class="solid"></line>
+    </g>
+    <g>
+        <line x1="16" y1="1288" x2="24" y2="1288" class="solid"></line>
+        <polygon points="24,1284 32,1288 24,1292" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 40,1352 A 8,8 0,0,0 34,1356" class="nofill"></path>
+        <line x1="34" y1="1356" x2="20" y2="1384" class="solid"></line>
+        <line x1="40" y1="1352" x2="72" y2="1352" class="solid"></line>
+        <path d="M 72,1352 A 8,8 0,0,1 78,1356" class="nofill"></path>
+        <line x1="78" y1="1356" x2="92" y2="1384" class="solid"></line>
+        <line x1="20" y1="1384" x2="36" y2="1416" class="solid"></line>
+        <path d="M 152,1352 A 8,8 0,0,0 146,1356" class="nofill"></path>
+        <line x1="146" y1="1356" x2="132" y2="1384" class="solid"></line>
+        <line x1="152" y1="1352" x2="184" y2="1352" class="solid"></line>
+        <path d="M 184,1352 A 8,8 0,0,1 190,1356" class="nofill"></path>
+        <line x1="190" y1="1356" x2="204" y2="1384" class="solid"></line>
+        <line x1="92" y1="1384" x2="132" y2="1384" class="solid"></line>
+        <line x1="92" y1="1384" x2="76" y2="1416" class="solid"></line>
+        <line x1="132" y1="1384" x2="148" y2="1416" class="solid"></line>
+        <line x1="204" y1="1384" x2="240" y2="1384" class="solid"></line>
+        <line x1="204" y1="1384" x2="188" y2="1416" class="solid"></line>
+        <path d="M 240,1384 A 8,8 0,0,1 246,1388" class="nofill"></path>
+        <line x1="246" y1="1388" x2="260" y2="1416" class="solid"></line>
+        <line x1="36" y1="1416" x2="76" y2="1416" class="solid"></line>
+        <line x1="36" y1="1416" x2="20" y2="1448" class="solid"></line>
+        <line x1="76" y1="1416" x2="92" y2="1448" class="solid"></line>
+        <line x1="148" y1="1416" x2="188" y2="1416" class="solid"></line>
+        <line x1="148" y1="1416" x2="132" y2="1448" class="solid"></line>
+        <line x1="188" y1="1416" x2="204" y2="1448" class="solid"></line>
+        <line x1="260" y1="1416" x2="244" y2="1448" class="solid"></line>
+        <line x1="20" y1="1448" x2="34" y2="1476" class="solid"></line>
+        <line x1="92" y1="1448" x2="132" y2="1448" class="solid"></line>
+        <line x1="92" y1="1448" x2="76" y2="1480" class="solid"></line>
+        <line x1="132" y1="1448" x2="148" y2="1480" class="solid"></line>
+        <line x1="204" y1="1448" x2="244" y2="1448" class="solid"></line>
+        <line x1="204" y1="1448" x2="188" y2="1480" class="solid"></line>
+        <line x1="244" y1="1448" x2="260" y2="1480" class="solid"></line>
+        <path d="M 34,1476 A 8,8 0,0,0 40,1480" class="nofill"></path>
+        <line x1="40" y1="1480" x2="76" y2="1480" class="solid"></line>
+        <line x1="76" y1="1480" x2="90" y2="1508" class="solid"></line>
+        <line x1="148" y1="1480" x2="188" y2="1480" class="solid"></line>
+        <line x1="148" y1="1480" x2="134" y2="1508" class="solid"></line>
+        <line x1="188" y1="1480" x2="202" y2="1508" class="solid"></line>
+        <line x1="260" y1="1480" x2="246" y2="1508" class="solid"></line>
+        <path d="M 90,1508 A 8,8 0,0,0 96,1512" class="nofill"></path>
+        <line x1="96" y1="1512" x2="128" y2="1512" class="solid"></line>
+        <path d="M 134,1508 A 8,8 0,0,1 128,1512" class="nofill"></path>
+        <path d="M 202,1508 A 8,8 0,0,0 208,1512" class="nofill"></path>
+        <line x1="208" y1="1512" x2="240" y2="1512" class="solid"></line>
+        <path d="M 246,1508 A 8,8 0,0,1 240,1512" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 304,1368 A 4,4 0,0,0 300,1372" class="nofill"></path>
+        <line x1="300" y1="1372" x2="300" y2="1508" class="solid"></line>
+        <line x1="304" y1="1368" x2="440" y2="1368" class="solid"></line>
+        <line x1="348" y1="1368" x2="348" y2="1512" class="solid"></line>
+        <line x1="396" y1="1368" x2="396" y2="1512" class="solid"></line>
+        <path d="M 440,1368 A 4,4 0,0,1 444,1372" class="nofill"></path>
+        <line x1="444" y1="1372" x2="444" y2="1508" class="solid"></line>
+        <line x1="300" y1="1416" x2="444" y2="1416" class="solid"></line>
+        <line x1="300" y1="1464" x2="444" y2="1464" class="solid"></line>
+        <path d="M 300,1508 A 4,4 0,0,0 304,1512" class="nofill"></path>
+        <line x1="304" y1="1512" x2="440" y2="1512" class="solid"></line>
+        <path d="M 444,1508 A 4,4 0,0,1 440,1512" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 536,1384 A 8,8 0,0,0 530,1388" class="nofill"></path>
+        <line x1="530" y1="1388" x2="470" y2="1508" class="solid"></line>
+        <line x1="536" y1="1384" x2="724" y2="1384" class="solid"></line>
+        <line x1="580" y1="1384" x2="516" y2="1512" class="solid"></line>
+        <line x1="628" y1="1384" x2="564" y2="1512" class="solid"></line>
+        <line x1="676" y1="1384" x2="612" y2="1512" class="solid"></line>
+        <line x1="724" y1="1384" x2="660" y2="1512" class="solid"></line>
+        <line x1="516" y1="1416" x2="708" y2="1416" class="solid"></line>
+        <line x1="500" y1="1448" x2="692" y2="1448" class="solid"></line>
+        <line x1="484" y1="1480" x2="676" y2="1480" class="solid"></line>
+        <path d="M 470,1508 A 3,3 0,0,0 472,1512" class="nofill"></path>
+        <line x1="472" y1="1512" x2="660" y2="1512" class="solid"></line>
+    </g>
+    <g>
+        <line x1="56" y1="1616" x2="80" y2="1616" class="solid"></line>
+        <line x1="80" y1="1616" x2="88" y2="1632" class="solid"></line>
+        <line x1="88" y1="1632" x2="112" y2="1632" class="solid"></line>
+        <line x1="120" y1="1616" x2="144" y2="1616" class="solid"></line>
+        <line x1="120" y1="1616" x2="112" y2="1632" class="solid"></line>
+        <line x1="144" y1="1616" x2="152" y2="1632" class="solid"></line>
+        <line x1="112" y1="1632" x2="120" y2="1648" class="solid"></line>
+        <line x1="120" y1="1648" x2="144" y2="1648" class="solid"></line>
+        <line x1="152" y1="1632" x2="144" y2="1648" class="solid"></line>
+        <line x1="144" y1="1648" x2="152" y2="1664" class="solid"></line>
+        <line x1="24" y1="1632" x2="48" y2="1632" class="solid"></line>
+        <line x1="56" y1="1616" x2="48" y2="1632" class="solid"></line>
+        <line x1="24" y1="1632" x2="16" y2="1648" class="solid"></line>
+        <line x1="48" y1="1632" x2="56" y2="1648" class="solid"></line>
+        <line x1="56" y1="1648" x2="80" y2="1648" class="solid"></line>
+        <line x1="88" y1="1632" x2="80" y2="1648" class="solid"></line>
+        <line x1="16" y1="1648" x2="24" y2="1664" class="solid"></line>
+        <line x1="24" y1="1664" x2="48" y2="1664" class="solid"></line>
+        <line x1="56" y1="1648" x2="48" y2="1664" class="solid"></line>
+        <line x1="80" y1="1648" x2="88" y2="1664" class="solid"></line>
+        <line x1="88" y1="1664" x2="112" y2="1664" class="solid"></line>
+        <line x1="120" y1="1648" x2="112" y2="1664" class="solid"></line>
+        <line x1="24" y1="1664" x2="16" y2="1680" class="solid"></line>
+        <line x1="48" y1="1664" x2="56" y2="1680" class="solid"></line>
+        <line x1="56" y1="1680" x2="80" y2="1680" class="solid"></line>
+        <line x1="88" y1="1664" x2="80" y2="1680" class="solid"></line>
+        <line x1="112" y1="1664" x2="120" y2="1680" class="solid"></line>
+        <line x1="120" y1="1680" x2="144" y2="1680" class="solid"></line>
+        <line x1="152" y1="1664" x2="144" y2="1680" class="solid"></line>
+        <line x1="16" y1="1680" x2="24" y2="1696" class="solid"></line>
+        <line x1="24" y1="1696" x2="48" y2="1696" class="solid"></line>
+        <line x1="56" y1="1680" x2="48" y2="1696" class="solid"></line>
+        <line x1="80" y1="1680" x2="88" y2="1696" class="solid"></line>
+        <line x1="88" y1="1696" x2="112" y2="1696" class="solid"></line>
+        <line x1="120" y1="1680" x2="112" y2="1696" class="solid"></line>
+        <line x1="144" y1="1680" x2="152" y2="1696" class="solid"></line>
+        <line x1="48" y1="1696" x2="56" y2="1712" class="solid"></line>
+        <line x1="56" y1="1712" x2="80" y2="1712" class="solid"></line>
+        <line x1="88" y1="1696" x2="80" y2="1712" class="solid"></line>
+        <line x1="112" y1="1696" x2="120" y2="1712" class="solid"></line>
+        <line x1="120" y1="1712" x2="144" y2="1712" class="solid"></line>
+        <line x1="152" y1="1696" x2="144" y2="1712" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 200,1608 A 4,4 0,0,0 196,1612" class="nofill"></path>
+        <line x1="196" y1="1612" x2="196" y2="1700" class="solid"></line>
+        <line x1="200" y1="1608" x2="352" y2="1608" class="solid"></line>
+        <line x1="228" y1="1608" x2="228" y2="1704" class="solid"></line>
+        <line x1="260" y1="1608" x2="260" y2="1704" class="solid"></line>
+        <line x1="292" y1="1608" x2="292" y2="1704" class="solid"></line>
+        <line x1="324" y1="1608" x2="324" y2="1704" class="solid"></line>
+        <path d="M 352,1608 A 4,4 0,0,1 356,1612" class="nofill"></path>
+        <line x1="356" y1="1612" x2="356" y2="1700" class="solid"></line>
+        <line x1="196" y1="1640" x2="356" y2="1640" class="solid"></line>
+        <line x1="196" y1="1672" x2="356" y2="1672" class="solid"></line>
+        <path d="M 196,1700 A 4,4 0,0,0 200,1704" class="nofill"></path>
+        <line x1="200" y1="1704" x2="352" y2="1704" class="solid"></line>
+        <path d="M 356,1700 A 4,4 0,0,1 352,1704" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="404" y1="1608" x2="388" y2="1640" class="solid"></line>
+        <line x1="404" y1="1608" x2="452" y2="1704" class="solid"></line>
+        <path d="M 408,1608 A 8,8 0,0,0 402,1612" class="nofill"></path>
+        <path d="M 408,1608 A 3,3 0,0,0 406,1612" class="nofill"></path>
+        <line x1="408" y1="1608" x2="528" y2="1608" class="solid"></line>
+        <line x1="436" y1="1608" x2="390" y2="1700" class="solid"></line>
+        <line x1="436" y1="1608" x2="484" y2="1704" class="solid"></line>
+        <line x1="468" y1="1608" x2="420" y2="1704" class="solid"></line>
+        <line x1="468" y1="1608" x2="516" y2="1704" class="solid"></line>
+        <line x1="500" y1="1608" x2="452" y2="1704" class="solid"></line>
+        <line x1="500" y1="1608" x2="532" y2="1672" class="solid"></line>
+        <path d="M 528,1608 A 3,3 0,0,1 530,1612" class="nofill"></path>
+        <line x1="530" y1="1612" x2="484" y2="1704" class="solid"></line>
+        <line x1="388" y1="1640" x2="516" y2="1640" class="solid"></line>
+        <line x1="388" y1="1640" x2="420" y2="1704" class="solid"></line>
+        <line x1="404" y1="1672" x2="532" y2="1672" class="solid"></line>
+        <line x1="532" y1="1672" x2="516" y2="1704" class="solid"></line>
+        <path d="M 390,1700 A 3,3 0,0,0 392,1704" class="nofill"></path>
+        <line x1="392" y1="1704" x2="512" y2="1704" class="solid"></line>
+        <path d="M 514,1700 A 3,3 0,0,1 512,1704" class="nofill"></path>
+        <path d="M 518,1700 A 8,8 0,0,1 512,1704" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 560,1608 A 4,4 0,0,0 556,1612" class="nofill"></path>
+        <line x1="556" y1="1612" x2="556" y2="1700" class="solid"></line>
+        <line x1="560" y1="1608" x2="584" y2="1608" class="solid"></line>
+        <path d="M 584,1608 A 4,4 0,0,1 588,1612" class="nofill"></path>
+        <line x1="588" y1="1612" x2="588" y2="1700" class="solid"></line>
+        <line x1="556" y1="1640" x2="588" y2="1640" class="solid"></line>
+        <line x1="556" y1="1672" x2="588" y2="1672" class="solid"></line>
+        <path d="M 556,1700 A 4,4 0,0,0 560,1704" class="nofill"></path>
+        <line x1="560" y1="1704" x2="584" y2="1704" class="solid"></line>
+        <path d="M 588,1700 A 4,4 0,0,1 584,1704" class="nofill"></path>
+        <path d="M 624,1608 A 4,4 0,0,0 620,1612" class="nofill"></path>
+        <line x1="620" y1="1612" x2="620" y2="1700" class="solid"></line>
+        <line x1="624" y1="1608" x2="648" y2="1608" class="solid"></line>
+        <path d="M 648,1608 A 4,4 0,0,1 652,1612" class="nofill"></path>
+        <line x1="652" y1="1612" x2="652" y2="1700" class="solid"></line>
+        <line x1="588" y1="1624" x2="620" y2="1624" class="solid"></line>
+        <line x1="620" y1="1640" x2="652" y2="1640" class="solid"></line>
+        <line x1="588" y1="1656" x2="620" y2="1656" class="solid"></line>
+        <line x1="620" y1="1672" x2="652" y2="1672" class="solid"></line>
+        <line x1="588" y1="1688" x2="620" y2="1688" class="solid"></line>
+        <path d="M 620,1700 A 4,4 0,0,0 624,1704" class="nofill"></path>
+        <line x1="624" y1="1704" x2="648" y2="1704" class="solid"></line>
+        <path d="M 652,1700 A 4,4 0,0,1 648,1704" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="16" y1="1752" x2="24" y2="1752" class="solid"></line>
+        <polygon points="24,1748 32,1752 24,1756" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="618" y1="1788" x2="598" y2="1828" class="solid"></line>
+        <polygon points="601,1828 594,1836 594,1825" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="569,1804 562,1796 562,1807" class="filled"></polygon>
+        <line x1="566" y1="1804" x2="586" y2="1844" class="solid"></line>
+    </g>
+    <g>
+        <line x1="334" y1="1804" x2="370" y2="1876" class="solid"></line>
+        <polygon points="367,1876 374,1884 374,1873" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="488" y1="1792" x2="476" y2="1816" class="solid"></line>
+        <line x1="476" y1="1816" x2="488" y2="1840" class="solid"></line>
+    </g>
+    <g>
+        <polygon points="168,1836 172,1824 176,1836" class="filled"></polygon>
+        <line x1="172" y1="1836" x2="172" y2="1880" class="solid"></line>
+        <line x1="172" y1="1880" x2="216" y2="1880" class="solid"></line>
+        <line x1="172" y1="1880" x2="158" y2="1908" class="solid"></line>
+        <polygon points="216,1876 224,1880 216,1884" class="filled"></polygon>
+        <polygon points="161,1908 154,1916 154,1905" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 192,1864 A 4,4 0,0,1 196,1868" class="nofill"></path>
+        <line x1="196" y1="1868" x2="196" y2="1872" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 520,1880 A 8,8 0,0,1 526,1884" class="nofill"></path>
+        <line x1="526" y1="1884" x2="528" y2="1888" class="solid"></line>
+        <path d="M 528,1888 A 16,16 0,0,1 528,1904" class="nofill"></path>
+        <line x1="528" y1="1904" x2="526" y2="1908" class="solid"></line>
+        <line x1="520" y1="1888" x2="510" y2="1908" class="solid"></line>
+        <path d="M 510,1908 A 3,3 0,0,0 512,1912" class="nofill"></path>
+        <line x1="512" y1="1912" x2="520" y2="1912" class="solid"></line>
+        <path d="M 526,1908 A 8,8 0,0,1 520,1912" class="nofill"></path>
+    </g>
+    <g>
+        <polygon points="536,1876 528,1880 536,1884" class="filled"></polygon>
+        <line x1="536" y1="1880" x2="600" y2="1880" class="solid"></line>
+    </g>
+    <g>
+        <line x1="508" y1="1920" x2="508" y2="1940" class="solid"></line>
+        <polygon points="504,1940 512,1940 508,1952" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="16" y1="1992" x2="24" y2="1992" class="solid"></line>
+        <polygon points="24,1988 32,1992 24,1996" class="filled"></polygon>
+    </g>
+    <g>
+        <text x="114" y="2044">文</text>
+        <text x="130" y="2044">件</text>
+        <text x="146" y="2044">系</text>
+        <text x="162" y="2044">统</text>
+    </g>
+    <g>
+        <text x="258" y="2044">调</text>
+        <text x="274" y="2044">度</text>
+        <text x="290" y="2044">器</text>
+    </g>
+    <g>
+        <line x1="16" y1="2088" x2="24" y2="2088" class="solid"></line>
+        <polygon points="24,2084 32,2088 24,2092" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 288,2120 A 8,8 0,0,0 282,2124" class="nofill"></path>
+        <line x1="282" y1="2124" x2="270" y2="2148" class="solid"></line>
+        <line x1="288" y1="2120" x2="312" y2="2120" class="solid"></line>
+        <polygon points="312,2116 320,2120 312,2124" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="150" y1="2156" x2="162" y2="2180" class="solid"></line>
+        <polygon points="159,2180 166,2188 166,2177" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="270" y1="2156" x2="282" y2="2180" class="solid"></line>
+        <path d="M 282,2180 A 8,8 0,0,0 288,2184" class="nofill"></path>
+        <line x1="288" y1="2184" x2="312" y2="2184" class="solid"></line>
+        <polygon points="312,2180 320,2184 312,2188" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="272" y1="2152" x2="312" y2="2152" class="solid"></line>
+        <polygon points="312,2148 320,2152 312,2156" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="255,2172 262,2164 262,2175" class="filled"></polygon>
+        <line x1="258" y1="2172" x2="246" y2="2196" class="solid"></line>
+        <line x1="232" y1="2200" x2="240" y2="2200" class="solid"></line>
+        <path d="M 246,2196 A 8,8 0,0,1 240,2200" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="184" y1="2200" x2="200" y2="2200" class="solid"></line>
+        <polygon points="200,2196 208,2200 200,2204" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="220" y1="2272" x2="220" y2="2296" class="solid"></line>
+        <line x1="220" y1="2296" x2="208" y2="2320" class="solid"></line>
+        <line x1="220" y1="2296" x2="232" y2="2320" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 80,2296 A 4,4 0,0,0 76,2300" class="nofill"></path>
+        <line x1="76" y1="2300" x2="76" y2="2324" class="solid"></line>
+        <line x1="80" y1="2296" x2="104" y2="2296" class="solid"></line>
+        <path d="M 104,2296 A 4,4 0,0,1 108,2300" class="nofill"></path>
+        <line x1="108" y1="2300" x2="108" y2="2324" class="solid"></line>
+        <path d="M 76,2324 A 4,4 0,0,0 80,2328" class="nofill"></path>
+        <line x1="80" y1="2328" x2="104" y2="2328" class="solid"></line>
+        <line x1="92" y1="2328" x2="92" y2="2424" class="solid"></line>
+        <path d="M 108,2324 A 4,4 0,0,1 104,2328" class="nofill"></path>
+        <line x1="92" y1="2360" x2="208" y2="2360" class="solid"></line>
+        <polygon points="208,2356 216,2360 208,2364" class="filled"></polygon>
+        <path d="M 80,2424 A 4,4 0,0,0 76,2428" class="nofill"></path>
+        <line x1="76" y1="2428" x2="76" y2="2452" class="solid"></line>
+        <line x1="80" y1="2424" x2="104" y2="2424" class="solid"></line>
+        <path d="M 104,2424 A 4,4 0,0,1 108,2428" class="nofill"></path>
+        <line x1="108" y1="2428" x2="108" y2="2452" class="solid"></line>
+        <path d="M 76,2452 A 4,4 0,0,0 80,2456" class="nofill"></path>
+        <line x1="80" y1="2456" x2="104" y2="2456" class="solid"></line>
+        <path d="M 108,2452 A 4,4 0,0,1 104,2456" class="nofill"></path>
+    </g>
+    <g>
+        <polygon points="104,2404 96,2408 104,2412" class="filled"></polygon>
+        <line x1="104" y1="2408" x2="112" y2="2408" class="solid"></line>
+    </g>
+    <g>
+        <line x1="220" y1="2464" x2="220" y2="2488" class="solid"></line>
+        <line x1="220" y1="2488" x2="208" y2="2512" class="solid"></line>
+        <line x1="220" y1="2488" x2="232" y2="2512" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 120,2552 A 8,8 0,0,0 114,2556" class="nofill"></path>
+        <line x1="114" y1="2556" x2="112" y2="2560" class="solid"></line>
+        <line x1="120" y1="2552" x2="128" y2="2552" class="solid"></line>
+        <path d="M 128,2552 A 8,8 0,0,1 134,2556" class="nofill"></path>
+        <line x1="134" y1="2556" x2="136" y2="2560" class="solid"></line>
+        <path d="M 112,2560 A 16,16 0,0,0 112,2576" class="nofill"></path>
+        <path d="M 136,2560 A 16,16 0,0,1 136,2576" class="nofill"></path>
+        <line x1="112" y1="2576" x2="114" y2="2580" class="solid"></line>
+        <path d="M 114,2580 A 8,8 0,0,0 120,2584" class="nofill"></path>
+        <line x1="120" y1="2584" x2="128" y2="2584" class="solid"></line>
+        <line x1="136" y1="2576" x2="134" y2="2580" class="solid"></line>
+        <path d="M 134,2580 A 8,8 0,0,1 128,2584" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="104" y1="2592" x2="86" y2="2628" class="solid"></line>
+        <polygon points="89,2628 82,2636 82,2625" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 80,2648 A 8,8 0,0,0 74,2652" class="nofill"></path>
+        <line x1="74" y1="2652" x2="72" y2="2656" class="solid"></line>
+        <line x1="80" y1="2648" x2="88" y2="2648" class="solid"></line>
+        <path d="M 88,2648 A 8,8 0,0,1 94,2652" class="nofill"></path>
+        <line x1="94" y1="2652" x2="96" y2="2656" class="solid"></line>
+        <path d="M 72,2656 A 16,16 0,0,0 72,2672" class="nofill"></path>
+        <path d="M 96,2656 A 16,16 0,0,1 96,2672" class="nofill"></path>
+        <line x1="72" y1="2672" x2="74" y2="2676" class="solid"></line>
+        <path d="M 74,2676 A 8,8 0,0,0 80,2680" class="nofill"></path>
+        <line x1="80" y1="2680" x2="88" y2="2680" class="solid"></line>
+        <line x1="96" y1="2672" x2="94" y2="2676" class="solid"></line>
+        <path d="M 94,2676 A 8,8 0,0,1 88,2680" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="88" y1="2688" x2="106" y2="2724" class="solid"></line>
+        <polygon points="103,2724 110,2732 110,2721" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 112,2744 A 8,8 0,0,0 106,2748" class="nofill"></path>
+        <line x1="106" y1="2748" x2="104" y2="2752" class="solid"></line>
+        <line x1="112" y1="2744" x2="120" y2="2744" class="solid"></line>
+        <path d="M 120,2744 A 8,8 0,0,1 126,2748" class="nofill"></path>
+        <line x1="126" y1="2748" x2="128" y2="2752" class="solid"></line>
+        <path d="M 104,2752 A 16,16 0,0,0 104,2768" class="nofill"></path>
+        <path d="M 128,2752 A 16,16 0,0,1 128,2768" class="nofill"></path>
+        <line x1="104" y1="2768" x2="106" y2="2772" class="solid"></line>
+        <path d="M 106,2772 A 8,8 0,0,0 112,2776" class="nofill"></path>
+        <line x1="112" y1="2776" x2="120" y2="2776" class="solid"></line>
+        <line x1="128" y1="2768" x2="126" y2="2772" class="solid"></line>
+        <path d="M 126,2772 A 8,8 0,0,1 120,2776" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="144" y1="2592" x2="162" y2="2628" class="solid"></line>
+        <polygon points="159,2628 166,2636 166,2625" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 176,2648 A 8,8 0,0,0 170,2652" class="nofill"></path>
+        <line x1="170" y1="2652" x2="168" y2="2656" class="solid"></line>
+        <line x1="176" y1="2648" x2="184" y2="2648" class="solid"></line>
+        <path d="M 184,2648 A 8,8 0,0,1 190,2652" class="nofill"></path>
+        <line x1="190" y1="2652" x2="192" y2="2656" class="solid"></line>
+        <path d="M 168,2656 A 16,16 0,0,0 168,2672" class="nofill"></path>
+        <path d="M 192,2656 A 16,16 0,0,1 192,2672" class="nofill"></path>
+        <line x1="168" y1="2672" x2="170" y2="2676" class="solid"></line>
+        <path d="M 170,2676 A 8,8 0,0,0 176,2680" class="nofill"></path>
+        <line x1="176" y1="2680" x2="184" y2="2680" class="solid"></line>
+        <line x1="192" y1="2672" x2="190" y2="2676" class="solid"></line>
+        <path d="M 190,2676 A 8,8 0,0,1 184,2680" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="172" y1="2688" x2="172" y2="2740" class="solid"></line>
+        <polygon points="168,2740 176,2740 172,2752" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="192" y1="2688" x2="218" y2="2740" class="solid"></line>
+        <polygon points="215,2740 222,2748 222,2737" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="204" y1="2680" x2="252" y2="2728" class="broken"></line>
+        <polygon points="256,2740 264,2744 260,2736" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 176,2760 A 8,8 0,0,0 170,2764" class="nofill"></path>
+        <line x1="170" y1="2764" x2="168" y2="2768" class="solid"></line>
+        <line x1="176" y1="2760" x2="184" y2="2760" class="solid"></line>
+        <path d="M 184,2760 A 8,8 0,0,1 190,2764" class="nofill"></path>
+        <line x1="190" y1="2764" x2="192" y2="2768" class="solid"></line>
+        <path d="M 168,2768 A 16,16 0,0,0 168,2784" class="nofill"></path>
+        <path d="M 192,2768 A 16,16 0,0,1 192,2784" class="nofill"></path>
+        <line x1="168" y1="2784" x2="170" y2="2788" class="solid"></line>
+        <path d="M 170,2788 A 8,8 0,0,0 176,2792" class="nofill"></path>
+        <line x1="176" y1="2792" x2="184" y2="2792" class="solid"></line>
+        <line x1="192" y1="2784" x2="190" y2="2788" class="solid"></line>
+        <path d="M 190,2788 A 8,8 0,0,1 184,2792" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 224,2760 A 8,8 0,0,0 218,2764" class="nofill"></path>
+        <line x1="218" y1="2764" x2="216" y2="2768" class="solid"></line>
+        <line x1="224" y1="2760" x2="232" y2="2760" class="solid"></line>
+        <path d="M 232,2760 A 8,8 0,0,1 238,2764" class="nofill"></path>
+        <line x1="238" y1="2764" x2="240" y2="2768" class="solid"></line>
+        <path d="M 216,2768 A 16,16 0,0,0 216,2784" class="nofill"></path>
+        <path d="M 240,2768 A 16,16 0,0,1 240,2784" class="nofill"></path>
+        <line x1="216" y1="2784" x2="218" y2="2788" class="solid"></line>
+        <path d="M 218,2788 A 8,8 0,0,0 224,2792" class="nofill"></path>
+        <line x1="224" y1="2792" x2="232" y2="2792" class="solid"></line>
+        <line x1="240" y1="2784" x2="238" y2="2788" class="solid"></line>
+        <path d="M 238,2788 A 8,8 0,0,1 232,2792" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 272,2760 A 8,8 0,0,0 266,2764" class="nofill"></path>
+        <line x1="266" y1="2764" x2="264" y2="2768" class="solid"></line>
+        <line x1="272" y1="2760" x2="280" y2="2760" class="solid"></line>
+        <path d="M 280,2760 A 8,8 0,0,1 286,2764" class="nofill"></path>
+        <line x1="286" y1="2764" x2="288" y2="2768" class="solid"></line>
+        <path d="M 264,2768 A 16,16 0,0,0 264,2784" class="nofill"></path>
+        <path d="M 288,2768 A 16,16 0,0,1 288,2784" class="nofill"></path>
+        <line x1="264" y1="2784" x2="266" y2="2788" class="solid"></line>
+        <path d="M 266,2788 A 8,8 0,0,0 272,2792" class="nofill"></path>
+        <line x1="272" y1="2792" x2="280" y2="2792" class="solid"></line>
+        <line x1="288" y1="2784" x2="286" y2="2788" class="solid"></line>
+        <path d="M 286,2788 A 8,8 0,0,1 280,2792" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="64" y1="2688" x2="46" y2="2724" class="solid"></line>
+        <polygon points="49,2724 42,2732 42,2721" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 40,2744 A 8,8 0,0,0 34,2748" class="nofill"></path>
+        <line x1="34" y1="2748" x2="32" y2="2752" class="solid"></line>
+        <line x1="40" y1="2744" x2="48" y2="2744" class="solid"></line>
+        <path d="M 48,2744 A 8,8 0,0,1 54,2748" class="nofill"></path>
+        <line x1="54" y1="2748" x2="56" y2="2752" class="solid"></line>
+        <path d="M 32,2752 A 16,16 0,0,0 32,2768" class="nofill"></path>
+        <path d="M 56,2752 A 16,16 0,0,1 56,2768" class="nofill"></path>
+        <line x1="32" y1="2768" x2="34" y2="2772" class="solid"></line>
+        <path d="M 34,2772 A 8,8 0,0,0 40,2776" class="nofill"></path>
+        <line x1="40" y1="2776" x2="48" y2="2776" class="solid"></line>
+        <line x1="56" y1="2768" x2="54" y2="2772" class="solid"></line>
+        <path d="M 54,2772 A 8,8 0,0,1 48,2776" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="16" y1="2856" x2="24" y2="2856" class="solid"></line>
+        <polygon points="24,2852 32,2856 24,2860" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="64,2892 68,2880 72,2892" class="filled"></polygon>
+        <line x1="68" y1="2892" x2="68" y2="2948" class="broken"></line>
+    </g>
+    <g>
+        <path d="M 104,2904 A 4,4 0,0,0 100,2908" class="nofill"></path>
+        <line x1="100" y1="2908" x2="100" y2="2948" class="solid"></line>
+        <line x1="104" y1="2904" x2="296" y2="2904" class="solid"></line>
+        <line x1="72" y1="2952" x2="96" y2="2952" class="solid"></line>
+        <path d="M 100,2948 A 4,4 0,0,1 96,2952" class="nofill"></path>
+        <path d="M 100,2948 A 4,4 0,0,0 104,2952" class="nofill"></path>
+        <line x1="104" y1="2952" x2="296" y2="2952" class="broken"></line>
+        <polygon points="296,2948 304,2952 296,2956" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="64,2988 68,2976 72,2988" class="filled"></polygon>
+        <line x1="68" y1="2988" x2="68" y2="3044" class="broken"></line>
+    </g>
+    <g>
+        <path d="M 128,3000 A 8,8 0,0,0 122,3004" class="nofill"></path>
+        <line x1="122" y1="3004" x2="102" y2="3044" class="solid"></line>
+        <line x1="128" y1="3000" x2="296" y2="3000" class="solid"></line>
+        <line x1="72" y1="3048" x2="96" y2="3048" class="solid"></line>
+        <path d="M 102,3044 A 8,8 0,0,1 96,3048" class="nofill"></path>
+        <path d="M 102,3044 A 3,3 0,0,0 104,3048" class="nofill"></path>
+        <line x1="104" y1="3048" x2="136" y2="3048" class="broken"></line>
+    </g>
+    <g>
+        <line x1="144" y1="3048" x2="296" y2="3048" class="broken"></line>
+        <polygon points="296,3044 304,3048 296,3052" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="152,3060 144,3064 152,3068" class="filled"></polygon>
+        <line x1="152" y1="3064" x2="192" y2="3064" class="solid"></line>
+        <polygon points="192,3060 200,3064 192,3068" class="filled"></polygon>
+    </g>
+    <g>
+        <polygon points="64,3084 68,3072 72,3084" class="filled"></polygon>
+        <line x1="68" y1="3084" x2="68" y2="3156" class="broken"></line>
+    </g>
+    <g>
+        <line x1="72" y1="3112" x2="200" y2="3112" class="broken"></line>
+        <path d="M 200,3112 A 4,4 0,0,1 204,3116" class="nofill"></path>
+        <path d="M 208,3112 A 4,4 0,0,0 204,3116" class="nofill"></path>
+        <line x1="204" y1="3116" x2="204" y2="3156" class="solid"></line>
+        <line x1="208" y1="3112" x2="296" y2="3112" class="solid"></line>
+        <line x1="72" y1="3160" x2="200" y2="3160" class="solid"></line>
+        <path d="M 204,3156 A 4,4 0,0,1 200,3160" class="nofill"></path>
+        <path d="M 204,3156 A 4,4 0,0,0 208,3160" class="nofill"></path>
+        <line x1="208" y1="3160" x2="296" y2="3160" class="broken"></line>
+        <polygon points="296,3156 304,3160 296,3164" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="16" y1="3192" x2="24" y2="3192" class="solid"></line>
+        <polygon points="24,3188 32,3192 24,3196" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="124" y1="3224" x2="180" y2="3224" class="solid"></line>
+        <line x1="124" y1="3224" x2="124" y2="3256" class="solid"></line>
+        <line x1="180" y1="3224" x2="180" y2="3256" class="solid"></line>
+        <line x1="96" y1="3240" x2="124" y2="3240" class="solid"></line>
+        <line x1="180" y1="3240" x2="200" y2="3240" class="solid"></line>
+        <line x1="124" y1="3256" x2="180" y2="3256" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 216,3224 A 8,8 0,0,0 210,3228" class="nofill"></path>
+        <line x1="210" y1="3228" x2="208" y2="3232" class="solid"></line>
+        <line x1="216" y1="3224" x2="224" y2="3224" class="solid"></line>
+        <path d="M 224,3224 A 8,8 0,0,1 230,3228" class="nofill"></path>
+        <line x1="230" y1="3228" x2="232" y2="3232" class="solid"></line>
+        <path d="M 208,3232 A 16,16 0,0,0 208,3248" class="nofill"></path>
+        <path d="M 232,3232 A 16,16 0,0,1 232,3248" class="nofill"></path>
+        <line x1="208" y1="3248" x2="210" y2="3252" class="solid"></line>
+        <path d="M 210,3252 A 8,8 0,0,0 216,3256" class="nofill"></path>
+        <line x1="216" y1="3256" x2="224" y2="3256" class="solid"></line>
+        <line x1="232" y1="3248" x2="230" y2="3252" class="solid"></line>
+        <path d="M 230,3252 A 8,8 0,0,1 224,3256" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="252" y1="3224" x2="284" y2="3224" class="solid"></line>
+        <line x1="252" y1="3224" x2="252" y2="3256" class="solid"></line>
+        <line x1="284" y1="3224" x2="284" y2="3256" class="solid"></line>
+        <line x1="240" y1="3240" x2="252" y2="3240" class="solid"></line>
+        <line x1="284" y1="3240" x2="304" y2="3240" class="solid"></line>
+        <line x1="252" y1="3256" x2="284" y2="3256" class="solid"></line>
+    </g>
+    <g>
+        <line x1="72" y1="3240" x2="88" y2="3240" class="solid"></line>
+        <path d="M 88,3240 A 4,4 0,0,1 92,3244" class="nofill"></path>
+        <line x1="92" y1="3244" x2="92" y2="3300" class="solid"></line>
+        <path d="M 92,3300 A 4,4 0,0,0 96,3304" class="nofill"></path>
+        <line x1="96" y1="3304" x2="104" y2="3304" class="solid"></line>
+        <path d="M 112,3272 A 4,4 0,0,0 108,3276" class="nofill"></path>
+        <line x1="108" y1="3276" x2="108" y2="3300" class="solid"></line>
+        <line x1="112" y1="3272" x2="160" y2="3272" class="solid"></line>
+        <polygon points="160,3268 168,3272 160,3276" class="filled"></polygon>
+        <line x1="168" y1="3272" x2="216" y2="3272" class="solid"></line>
+        <path d="M 216,3272 A 4,4 0,0,1 220,3276" class="nofill"></path>
+        <line x1="220" y1="3276" x2="220" y2="3300" class="solid"></line>
+        <path d="M 108,3300 A 4,4 0,0,1 104,3304" class="nofill"></path>
+        <path d="M 220,3300 A 4,4 0,0,0 224,3304" class="nofill"></path>
+        <line x1="224" y1="3304" x2="304" y2="3304" class="solid"></line>
+        <path d="M 308,3300 A 4,4 0,0,1 304,3304" class="nofill"></path>
+        <path d="M 312,3240 A 4,4 0,0,0 308,3244" class="nofill"></path>
+        <line x1="308" y1="3244" x2="308" y2="3300" class="solid"></line>
+        <line x1="312" y1="3240" x2="328" y2="3240" class="solid"></line>
+    </g>
+    <g>
+        <line x1="148" y1="3288" x2="180" y2="3288" class="solid"></line>
+        <line x1="148" y1="3288" x2="148" y2="3320" class="solid"></line>
+        <line x1="180" y1="3288" x2="180" y2="3320" class="solid"></line>
+        <line x1="180" y1="3304" x2="200" y2="3304" class="solid"></line>
+        <path d="M 200,3304 A 4,4 0,0,1 204,3308" class="nofill"></path>
+        <line x1="204" y1="3308" x2="204" y2="3348" class="solid"></line>
+        <line x1="148" y1="3320" x2="180" y2="3320" class="solid"></line>
+        <path d="M 128,3304 A 4,4 0,0,0 124,3308" class="nofill"></path>
+        <line x1="124" y1="3308" x2="124" y2="3348" class="solid"></line>
+        <line x1="128" y1="3304" x2="148" y2="3304" class="solid"></line>
+        <path d="M 124,3348 A 4,4 0,0,0 128,3352" class="nofill"></path>
+        <line x1="128" y1="3352" x2="144" y2="3352" class="solid"></line>
+        <line x1="184" y1="3352" x2="200" y2="3352" class="solid"></line>
+        <path d="M 204,3348 A 4,4 0,0,1 200,3352" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="92" y1="3312" x2="92" y2="3412" class="solid"></line>
+        <path d="M 92,3412 A 4,4 0,0,0 96,3416" class="nofill"></path>
+        <line x1="96" y1="3416" x2="112" y2="3416" class="solid"></line>
+    </g>
+    <g>
+        <line x1="308" y1="3312" x2="308" y2="3344" class="solid"></line>
+        <polygon points="304,3356 308,3344 312,3356" class="filled"></polygon>
+        <line x1="308" y1="3356" x2="308" y2="3412" class="solid"></line>
+        <line x1="272" y1="3416" x2="304" y2="3416" class="solid"></line>
+        <path d="M 308,3412 A 4,4 0,0,1 304,3416" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 160,3336 A 8,8 0,0,0 154,3340" class="nofill"></path>
+        <line x1="154" y1="3340" x2="152" y2="3344" class="solid"></line>
+        <line x1="160" y1="3336" x2="168" y2="3336" class="solid"></line>
+        <path d="M 168,3336 A 8,8 0,0,1 174,3340" class="nofill"></path>
+        <line x1="174" y1="3340" x2="176" y2="3344" class="solid"></line>
+        <path d="M 152,3344 A 16,16 0,0,0 152,3360" class="nofill"></path>
+        <path d="M 176,3344 A 16,16 0,0,1 176,3360" class="nofill"></path>
+        <line x1="152" y1="3360" x2="154" y2="3364" class="solid"></line>
+        <path d="M 154,3364 A 8,8 0,0,0 160,3368" class="nofill"></path>
+        <line x1="160" y1="3368" x2="168" y2="3368" class="solid"></line>
+        <line x1="176" y1="3360" x2="174" y2="3364" class="solid"></line>
+        <path d="M 174,3364 A 8,8 0,0,1 168,3368" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 120,3384 A 4,4 0,0,0 116,3388" class="nofill"></path>
+        <line x1="116" y1="3388" x2="116" y2="3412" class="solid"></line>
+        <line x1="120" y1="3384" x2="184" y2="3384" class="solid"></line>
+        <polygon points="184,3380 192,3384 184,3388" class="filled"></polygon>
+        <line x1="192" y1="3384" x2="264" y2="3384" class="solid"></line>
+        <path d="M 264,3384 A 4,4 0,0,1 268,3388" class="nofill"></path>
+        <line x1="268" y1="3388" x2="268" y2="3412" class="solid"></line>
+        <path d="M 116,3412 A 4,4 0,0,0 120,3416" class="nofill"></path>
+        <line x1="120" y1="3416" x2="128" y2="3416" class="solid"></line>
+        <line x1="256" y1="3416" x2="264" y2="3416" class="solid"></line>
+        <path d="M 268,3412 A 4,4 0,0,1 264,3416" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="148" y1="3400" x2="180" y2="3400" class="solid"></line>
+        <line x1="148" y1="3400" x2="148" y2="3432" class="solid"></line>
+        <line x1="180" y1="3400" x2="180" y2="3432" class="solid"></line>
+        <line x1="180" y1="3416" x2="200" y2="3416" class="solid"></line>
+        <line x1="148" y1="3432" x2="180" y2="3432" class="solid"></line>
+        <path d="M 136,3416 A 4,4 0,0,0 132,3420" class="nofill"></path>
+        <line x1="132" y1="3420" x2="132" y2="3444" class="solid"></line>
+        <line x1="136" y1="3416" x2="148" y2="3416" class="solid"></line>
+        <path d="M 132,3444 A 4,4 0,0,0 136,3448" class="nofill"></path>
+        <line x1="136" y1="3448" x2="192" y2="3448" class="solid"></line>
+        <polygon points="200,3444 192,3448 200,3452" class="filled"></polygon>
+        <line x1="200" y1="3448" x2="248" y2="3448" class="solid"></line>
+        <line x1="240" y1="3416" x2="248" y2="3416" class="solid"></line>
+        <path d="M 248,3416 A 4,4 0,0,1 252,3420" class="nofill"></path>
+        <line x1="252" y1="3420" x2="252" y2="3444" class="solid"></line>
+        <path d="M 252,3444 A 4,4 0,0,1 248,3448" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 216,3400 A 8,8 0,0,0 210,3404" class="nofill"></path>
+        <line x1="210" y1="3404" x2="208" y2="3408" class="solid"></line>
+        <line x1="216" y1="3400" x2="224" y2="3400" class="solid"></line>
+        <path d="M 224,3400 A 8,8 0,0,1 230,3404" class="nofill"></path>
+        <line x1="230" y1="3404" x2="232" y2="3408" class="solid"></line>
+        <path d="M 208,3408 A 16,16 0,0,0 208,3424" class="nofill"></path>
+        <path d="M 232,3408 A 16,16 0,0,1 232,3424" class="nofill"></path>
+        <line x1="208" y1="3424" x2="210" y2="3428" class="solid"></line>
+        <path d="M 210,3428 A 8,8 0,0,0 216,3432" class="nofill"></path>
+        <line x1="216" y1="3432" x2="224" y2="3432" class="solid"></line>
+        <line x1="232" y1="3424" x2="230" y2="3428" class="solid"></line>
+        <path d="M 230,3428 A 8,8 0,0,1 224,3432" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 320,3464 A 4,4 0,0,0 316,3468" class="nofill"></path>
+        <line x1="316" y1="3468" x2="316" y2="3496" class="solid"></line>
+        <line x1="320" y1="3464" x2="416" y2="3464" class="solid"></line>
+        <polygon points="416,3460 424,3464 416,3468" class="filled"></polygon>
+        <line x1="424" y1="3464" x2="544" y2="3464" class="solid"></line>
+        <path d="M 544,3464 A 4,4 0,0,1 548,3468" class="nofill"></path>
+        <line x1="548" y1="3468" x2="548" y2="3496" class="solid"></line>
+        <path d="M 548,3496 A 8,8 0,0,0 552,3504" class="nofill"></path>
+        <line x1="552" y1="3504" x2="576" y2="3504" class="solid"></line>
+        <line x1="304" y1="3504" x2="312" y2="3504" class="solid"></line>
+        <path d="M 316,3496 A 8,8 0,0,1 312,3504" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="92" y1="3480" x2="204" y2="3480" class="solid"></line>
+        <line x1="92" y1="3480" x2="92" y2="3512" class="solid"></line>
+        <line x1="204" y1="3480" x2="204" y2="3512" class="solid"></line>
+        <line x1="56" y1="3504" x2="92" y2="3504" class="solid"></line>
+        <line x1="204" y1="3504" x2="216" y2="3504" class="solid"></line>
+        <line x1="92" y1="3512" x2="204" y2="3512" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 232,3480 A 8,8 0,0,0 226,3484" class="nofill"></path>
+        <line x1="226" y1="3484" x2="224" y2="3488" class="solid"></line>
+        <line x1="232" y1="3480" x2="240" y2="3480" class="solid"></line>
+        <path d="M 240,3480 A 8,8 0,0,1 246,3484" class="nofill"></path>
+        <line x1="246" y1="3484" x2="248" y2="3488" class="solid"></line>
+        <path d="M 224,3488 A 16,16 0,0,0 224,3504" class="nofill"></path>
+        <path d="M 248,3488 A 16,16 0,0,1 248,3504" class="nofill"></path>
+        <line x1="224" y1="3504" x2="226" y2="3508" class="solid"></line>
+        <path d="M 226,3508 A 8,8 0,0,0 232,3512" class="nofill"></path>
+        <line x1="232" y1="3512" x2="240" y2="3512" class="solid"></line>
+        <line x1="248" y1="3504" x2="246" y2="3508" class="solid"></line>
+        <path d="M 246,3508 A 8,8 0,0,1 240,3512" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 280,3480 A 8,8 0,0,0 274,3484" class="nofill"></path>
+        <line x1="274" y1="3484" x2="272" y2="3488" class="solid"></line>
+        <line x1="280" y1="3480" x2="288" y2="3480" class="solid"></line>
+        <path d="M 288,3480 A 8,8 0,0,1 294,3484" class="nofill"></path>
+        <line x1="294" y1="3484" x2="296" y2="3488" class="solid"></line>
+        <path d="M 272,3488 A 16,16 0,0,0 272,3504" class="nofill"></path>
+        <path d="M 296,3488 A 16,16 0,0,1 296,3504" class="nofill"></path>
+        <line x1="272" y1="3504" x2="274" y2="3508" class="solid"></line>
+        <path d="M 274,3508 A 8,8 0,0,0 280,3512" class="nofill"></path>
+        <line x1="280" y1="3512" x2="288" y2="3512" class="solid"></line>
+        <line x1="296" y1="3504" x2="294" y2="3508" class="solid"></line>
+        <path d="M 294,3508 A 8,8 0,0,1 288,3512" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="340" y1="3480" x2="396" y2="3480" class="solid"></line>
+        <line x1="340" y1="3480" x2="340" y2="3512" class="solid"></line>
+        <line x1="396" y1="3480" x2="396" y2="3512" class="solid"></line>
+        <line x1="320" y1="3504" x2="340" y2="3504" class="solid"></line>
+        <line x1="396" y1="3504" x2="408" y2="3504" class="solid"></line>
+        <line x1="340" y1="3512" x2="396" y2="3512" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 424,3480 A 8,8 0,0,0 418,3484" class="nofill"></path>
+        <line x1="418" y1="3484" x2="416" y2="3488" class="solid"></line>
+        <line x1="424" y1="3480" x2="432" y2="3480" class="solid"></line>
+        <path d="M 432,3480 A 8,8 0,0,1 438,3484" class="nofill"></path>
+        <line x1="438" y1="3484" x2="440" y2="3488" class="solid"></line>
+        <path d="M 416,3488 A 16,16 0,0,0 416,3504" class="nofill"></path>
+        <path d="M 440,3488 A 16,16 0,0,1 440,3504" class="nofill"></path>
+        <line x1="416" y1="3504" x2="418" y2="3508" class="solid"></line>
+        <path d="M 418,3508 A 8,8 0,0,0 424,3512" class="nofill"></path>
+        <line x1="424" y1="3512" x2="432" y2="3512" class="solid"></line>
+        <line x1="440" y1="3504" x2="438" y2="3508" class="solid"></line>
+        <path d="M 438,3508 A 8,8 0,0,1 432,3512" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="468" y1="3480" x2="516" y2="3480" class="solid"></line>
+        <line x1="468" y1="3480" x2="468" y2="3512" class="solid"></line>
+        <line x1="516" y1="3480" x2="516" y2="3512" class="solid"></line>
+        <line x1="448" y1="3504" x2="468" y2="3504" class="solid"></line>
+        <line x1="516" y1="3504" x2="544" y2="3504" class="solid"></line>
+        <line x1="468" y1="3512" x2="516" y2="3512" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 592,3480 A 8,8 0,0,0 586,3484" class="nofill"></path>
+        <line x1="586" y1="3484" x2="584" y2="3488" class="solid"></line>
+        <line x1="592" y1="3480" x2="600" y2="3480" class="solid"></line>
+        <path d="M 600,3480 A 8,8 0,0,1 606,3484" class="nofill"></path>
+        <line x1="606" y1="3484" x2="608" y2="3488" class="solid"></line>
+        <path d="M 584,3488 A 16,16 0,0,0 584,3504" class="nofill"></path>
+        <path d="M 608,3488 A 16,16 0,0,1 608,3504" class="nofill"></path>
+        <line x1="584" y1="3504" x2="586" y2="3508" class="solid"></line>
+        <path d="M 586,3508 A 8,8 0,0,0 592,3512" class="nofill"></path>
+        <line x1="592" y1="3512" x2="600" y2="3512" class="solid"></line>
+        <line x1="608" y1="3504" x2="606" y2="3508" class="solid"></line>
+        <path d="M 606,3508 A 8,8 0,0,1 600,3512" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="636" y1="3480" x2="692" y2="3480" class="solid"></line>
+        <line x1="636" y1="3480" x2="636" y2="3512" class="solid"></line>
+        <line x1="692" y1="3480" x2="692" y2="3512" class="solid"></line>
+        <line x1="616" y1="3504" x2="636" y2="3504" class="solid"></line>
+        <line x1="692" y1="3504" x2="744" y2="3504" class="solid"></line>
+        <line x1="636" y1="3512" x2="692" y2="3512" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 64,3504 A 8,8 0,0,1 68,3512" class="nofill"></path>
+        <line x1="68" y1="3512" x2="68" y2="3572" class="solid"></line>
+        <path d="M 68,3572 A 4,4 0,0,0 72,3576" class="nofill"></path>
+        <line x1="72" y1="3576" x2="712" y2="3576" class="solid"></line>
+        <path d="M 720,3504 A 8,8 0,0,0 716,3512" class="nofill"></path>
+        <line x1="716" y1="3512" x2="716" y2="3572" class="solid"></line>
+        <path d="M 716,3572 A 4,4 0,0,1 712,3576" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 328,3504 A 8,8 0,0,0 324,3512" class="nofill"></path>
+        <line x1="324" y1="3512" x2="324" y2="3540" class="solid"></line>
+        <path d="M 324,3540 A 4,4 0,0,0 328,3544" class="nofill"></path>
+        <line x1="328" y1="3544" x2="424" y2="3544" class="solid"></line>
+        <polygon points="432,3540 424,3544 432,3548" class="filled"></polygon>
+        <line x1="432" y1="3544" x2="480" y2="3544" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 536,3504 A 8,8 0,0,1 540,3512" class="nofill"></path>
+        <line x1="540" y1="3512" x2="540" y2="3540" class="solid"></line>
+        <line x1="520" y1="3544" x2="536" y2="3544" class="solid"></line>
+        <path d="M 540,3540 A 4,4 0,0,1 536,3544" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 496,3528 A 8,8 0,0,0 490,3532" class="nofill"></path>
+        <line x1="490" y1="3532" x2="488" y2="3536" class="solid"></line>
+        <line x1="496" y1="3528" x2="504" y2="3528" class="solid"></line>
+        <path d="M 504,3528 A 8,8 0,0,1 510,3532" class="nofill"></path>
+        <line x1="510" y1="3532" x2="512" y2="3536" class="solid"></line>
+        <path d="M 488,3536 A 16,16 0,0,0 488,3552" class="nofill"></path>
+        <path d="M 512,3536 A 16,16 0,0,1 512,3552" class="nofill"></path>
+        <line x1="488" y1="3552" x2="490" y2="3556" class="solid"></line>
+        <path d="M 490,3556 A 8,8 0,0,0 496,3560" class="nofill"></path>
+        <line x1="496" y1="3560" x2="504" y2="3560" class="solid"></line>
+        <line x1="512" y1="3552" x2="510" y2="3556" class="solid"></line>
+        <path d="M 510,3556 A 8,8 0,0,1 504,3560" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="16" y1="3608" x2="24" y2="3608" class="solid"></line>
+        <polygon points="24,3604 32,3608 24,3612" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="52" y1="3656" x2="256" y2="3656" class="solid"></line>
+        <line x1="52" y1="3656" x2="52" y2="3720" class="solid"></line>
+        <line x1="52" y1="3672" x2="208" y2="3672" class="solid"></line>
+        <line x1="52" y1="3688" x2="160" y2="3688" class="solid"></line>
+        <line x1="52" y1="3704" x2="112" y2="3704" class="solid"></line>
+        <line x1="52" y1="3720" x2="64" y2="3720" class="solid"></line>
+    </g>
+    <g>
+        <line x1="260" y1="3660" x2="260" y2="3720" class="solid"></line>
+        <line x1="188" y1="3692" x2="188" y2="3720" class="solid"></line>
+        <line x1="96" y1="3720" x2="284" y2="3720" class="solid"></line>
+        <line x1="116" y1="3712" x2="116" y2="3720" class="solid"></line>
+        <line x1="140" y1="3712" x2="140" y2="3720" class="solid"></line>
+        <line x1="212" y1="3676" x2="212" y2="3720" class="solid"></line>
+        <line x1="236" y1="3676" x2="236" y2="3720" class="solid"></line>
+        <line x1="284" y1="3676" x2="284" y2="3720" class="solid"></line>
+        <line x1="164" y1="3692" x2="164" y2="3720" class="solid"></line>
+    </g>
+    <g>
+        <line x1="264" y1="3656" x2="284" y2="3656" class="solid"></line>
+        <line x1="284" y1="3656" x2="284" y2="3664" class="solid"></line>
+    </g>
+    <g>
+        <line x1="348" y1="3648" x2="348" y2="3720" class="solid"></line>
+        <line x1="348" y1="3720" x2="360" y2="3720" class="solid"></line>
+    </g>
+    <g>
+        <line x1="580" y1="3676" x2="580" y2="3728" class="solid"></line>
+        <line x1="392" y1="3720" x2="580" y2="3720" class="solid"></line>
+    </g>
+    <g>
+        <line x1="68" y1="3792" x2="68" y2="3976" class="solid"></line>
+        <line x1="64" y1="3800" x2="68" y2="3800" class="solid"></line>
+        <line x1="64" y1="3816" x2="68" y2="3816" class="solid"></line>
+        <line x1="64" y1="3832" x2="68" y2="3832" class="solid"></line>
+        <line x1="64" y1="3848" x2="68" y2="3848" class="solid"></line>
+        <line x1="64" y1="3864" x2="68" y2="3864" class="solid"></line>
+        <line x1="64" y1="3880" x2="68" y2="3880" class="solid"></line>
+        <line x1="64" y1="3896" x2="68" y2="3896" class="solid"></line>
+        <line x1="64" y1="3912" x2="68" y2="3912" class="solid"></line>
+        <line x1="64" y1="3928" x2="68" y2="3928" class="solid"></line>
+        <line x1="64" y1="3960" x2="68" y2="3960" class="solid"></line>
+        <line x1="68" y1="3976" x2="584" y2="3976" class="solid"></line>
+        <line x1="164" y1="3968" x2="164" y2="3976" class="solid"></line>
+        <line x1="260" y1="3968" x2="260" y2="3976" class="solid"></line>
+        <line x1="356" y1="3968" x2="356" y2="3976" class="solid"></line>
+        <line x1="452" y1="3968" x2="452" y2="3976" class="solid"></line>
+        <line x1="548" y1="3968" x2="548" y2="3976" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 392,3800 A 4,4 0,0,0 388,3804" class="nofill"></path>
+        <line x1="388" y1="3804" x2="388" y2="3860" class="solid"></line>
+        <path d="M 392,3800 A 4,4 0,0,1 396,3804" class="nofill"></path>
+        <line x1="396" y1="3804" x2="396" y2="3860" class="solid"></line>
+        <path d="M 396,3860 A 4,4 0,0,0 400,3864" class="nofill"></path>
+        <line x1="400" y1="3864" x2="408" y2="3864" class="solid"></line>
+        <path d="M 360,3848 A 4,4 0,0,0 356,3852" class="nofill"></path>
+        <line x1="356" y1="3852" x2="356" y2="3892" class="solid"></line>
+        <line x1="360" y1="3848" x2="368" y2="3848" class="solid"></line>
+        <path d="M 368,3848 A 4,4 0,0,1 372,3852" class="nofill"></path>
+        <line x1="372" y1="3852" x2="372" y2="3860" class="solid"></line>
+        <path d="M 372,3860 A 4,4 0,0,0 376,3864" class="nofill"></path>
+        <line x1="376" y1="3864" x2="384" y2="3864" class="solid"></line>
+        <path d="M 388,3860 A 4,4 0,0,1 384,3864" class="nofill"></path>
+        <path d="M 416,3848 A 4,4 0,0,0 412,3852" class="nofill"></path>
+        <line x1="412" y1="3852" x2="412" y2="3860" class="solid"></line>
+        <path d="M 420,3844 A 4,4 0,0,1 416,3848" class="nofill"></path>
+        <path d="M 412,3860 A 4,4 0,0,1 408,3864" class="nofill"></path>
+        <path d="M 328,3864 A 4,4 0,0,0 324,3868" class="nofill"></path>
+        <line x1="324" y1="3868" x2="324" y2="3876" class="solid"></line>
+        <path d="M 328,3864 A 4,4 0,0,1 332,3868" class="nofill"></path>
+        <line x1="332" y1="3868" x2="332" y2="3892" class="solid"></line>
+        <path d="M 324,3876 A 4,4 0,0,1 320,3880" class="nofill"></path>
+        <path d="M 332,3892 A 4,4 0,0,0 336,3896" class="nofill"></path>
+        <line x1="336" y1="3896" x2="352" y2="3896" class="solid"></line>
+        <path d="M 356,3892 A 4,4 0,0,1 352,3896" class="nofill"></path>
+        <path d="M 424,3832 A 4,4 0,0,0 420,3836" class="nofill"></path>
+        <line x1="420" y1="3836" x2="420" y2="3844" class="solid"></line>
+        <path d="M 424,3832 A 4,4 0,0,1 428,3836" class="nofill"></path>
+        <line x1="428" y1="3836" x2="428" y2="3844" class="solid"></line>
+        <path d="M 428,3844 A 4,4 0,0,0 432,3848" class="nofill"></path>
+        <path d="M 432,3848 A 4,4 0,0,1 436,3852" class="nofill"></path>
+        <line x1="436" y1="3852" x2="436" y2="3876" class="solid"></line>
+        <path d="M 436,3876 A 4,4 0,0,0 440,3880" class="nofill"></path>
+        <path d="M 448,3832 A 4,4 0,0,0 444,3836" class="nofill"></path>
+        <line x1="444" y1="3836" x2="444" y2="3876" class="solid"></line>
+        <path d="M 448,3832 A 4,4 0,0,1 452,3836" class="nofill"></path>
+        <line x1="452" y1="3836" x2="452" y2="3844" class="solid"></line>
+        <path d="M 452,3844 A 4,4 0,0,0 456,3848" class="nofill"></path>
+        <line x1="456" y1="3848" x2="464" y2="3848" class="solid"></line>
+        <path d="M 444,3876 A 4,4 0,0,1 440,3880" class="nofill"></path>
+        <path d="M 472,3832 A 4,4 0,0,0 468,3836" class="nofill"></path>
+        <line x1="468" y1="3836" x2="468" y2="3844" class="solid"></line>
+        <path d="M 472,3832 A 4,4 0,0,1 476,3836" class="nofill"></path>
+        <line x1="476" y1="3836" x2="476" y2="3844" class="solid"></line>
+        <path d="M 468,3844 A 4,4 0,0,1 464,3848" class="nofill"></path>
+        <path d="M 476,3844 A 4,4 0,0,0 480,3848" class="nofill"></path>
+        <path d="M 480,3848 A 4,4 0,0,1 484,3852" class="nofill"></path>
+        <line x1="484" y1="3852" x2="484" y2="3876" class="solid"></line>
+        <path d="M 484,3876 A 4,4 0,0,0 488,3880" class="nofill"></path>
+        <path d="M 496,3848 A 4,4 0,0,0 492,3852" class="nofill"></path>
+        <line x1="492" y1="3852" x2="492" y2="3876" class="solid"></line>
+        <path d="M 496,3848 A 4,4 0,0,1 500,3852" class="nofill"></path>
+        <line x1="500" y1="3852" x2="500" y2="3876" class="solid"></line>
+        <path d="M 492,3876 A 4,4 0,0,1 488,3880" class="nofill"></path>
+        <path d="M 500,3876 A 4,4 0,0,0 504,3880" class="nofill"></path>
+        <path d="M 508,3876 A 4,4 0,0,1 504,3880" class="nofill"></path>
+        <path d="M 512,3832 A 4,4 0,0,0 508,3836" class="nofill"></path>
+        <line x1="508" y1="3836" x2="508" y2="3876" class="solid"></line>
+        <path d="M 512,3832 A 4,4 0,0,1 516,3836" class="nofill"></path>
+        <line x1="516" y1="3836" x2="516" y2="3844" class="solid"></line>
+        <path d="M 516,3844 A 4,4 0,0,0 520,3848" class="nofill"></path>
+        <line x1="520" y1="3848" x2="536" y2="3848" class="solid"></line>
+        <path d="M 272,3848 A 4,4 0,0,0 268,3852" class="nofill"></path>
+        <line x1="268" y1="3852" x2="268" y2="3892" class="solid"></line>
+        <path d="M 272,3848 A 4,4 0,0,1 276,3852" class="nofill"></path>
+        <line x1="276" y1="3852" x2="276" y2="3892" class="solid"></line>
+        <path d="M 276,3892 A 4,4 0,0,0 280,3896" class="nofill"></path>
+        <path d="M 256,3864 A 4,4 0,0,0 252,3868" class="nofill"></path>
+        <line x1="252" y1="3868" x2="252" y2="3892" class="solid"></line>
+        <path d="M 256,3864 A 4,4 0,0,1 260,3868" class="nofill"></path>
+        <line x1="260" y1="3868" x2="260" y2="3892" class="solid"></line>
+        <path d="M 260,3892 A 4,4 0,0,0 264,3896" class="nofill"></path>
+        <path d="M 268,3892 A 4,4 0,0,1 264,3896" class="nofill"></path>
+        <path d="M 288,3864 A 4,4 0,0,0 284,3868" class="nofill"></path>
+        <line x1="284" y1="3868" x2="284" y2="3892" class="solid"></line>
+        <path d="M 288,3864 A 4,4 0,0,1 292,3868" class="nofill"></path>
+        <line x1="292" y1="3868" x2="292" y2="3876" class="solid"></line>
+        <path d="M 292,3876 A 4,4 0,0,0 296,3880" class="nofill"></path>
+        <path d="M 296,3880 A 4,4 0,0,1 300,3884" class="nofill"></path>
+        <line x1="300" y1="3884" x2="300" y2="3892" class="solid"></line>
+        <path d="M 284,3892 A 4,4 0,0,1 280,3896" class="nofill"></path>
+        <path d="M 300,3892 A 4,4 0,0,0 304,3896" class="nofill"></path>
+        <path d="M 312,3864 A 4,4 0,0,0 308,3868" class="nofill"></path>
+        <line x1="308" y1="3868" x2="308" y2="3892" class="solid"></line>
+        <path d="M 312,3864 A 4,4 0,0,1 316,3868" class="nofill"></path>
+        <line x1="316" y1="3868" x2="316" y2="3876" class="solid"></line>
+        <path d="M 316,3876 A 4,4 0,0,0 320,3880" class="nofill"></path>
+        <path d="M 308,3892 A 4,4 0,0,1 304,3896" class="nofill"></path>
+        <path d="M 240,3896 A 4,4 0,0,0 236,3900" class="nofill"></path>
+        <line x1="236" y1="3900" x2="236" y2="3908" class="solid"></line>
+        <line x1="240" y1="3896" x2="248" y2="3896" class="solid"></line>
+        <path d="M 252,3892 A 4,4 0,0,1 248,3896" class="nofill"></path>
+        <path d="M 236,3908 A 4,4 0,0,1 232,3912" class="nofill"></path>
+        <path d="M 176,3880 A 4,4 0,0,0 172,3884" class="nofill"></path>
+        <line x1="172" y1="3884" x2="172" y2="3892" class="solid"></line>
+        <line x1="176" y1="3880" x2="192" y2="3880" class="solid"></line>
+        <path d="M 192,3880 A 4,4 0,0,1 196,3884" class="nofill"></path>
+        <line x1="196" y1="3884" x2="196" y2="3892" class="solid"></line>
+        <path d="M 196,3892 A 4,4 0,0,0 200,3896" class="nofill"></path>
+        <line x1="200" y1="3896" x2="208" y2="3896" class="solid"></line>
+        <path d="M 208,3896 A 4,4 0,0,1 212,3900" class="nofill"></path>
+        <line x1="212" y1="3900" x2="212" y2="3924" class="solid"></line>
+        <path d="M 212,3924 A 4,4 0,0,0 216,3928" class="nofill"></path>
+        <path d="M 168,3896 A 4,4 0,0,0 164,3900" class="nofill"></path>
+        <line x1="164" y1="3900" x2="164" y2="3908" class="solid"></line>
+        <path d="M 172,3892 A 4,4 0,0,1 168,3896" class="nofill"></path>
+        <path d="M 224,3896 A 4,4 0,0,0 220,3900" class="nofill"></path>
+        <line x1="220" y1="3900" x2="220" y2="3924" class="solid"></line>
+        <path d="M 224,3896 A 4,4 0,0,1 228,3900" class="nofill"></path>
+        <line x1="228" y1="3900" x2="228" y2="3908" class="solid"></line>
+        <path d="M 228,3908 A 4,4 0,0,0 232,3912" class="nofill"></path>
+        <path d="M 220,3924 A 4,4 0,0,1 216,3928" class="nofill"></path>
+        <path d="M 552,3816 A 4,4 0,0,0 548,3820" class="nofill"></path>
+        <line x1="548" y1="3820" x2="548" y2="3828" class="solid"></line>
+        <path d="M 552,3816 A 4,4 0,0,1 556,3820" class="nofill"></path>
+        <line x1="556" y1="3820" x2="556" y2="3828" class="solid"></line>
+        <path d="M 556,3828 A 4,4 0,0,0 560,3832" class="nofill"></path>
+        <line x1="560" y1="3832" x2="568" y2="3832" class="solid"></line>
+        <path d="M 568,3832 A 4,4 0,0,1 572,3836" class="nofill"></path>
+        <line x1="572" y1="3836" x2="572" y2="3860" class="solid"></line>
+        <path d="M 572,3860 A 4,4 0,0,0 576,3864" class="nofill"></path>
+        <path d="M 544,3832 A 4,4 0,0,0 540,3836" class="nofill"></path>
+        <line x1="540" y1="3836" x2="540" y2="3844" class="solid"></line>
+        <path d="M 548,3828 A 4,4 0,0,1 544,3832" class="nofill"></path>
+        <path d="M 540,3844 A 4,4 0,0,1 536,3848" class="nofill"></path>
+        <path d="M 584,3848 A 4,4 0,0,0 580,3852" class="nofill"></path>
+        <line x1="580" y1="3852" x2="580" y2="3860" class="solid"></line>
+        <path d="M 580,3860 A 4,4 0,0,1 576,3864" class="nofill"></path>
+        <path d="M 104,3864 A 4,4 0,0,0 100,3868" class="nofill"></path>
+        <line x1="100" y1="3868" x2="100" y2="3924" class="solid"></line>
+        <path d="M 104,3864 A 4,4 0,0,1 108,3868" class="nofill"></path>
+        <line x1="108" y1="3868" x2="108" y2="3876" class="solid"></line>
+        <path d="M 108,3876 A 4,4 0,0,0 112,3880" class="nofill"></path>
+        <path d="M 112,3880 A 4,4 0,0,1 116,3884" class="nofill"></path>
+        <line x1="116" y1="3884" x2="116" y2="3892" class="solid"></line>
+        <path d="M 116,3892 A 4,4 0,0,0 120,3896" class="nofill"></path>
+        <path d="M 120,3896 A 4,4 0,0,1 124,3900" class="nofill"></path>
+        <line x1="124" y1="3900" x2="124" y2="3908" class="solid"></line>
+        <path d="M 124,3908 A 4,4 0,0,0 128,3912" class="nofill"></path>
+        <path d="M 136,3896 A 4,4 0,0,0 132,3900" class="nofill"></path>
+        <line x1="132" y1="3900" x2="132" y2="3908" class="solid"></line>
+        <path d="M 136,3896 A 4,4 0,0,1 140,3900" class="nofill"></path>
+        <line x1="140" y1="3900" x2="140" y2="3908" class="solid"></line>
+        <path d="M 132,3908 A 4,4 0,0,1 128,3912" class="nofill"></path>
+        <path d="M 140,3908 A 4,4 0,0,0 144,3912" class="nofill"></path>
+        <path d="M 144,3912 A 4,4 0,0,1 148,3916" class="nofill"></path>
+        <line x1="148" y1="3916" x2="148" y2="3924" class="solid"></line>
+        <path d="M 148,3924 A 4,4 0,0,0 152,3928" class="nofill"></path>
+        <path d="M 160,3912 A 4,4 0,0,0 156,3916" class="nofill"></path>
+        <line x1="156" y1="3916" x2="156" y2="3924" class="solid"></line>
+        <path d="M 164,3908 A 4,4 0,0,1 160,3912" class="nofill"></path>
+        <path d="M 156,3924 A 4,4 0,0,1 152,3928" class="nofill"></path>
+        <path d="M 96,3928 A 4,4 0,0,0 92,3932" class="nofill"></path>
+        <line x1="92" y1="3932" x2="92" y2="3956" class="solid"></line>
+        <path d="M 100,3924 A 4,4 0,0,1 96,3928" class="nofill"></path>
+        <path d="M 92,3956 A 4,4 0,0,1 88,3960" class="nofill"></path>
+        <path d="M 80,3896 A 4,4 0,0,0 76,3900" class="nofill"></path>
+        <line x1="76" y1="3900" x2="76" y2="3940" class="solid"></line>
+        <path d="M 80,3896 A 4,4 0,0,1 84,3900" class="nofill"></path>
+        <line x1="84" y1="3900" x2="84" y2="3956" class="solid"></line>
+        <path d="M 84,3956 A 4,4 0,0,0 88,3960" class="nofill"></path>
+        <line x1="64" y1="3944" x2="72" y2="3944" class="solid"></line>
+        <path d="M 76,3940 A 4,4 0,0,1 72,3944" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="16" y1="4120" x2="24" y2="4120" class="solid"></line>
+        <polygon points="24,4116 32,4120 24,4124" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 184,4136 A 4,4 0,0,0 180,4140" class="nofill"></path>
+        <line x1="180" y1="4140" x2="180" y2="4164" class="solid"></line>
+        <line x1="184" y1="4136" x2="200" y2="4136" class="solid"></line>
+        <path d="M 200,4136 A 4,4 0,0,1 204,4140" class="nofill"></path>
+        <line x1="204" y1="4140" x2="204" y2="4256" class="solid"></line>
+        <polygon points="176,4164 184,4164 180,4176" class="filled"></polygon>
+        <line x1="148" y1="4232" x2="136" y2="4256" class="solid"></line>
+        <line x1="148" y1="4232" x2="160" y2="4256" class="solid"></line>
+        <polygon points="169,4228 162,4236 162,4225" class="filled"></polygon>
+        <line x1="76" y1="4256" x2="136" y2="4256" class="solid"></line>
+        <line x1="160" y1="4256" x2="204" y2="4256" class="solid"></line>
+        <line x1="136" y1="4256" x2="148" y2="4280" class="solid"></line>
+        <line x1="160" y1="4256" x2="148" y2="4280" class="solid"></line>
+        <line x1="148" y1="4280" x2="148" y2="4292" class="solid"></line>
+        <path d="M 148,4292 A 4,4 0,0,0 152,4296" class="nofill"></path>
+        <line x1="152" y1="4296" x2="168" y2="4296" class="solid"></line>
+        <polygon points="168,4292 176,4296 168,4300" class="filled"></polygon>
+        <path d="M 80,4200 A 4,4 0,0,0 76,4204" class="nofill"></path>
+        <line x1="76" y1="4204" x2="76" y2="4256" class="solid"></line>
+        <line x1="80" y1="4200" x2="96" y2="4200" class="solid"></line>
+        <polygon points="96,4196 104,4200 96,4204" class="filled"></polygon>
+        <line x1="120" y1="4208" x2="130" y2="4228" class="solid"></line>
+        <polygon points="127,4228 134,4236 134,4225" class="filled"></polygon>
+        <line x1="176" y1="4208" x2="166" y2="4228" class="solid"></line>
+    </g>
+    <g>
+        <line x1="148" y1="4208" x2="148" y2="4228" class="solid"></line>
+        <path d="M 148,4228 A 16,16 0,0,1 146,4236" class="nofill"></path>
+        <path d="M 148,4228 A 16,16 0,0,0 150,4236" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="324" y1="4160" x2="324" y2="4180" class="solid"></line>
+        <polygon points="320,4180 328,4180 324,4192" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="380" y1="4160" x2="380" y2="4180" class="solid"></line>
+        <polygon points="376,4180 384,4180 380,4192" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="428" y1="4160" x2="428" y2="4292" class="solid"></line>
+        <polygon points="392,4292 384,4296 392,4300" class="filled"></polygon>
+        <line x1="392" y1="4296" x2="424" y2="4296" class="solid"></line>
+        <path d="M 428,4292 A 4,4 0,0,1 424,4296" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="484" y1="4160" x2="484" y2="4180" class="solid"></line>
+        <polygon points="480,4180 488,4180 484,4192" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="556" y1="4160" x2="556" y2="4260" class="solid"></line>
+        <polygon points="552,4260 560,4260 556,4272" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="364" y1="4240" x2="364" y2="4260" class="solid"></line>
+        <polygon points="360,4260 368,4260 364,4272" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="484" y1="4240" x2="484" y2="4340" class="solid"></line>
+        <polygon points="480,4340 488,4340 484,4352" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="364" y1="4320" x2="364" y2="4340" class="solid"></line>
+        <polygon points="360,4340 368,4340 364,4352" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="564" y1="4320" x2="564" y2="4340" class="solid"></line>
+        <polygon points="560,4340 568,4340 564,4352" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="612" y1="4160" x2="612" y2="4180" class="solid"></line>
+        <polygon points="608,4180 616,4180 612,4192" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="192" y1="4288" x2="224" y2="4288" class="solid"></line>
+        <line x1="192" y1="4288" x2="184" y2="4304" class="solid"></line>
+        <line x1="184" y1="4304" x2="216" y2="4304" class="solid"></line>
+        <line x1="224" y1="4288" x2="216" y2="4304" class="solid"></line>
+    </g>
+    <g>
+        <line x1="16" y1="4440" x2="24" y2="4440" class="solid"></line>
+        <polygon points="24,4436 32,4440 24,4444" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="84" y1="4512" x2="100" y2="4512" class="solid"></line>
+        <line x1="84" y1="4512" x2="84" y2="4520" class="solid"></line>
+        <line x1="84" y1="4520" x2="72" y2="4544" class="solid"></line>
+        <line x1="100" y1="4512" x2="100" y2="4544" class="solid"></line>
+        <line x1="84" y1="4528" x2="84" y2="4544" class="solid"></line>
+        <line x1="84" y1="4544" x2="100" y2="4544" class="solid"></line>
+    </g>
+    <g>
+        <text x="50" y="4540">⠶</text>
+        <text x="58" y="4540">⠶</text>
+    </g>
+    <g>
+        <path d="M 200,4488 A 8,8 0,0,0 194,4492" class="nofill"></path>
+        <line x1="194" y1="4492" x2="192" y2="4496" class="solid"></line>
+        <line x1="200" y1="4488" x2="208" y2="4488" class="solid"></line>
+        <path d="M 192,4496 A 16,16 0,0,0 192,4512" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 176,4504 A 8,8 0,0,0 170,4508" class="nofill"></path>
+        <line x1="170" y1="4508" x2="168" y2="4512" class="solid"></line>
+        <line x1="176" y1="4504" x2="184" y2="4504" class="solid"></line>
+        <path d="M 168,4512 A 16,16 0,0,0 168,4528" class="nofill"></path>
+        <line x1="168" y1="4528" x2="170" y2="4532" class="solid"></line>
+        <path d="M 170,4532 A 8,8 0,0,0 176,4536" class="nofill"></path>
+        <line x1="176" y1="4536" x2="184" y2="4536" class="solid"></line>
+    </g>
+    <g>
+        <line x1="120" y1="4520" x2="152" y2="4520" class="solid"></line>
+        <polygon points="152,4516 160,4520 152,4524" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="256" y1="4488" x2="264" y2="4488" class="solid"></line>
+        <path d="M 264,4488 A 8,8 0,0,1 270,4492" class="nofill"></path>
+        <line x1="270" y1="4492" x2="272" y2="4496" class="solid"></line>
+        <path d="M 272,4496 A 16,16 0,0,1 272,4512" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="280" y1="4504" x2="288" y2="4504" class="solid"></line>
+        <path d="M 288,4504 A 8,8 0,0,1 294,4508" class="nofill"></path>
+        <line x1="294" y1="4508" x2="296" y2="4512" class="solid"></line>
+    </g>
+    <g>
+        <line x1="304" y1="4520" x2="360" y2="4520" class="solid"></line>
+        <polygon points="360,4516 368,4520 360,4524" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="464" y1="4520" x2="512" y2="4520" class="solid"></line>
+        <polygon points="512,4516 520,4520 512,4524" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="524" y1="4528" x2="564" y2="4528" class="solid"></line>
+        <line x1="524" y1="4528" x2="524" y2="4560" class="solid"></line>
+        <line x1="564" y1="4528" x2="564" y2="4560" class="solid"></line>
+        <line x1="524" y1="4560" x2="564" y2="4560" class="solid"></line>
+        <line x1="528" y1="4560" x2="520" y2="4576" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 272,4528 A 16,16 0,0,1 272,4544" class="nofill"></path>
+        <line x1="272" y1="4544" x2="270" y2="4548" class="solid"></line>
+        <line x1="256" y1="4552" x2="264" y2="4552" class="solid"></line>
+        <path d="M 270,4548 A 8,8 0,0,1 264,4552" class="nofill"></path>
+    </g>
+    <g>
+        <text x="426" y="4540">...°</text>
+        <text x="458" y="4540">]</text>
+    </g>
+    <g>
+        <text x="530" y="4572">⠶</text>
+        <text x="538" y="4572">⠶</text>
+        <text x="546" y="4572">⠶</text>
+    </g>
+    <g>
+        <line x1="320" y1="4616" x2="384" y2="4616" class="solid"></line>
+        <path d="M 384,4616 A 3,3 0,0,1 386,4620" class="nofill"></path>
+        <line x1="386" y1="4620" x2="374" y2="4644" class="solid"></line>
+        <polygon points="377,4644 370,4652 370,4641" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="248" y1="4672" x2="320" y2="4672" class="solid"></line>
+        <line x1="328" y1="4664" x2="320" y2="4672" class="solid"></line>
+        <line x1="328" y1="4664" x2="476" y2="4664" class="solid"></line>
+        <line x1="476" y1="4664" x2="464" y2="4688" class="solid"></line>
+        <line x1="464" y1="4688" x2="476" y2="4712" class="solid"></line>
+        <line x1="424" y1="4712" x2="476" y2="4712" class="solid"></line>
+        <path d="M 168,4680 A 8,8 0,0,0 162,4684" class="nofill"></path>
+        <line x1="162" y1="4684" x2="152" y2="4704" class="solid"></line>
+        <line x1="168" y1="4680" x2="240" y2="4680" class="solid"></line>
+        <line x1="248" y1="4672" x2="240" y2="4680" class="solid"></line>
+        <path d="M 152,4704 A 16,16 0,0,0 152,4720" class="nofill"></path>
+        <line x1="152" y1="4720" x2="162" y2="4740" class="solid"></line>
+        <path d="M 162,4740 A 8,8 0,0,0 168,4744" class="nofill"></path>
+        <line x1="168" y1="4744" x2="216" y2="4744" class="solid"></line>
+        <line x1="216" y1="4744" x2="224" y2="4752" class="solid"></line>
+        <line x1="224" y1="4752" x2="236" y2="4752" class="solid"></line>
+        <line x1="236" y1="4752" x2="236" y2="4848" class="solid"></line>
+        <line x1="200" y1="4848" x2="236" y2="4848" class="solid"></line>
+        <line x1="200" y1="4848" x2="196" y2="4856" class="solid"></line>
+        <line x1="196" y1="4856" x2="196" y2="4896" class="solid"></line>
+        <path d="M 168,4888 A 4,4 0,0,0 164,4892" class="nofill"></path>
+        <line x1="164" y1="4892" x2="164" y2="4912" class="solid"></line>
+        <line x1="168" y1="4888" x2="196" y2="4888" class="solid"></line>
+        <line x1="136" y1="4912" x2="164" y2="4912" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 184,4696 A 8,8 0,0,0 178,4700" class="nofill"></path>
+        <line x1="178" y1="4700" x2="176" y2="4704" class="solid"></line>
+        <line x1="184" y1="4696" x2="240" y2="4696" class="solid"></line>
+        <line x1="240" y1="4696" x2="248" y2="4704" class="solid"></line>
+        <line x1="248" y1="4704" x2="320" y2="4704" class="solid"></line>
+        <path d="M 176,4704 A 16,16 0,0,0 176,4720" class="nofill"></path>
+        <line x1="320" y1="4704" x2="328" y2="4712" class="solid"></line>
+        <line x1="328" y1="4712" x2="416" y2="4712" class="solid"></line>
+        <line x1="176" y1="4720" x2="178" y2="4724" class="solid"></line>
+        <path d="M 178,4724 A 8,8 0,0,0 184,4728" class="nofill"></path>
+        <line x1="184" y1="4728" x2="216" y2="4728" class="solid"></line>
+        <line x1="224" y1="4720" x2="296" y2="4720" class="solid"></line>
+        <line x1="224" y1="4720" x2="216" y2="4728" class="solid"></line>
+        <line x1="296" y1="4720" x2="304" y2="4728" class="solid"></line>
+        <line x1="304" y1="4728" x2="336" y2="4728" class="solid"></line>
+    </g>
+    <g>
+        <line x1="244" y1="4752" x2="296" y2="4752" class="solid"></line>
+        <line x1="304" y1="4744" x2="296" y2="4752" class="solid"></line>
+        <line x1="304" y1="4744" x2="336" y2="4744" class="solid"></line>
+        <line x1="244" y1="4752" x2="244" y2="4852" class="solid"></line>
+        <path d="M 216,4856 A 4,4 0,0,0 212,4860" class="nofill"></path>
+        <line x1="212" y1="4860" x2="212" y2="4896" class="solid"></line>
+        <line x1="216" y1="4856" x2="240" y2="4856" class="solid"></line>
+        <path d="M 244,4852 A 4,4 0,0,1 240,4856" class="nofill"></path>
+        <line x1="212" y1="4888" x2="240" y2="4888" class="solid"></line>
+        <path d="M 240,4888 A 4,4 0,0,1 244,4892" class="nofill"></path>
+        <line x1="244" y1="4892" x2="244" y2="4948" class="solid"></line>
+        <line x1="228" y1="4912" x2="228" y2="4952" class="solid"></line>
+        <line x1="168" y1="4952" x2="240" y2="4952" class="solid"></line>
+        <path d="M 244,4948 A 4,4 0,0,1 240,4952" class="nofill"></path>
+        <line x1="136" y1="4928" x2="164" y2="4928" class="solid"></line>
+        <line x1="164" y1="4928" x2="164" y2="4948" class="solid"></line>
+        <path d="M 164,4948 A 4,4 0,0,0 168,4952" class="nofill"></path>
+        <line x1="180" y1="4912" x2="180" y2="4952" class="solid"></line>
+        <line x1="196" y1="4912" x2="196" y2="4952" class="solid"></line>
+        <line x1="212" y1="4912" x2="212" y2="4952" class="solid"></line>
+    </g>
+    <g>
+        <polygon points="264,4748 268,4736 272,4748" class="filled"></polygon>
+        <line x1="268" y1="4748" x2="268" y2="4836" class="solid"></line>
+        <path d="M 268,4836 A 4,4 0,0,0 272,4840" class="nofill"></path>
+        <line x1="272" y1="4840" x2="368" y2="4840" class="solid"></line>
+        <path d="M 368,4840 A 4,4 0,0,1 372,4844" class="nofill"></path>
+        <line x1="372" y1="4844" x2="372" y2="4900" class="solid"></line>
+    </g>
+    <g>
+        <line x1="540" y1="4872" x2="620" y2="4872" class="solid"></line>
+        <line x1="540" y1="4872" x2="540" y2="4900" class="solid"></line>
+        <line x1="556" y1="4872" x2="556" y2="4952" class="solid"></line>
+        <line x1="572" y1="4872" x2="572" y2="4952" class="solid"></line>
+        <line x1="588" y1="4872" x2="588" y2="4952" class="solid"></line>
+        <line x1="604" y1="4872" x2="604" y2="4952" class="solid"></line>
+        <line x1="620" y1="4872" x2="620" y2="4952" class="solid"></line>
+        <line x1="540" y1="4888" x2="620" y2="4888" class="solid"></line>
+        <line x1="544" y1="4904" x2="620" y2="4904" class="solid"></line>
+        <line x1="544" y1="4920" x2="620" y2="4920" class="solid"></line>
+        <line x1="540" y1="4924" x2="540" y2="4952" class="solid"></line>
+        <line x1="540" y1="4936" x2="620" y2="4936" class="solid"></line>
+        <line x1="540" y1="4952" x2="620" y2="4952" class="solid"></line>
+    </g>
+    <g>
+        <line x1="272" y1="4896" x2="288" y2="4896" class="solid"></line>
+        <line x1="288" y1="4896" x2="296" y2="4904" class="solid"></line>
+        <line x1="296" y1="4904" x2="368" y2="4904" class="solid"></line>
+    </g>
+    <g>
+        <line x1="188" y1="4904" x2="264" y2="4904" class="solid"></line>
+        <line x1="188" y1="4904" x2="188" y2="4944" class="solid"></line>
+        <line x1="204" y1="4904" x2="204" y2="4944" class="solid"></line>
+        <line x1="220" y1="4904" x2="220" y2="4944" class="solid"></line>
+    </g>
+    <g>
+        <line x1="348" y1="4952" x2="368" y2="4952" class="solid"></line>
+        <line x1="348" y1="4952" x2="348" y2="5000" class="solid"></line>
+        <line x1="424" y1="4952" x2="444" y2="4952" class="solid"></line>
+        <line x1="444" y1="4952" x2="444" y2="5000" class="solid"></line>
+        <line x1="348" y1="5000" x2="444" y2="5000" class="solid"></line>
+    </g>
+    <g>
+        <line x1="488" y1="4680" x2="552" y2="4680" class="solid"></line>
+        <polygon points="552,4676 560,4680 552,4684" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="544" y1="4696" x2="560" y2="4696" class="solid"></line>
+        <polygon points="560,4692 568,4696 560,4700" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="496" y1="4712" x2="560" y2="4712" class="solid"></line>
+        <polygon points="560,4708 568,4712 560,4716" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 64,4920 A 3,3 0,0,0 62,4924" class="nofill"></path>
+        <line x1="62" y1="4924" x2="72" y2="4944" class="solid"></line>
+        <line x1="64" y1="4920" x2="120" y2="4920" class="solid"></line>
+        <polygon points="120,4916 128,4920 120,4924" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 192,5160 A 8,8 0,0,0 186,5164" class="nofill"></path>
+        <line x1="186" y1="5164" x2="184" y2="5168" class="solid"></line>
+        <line x1="192" y1="5160" x2="224" y2="5160" class="solid"></line>
+        <path d="M 224,5160 A 4,4 0,0,1 228,5164" class="nofill"></path>
+        <line x1="228" y1="5164" x2="228" y2="5252" class="solid"></line>
+        <path d="M 184,5168 A 16,16 0,0,0 184,5184" class="nofill"></path>
+        <path d="M 192,5176 A 8,8 0,0,0 186,5180" class="nofill"></path>
+        <line x1="186" y1="5180" x2="184" y2="5184" class="solid"></line>
+        <line x1="192" y1="5176" x2="200" y2="5176" class="solid"></line>
+        <path d="M 184,5184 A 16,16 0,0,0 184,5200" class="nofill"></path>
+        <path d="M 192,5192 A 8,8 0,0,0 186,5196" class="nofill"></path>
+        <line x1="186" y1="5196" x2="184" y2="5200" class="solid"></line>
+        <line x1="192" y1="5192" x2="200" y2="5192" class="solid"></line>
+        <path d="M 206,5188 A 8,8 0,0,1 200,5192" class="nofill"></path>
+        <path d="M 184,5200 A 16,16 0,0,0 184,5216" class="nofill"></path>
+        <path d="M 192,5208 A 8,8 0,0,0 186,5212" class="nofill"></path>
+        <line x1="186" y1="5212" x2="184" y2="5216" class="solid"></line>
+        <line x1="192" y1="5208" x2="200" y2="5208" class="solid"></line>
+        <path d="M 206,5204 A 8,8 0,0,1 200,5208" class="nofill"></path>
+        <path d="M 144,5256 A 4,4 0,0,0 140,5260" class="nofill"></path>
+        <line x1="140" y1="5260" x2="140" y2="5268" class="solid"></line>
+        <line x1="144" y1="5256" x2="176" y2="5256" class="solid"></line>
+        <path d="M 180,5252 A 4,4 0,0,1 176,5256" class="nofill"></path>
+        <path d="M 180,5252 A 4,4 0,0,0 184,5256" class="nofill"></path>
+        <line x1="184" y1="5256" x2="224" y2="5256" class="solid"></line>
+        <path d="M 228,5252 A 4,4 0,0,1 224,5256" class="nofill"></path>
+        <path d="M 228,5252 A 4,4 0,0,0 232,5256" class="nofill"></path>
+        <line x1="232" y1="5256" x2="256" y2="5256" class="solid"></line>
+        <line x1="264" y1="5248" x2="256" y2="5256" class="solid"></line>
+        <path d="M 260,5252 A 4,4 0,0,1 256,5256" class="nofill"></path>
+        <path d="M 260,5252 A 4,4 0,0,0 264,5256" class="nofill"></path>
+        <line x1="264" y1="5256" x2="288" y2="5256" class="solid"></line>
+        <path d="M 292,5252 A 4,4 0,0,1 288,5256" class="nofill"></path>
+        <path d="M 140,5268 A 4,4 0,0,0 144,5272" class="nofill"></path>
+        <line x1="144" y1="5272" x2="296" y2="5272" class="solid"></line>
+        <path d="M 208,5168 A 16,16 0,0,1 208,5184" class="nofill"></path>
+        <line x1="208" y1="5184" x2="206" y2="5188" class="solid"></line>
+        <path d="M 208,5184 A 16,16 0,0,1 208,5200" class="nofill"></path>
+        <line x1="208" y1="5200" x2="206" y2="5204" class="solid"></line>
+        <path d="M 208,5200 A 16,16 0,0,1 208,5216" class="nofill"></path>
+        <line x1="208" y1="5216" x2="206" y2="5220" class="solid"></line>
+        <path d="M 188,5224 A 8,8 0,0,0 180,5232" class="nofill"></path>
+        <line x1="188" y1="5224" x2="200" y2="5224" class="solid"></line>
+        <path d="M 206,5220 A 8,8 0,0,1 200,5224" class="nofill"></path>
+        <line x1="180" y1="5232" x2="180" y2="5252" class="solid"></line>
+        <line x1="260" y1="5232" x2="292" y2="5232" class="solid"></line>
+        <line x1="260" y1="5232" x2="260" y2="5252" class="solid"></line>
+        <line x1="260" y1="5248" x2="292" y2="5248" class="solid"></line>
+        <line x1="292" y1="5232" x2="292" y2="5252" class="solid"></line>
+    </g>
+    <g>
+        <line x1="104" y1="5256" x2="112" y2="5256" class="solid"></line>
+        <polygon points="112,5252 120,5256 112,5260" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="16" y1="5368" x2="24" y2="5368" class="solid"></line>
+        <polygon points="24,5364 32,5368 24,5372" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 360,5400 A 8,8 0,0,0 354,5404" class="nofill"></path>
+        <line x1="354" y1="5404" x2="286" y2="5540" class="solid"></line>
+        <line x1="360" y1="5400" x2="376" y2="5400" class="solid"></line>
+        <polygon points="376,5396 384,5400 376,5404" class="filled"></polygon>
+        <line x1="300" y1="5512" x2="376" y2="5512" class="solid"></line>
+        <polygon points="376,5508 384,5512 376,5516" class="filled"></polygon>
+    </g>
+    <g>
+        <path d="M 344,5432 A 8,8 0,0,0 338,5436" class="nofill"></path>
+        <line x1="344" y1="5432" x2="376" y2="5432" class="solid"></line>
+        <polygon points="376,5428 384,5432 376,5436" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="160" y1="5448" x2="216" y2="5448" class="solid"></line>
+        <path d="M 216,5448 A 8,8 0,0,1 222,5452" class="nofill"></path>
+        <line x1="222" y1="5452" x2="266" y2="5540" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 256,5560 A 8,8 0,0,0 250,5564" class="nofill"></path>
+        <line x1="250" y1="5564" x2="248" y2="5568" class="solid"></line>
+        <line x1="256" y1="5560" x2="280" y2="5560" class="solid"></line>
+        <path d="M 280,5560 A 8,8 0,0,1 286,5564" class="nofill"></path>
+        <line x1="286" y1="5564" x2="288" y2="5568" class="solid"></line>
+        <path d="M 248,5568 A 16,16 0,0,0 248,5584" class="nofill"></path>
+        <path d="M 288,5568 A 16,16 0,0,1 288,5584" class="nofill"></path>
+        <line x1="248" y1="5584" x2="250" y2="5588" class="solid"></line>
+        <path d="M 250,5588 A 8,8 0,0,0 256,5592" class="nofill"></path>
+        <line x1="256" y1="5592" x2="280" y2="5592" class="solid"></line>
+        <line x1="288" y1="5584" x2="286" y2="5588" class="solid"></line>
+        <path d="M 286,5588 A 8,8 0,0,1 280,5592" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="304" y1="5560" x2="320" y2="5560" class="solid"></line>
+        <line x1="320" y1="5560" x2="328" y2="5568" class="solid"></line>
+        <line x1="328" y1="5568" x2="352" y2="5568" class="solid"></line>
+        <line x1="352" y1="5568" x2="360" y2="5576" class="solid"></line>
+        <line x1="360" y1="5576" x2="408" y2="5576" class="solid"></line>
+    </g>
+    <g>
+        <line x1="416" y1="5576" x2="424" y2="5576" class="solid"></line>
+        <polygon points="424,5572 432,5576 424,5580" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="302" y1="5596" x2="330" y2="5652" class="solid"></line>
+        <path d="M 330,5652 A 8,8 0,0,0 336,5656" class="nofill"></path>
+        <line x1="336" y1="5656" x2="384" y2="5656" class="solid"></line>
+        <line x1="372" y1="5656" x2="386" y2="5684" class="solid"></line>
+        <polygon points="384,5652 392,5656 384,5660" class="filled"></polygon>
+        <path d="M 386,5684 A 8,8 0,0,0 392,5688" class="nofill"></path>
+        <line x1="392" y1="5688" x2="424" y2="5688" class="solid"></line>
+        <polygon points="424,5684 432,5688 424,5692" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="250" y1="5612" x2="238" y2="5636" class="solid"></line>
+        <path d="M 216,5640 A 8,8 0,0,0 210,5644" class="nofill"></path>
+        <line x1="210" y1="5644" x2="196" y2="5672" class="solid"></line>
+        <line x1="216" y1="5640" x2="232" y2="5640" class="solid"></line>
+        <path d="M 238,5636 A 8,8 0,0,1 232,5640" class="nofill"></path>
+        <line x1="196" y1="5672" x2="196" y2="5704" class="solid"></line>
+        <line x1="196" y1="5704" x2="174" y2="5748" class="solid"></line>
+        <polygon points="177,5748 170,5756 170,5745" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="278" y1="5612" x2="344" y2="5744" class="solid"></line>
+        <line x1="344" y1="5744" x2="354" y2="5764" class="solid"></line>
+        <path d="M 354,5764 A 8,8 0,0,0 360,5768" class="nofill"></path>
+        <line x1="360" y1="5768" x2="376" y2="5768" class="solid"></line>
+        <polygon points="376,5764 384,5768 376,5772" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="294" y1="5612" x2="346" y2="5716" class="solid"></line>
+        <path d="M 346,5716 A 8,8 0,0,0 352,5720" class="nofill"></path>
+        <line x1="352" y1="5720" x2="392" y2="5720" class="solid"></line>
+        <polygon points="392,5716 400,5720 392,5724" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="192" y1="5680" x2="174" y2="5716" class="solid"></line>
+        <polygon points="177,5716 170,5724 170,5713" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="196" y1="5712" x2="196" y2="5736" class="solid"></line>
+        <line x1="196" y1="5736" x2="174" y2="5780" class="solid"></line>
+        <polygon points="177,5780 170,5788 170,5777" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="196" y1="5744" x2="196" y2="5764" class="solid"></line>
+        <path d="M 196,5764 A 16,16 0,0,1 194,5772" class="nofill"></path>
+        <line x1="194" y1="5772" x2="174" y2="5812" class="solid"></line>
+        <polygon points="177,5812 170,5820 170,5809" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="408" y1="5440" x2="418" y2="5460" class="solid"></line>
+        <path d="M 418,5460 A 8,8 0,0,0 424,5464" class="nofill"></path>
+        <line x1="424" y1="5464" x2="448" y2="5464" class="solid"></line>
+        <polygon points="448,5460 456,5464 448,5468" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="424" y1="5472" x2="434" y2="5492" class="solid"></line>
+        <path d="M 434,5492 A 8,8 0,0,0 440,5496" class="nofill"></path>
+        <line x1="440" y1="5496" x2="456" y2="5496" class="solid"></line>
+        <polygon points="456,5492 464,5496 456,5500" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="134" y1="5500" x2="170" y2="5572" class="solid"></line>
+        <path d="M 170,5572 A 8,8 0,0,0 176,5576" class="nofill"></path>
+        <line x1="176" y1="5576" x2="224" y2="5576" class="solid"></line>
+        <polygon points="224,5572 232,5576 224,5580" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="464" y1="5552" x2="520" y2="5552" class="solid"></line>
+        <line x1="464" y1="5552" x2="456" y2="5568" class="solid"></line>
+        <line x1="520" y1="5552" x2="528" y2="5568" class="solid"></line>
+    </g>
+    <g>
+        <line x1="456" y1="5584" x2="464" y2="5600" class="solid"></line>
+        <line x1="464" y1="5600" x2="520" y2="5600" class="solid"></line>
+        <line x1="528" y1="5584" x2="520" y2="5600" class="solid"></line>
+    </g>
+    <g>
+        <line x1="16" y1="5880" x2="24" y2="5880" class="solid"></line>
+        <polygon points="24,5876 32,5880 24,5884" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="196" y1="5936" x2="228" y2="5936" class="solid"></line>
+        <line x1="184" y1="5944" x2="196" y2="5944" class="solid"></line>
+        <line x1="196" y1="5936" x2="196" y2="5952" class="solid"></line>
+        <line x1="196" y1="5952" x2="228" y2="5952" class="solid"></line>
+        <line x1="228" y1="5936" x2="228" y2="5952" class="solid"></line>
+        <line x1="228" y1="5944" x2="240" y2="5944" class="solid"></line>
+    </g>
+    <g>
+        <line x1="132" y1="5948" x2="132" y2="5984" class="solid"></line>
+        <line x1="120" y1="5984" x2="144" y2="5984" class="solid"></line>
+    </g>
+    <g>
+        <line x1="180" y1="5948" x2="180" y2="6020" class="solid"></line>
+        <path d="M 180,6020 A 4,4 0,0,0 184,6024" class="nofill"></path>
+        <line x1="184" y1="6024" x2="200" y2="6024" class="solid"></line>
+        <path d="M 200,6024 A 4,4 0,0,1 204,6028" class="nofill"></path>
+        <line x1="204" y1="6028" x2="204" y2="6056" class="solid"></line>
+        <path d="M 192,6056 A 4,4 0,0,0 188,6060" class="nofill"></path>
+        <line x1="188" y1="6060" x2="188" y2="6308" class="solid"></line>
+        <line x1="192" y1="6056" x2="288" y2="6056" class="solid"></line>
+        <path d="M 288,6056 A 4,4 0,0,1 292,6060" class="nofill"></path>
+        <line x1="292" y1="6060" x2="292" y2="6308" class="solid"></line>
+        <line x1="292" y1="6104" x2="344" y2="6104" class="solid"></line>
+        <line x1="292" y1="6248" x2="312" y2="6248" class="solid"></line>
+        <line x1="292" y1="6296" x2="356" y2="6296" class="solid"></line>
+        <line x1="356" y1="6288" x2="356" y2="6304" class="solid"></line>
+        <path d="M 188,6308 A 4,4 0,0,0 192,6312" class="nofill"></path>
+        <line x1="192" y1="6312" x2="288" y2="6312" class="solid"></line>
+        <line x1="236" y1="6312" x2="236" y2="6372" class="solid"></line>
+        <line x1="276" y1="6312" x2="276" y2="6340" class="solid"></line>
+        <path d="M 292,6308 A 4,4 0,0,1 288,6312" class="nofill"></path>
+        <path d="M 276,6340 A 4,4 0,0,0 280,6344" class="nofill"></path>
+        <line x1="280" y1="6344" x2="384" y2="6344" class="solid"></line>
+        <path d="M 128,6152 A 4,4 0,0,0 124,6156" class="nofill"></path>
+        <line x1="124" y1="6156" x2="124" y2="6256" class="solid"></line>
+        <line x1="128" y1="6152" x2="188" y2="6152" class="solid"></line>
+        <line x1="96" y1="6256" x2="168" y2="6256" class="solid"></line>
+        <line x1="244" y1="5948" x2="244" y2="6056" class="solid"></line>
+        <line x1="268" y1="5948" x2="268" y2="5976" class="solid"></line>
+        <path d="M 264,5976 A 4,4 0,0,0 260,5980" class="nofill"></path>
+        <line x1="260" y1="5980" x2="260" y2="6020" class="solid"></line>
+        <line x1="264" y1="5976" x2="272" y2="5976" class="solid"></line>
+        <path d="M 272,5976 A 4,4 0,0,1 276,5980" class="nofill"></path>
+        <line x1="276" y1="5980" x2="276" y2="6020" class="solid"></line>
+        <path d="M 260,6020 A 4,4 0,0,0 264,6024" class="nofill"></path>
+        <line x1="264" y1="6024" x2="272" y2="6024" class="solid"></line>
+        <line x1="268" y1="6024" x2="268" y2="6056" class="solid"></line>
+        <path d="M 276,6020 A 4,4 0,0,1 272,6024" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="348" y1="5948" x2="348" y2="6024" class="solid"></line>
+        <path d="M 344,6024 A 4,4 0,0,0 340,6028" class="nofill"></path>
+        <line x1="340" y1="6028" x2="340" y2="6068" class="solid"></line>
+        <line x1="344" y1="6024" x2="352" y2="6024" class="solid"></line>
+        <path d="M 352,6024 A 4,4 0,0,1 356,6028" class="nofill"></path>
+        <line x1="356" y1="6028" x2="356" y2="6068" class="solid"></line>
+        <path d="M 340,6068 A 4,4 0,0,0 344,6072" class="nofill"></path>
+        <line x1="344" y1="6072" x2="352" y2="6072" class="solid"></line>
+        <line x1="348" y1="6072" x2="348" y2="6100" class="solid"></line>
+        <path d="M 356,6068 A 4,4 0,0,1 352,6072" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="388" y1="5948" x2="388" y2="6072" class="solid"></line>
+        <line x1="388" y1="6072" x2="372" y2="6104" class="solid"></line>
+        <line x1="372" y1="6080" x2="372" y2="6128" class="solid"></line>
+        <line x1="352" y1="6104" x2="372" y2="6104" class="solid"></line>
+    </g>
+    <g>
+        <line x1="392" y1="5944" x2="448" y2="5944" class="solid"></line>
+        <path d="M 448,5944 A 4,4 0,0,1 452,5948" class="nofill"></path>
+        <line x1="452" y1="5948" x2="452" y2="6016" class="solid"></line>
+        <line x1="440" y1="6016" x2="464" y2="6016" class="solid"></line>
+        <line x1="440" y1="6016" x2="452" y2="6040" class="solid"></line>
+        <line x1="464" y1="6016" x2="452" y2="6040" class="solid"></line>
+        <line x1="440" y1="6040" x2="464" y2="6040" class="solid"></line>
+        <line x1="452" y1="6040" x2="452" y2="6152" class="solid"></line>
+        <line x1="436" y1="6144" x2="436" y2="6192" class="solid"></line>
+        <line x1="436" y1="6152" x2="452" y2="6152" class="solid"></line>
+        <line x1="436" y1="6168" x2="448" y2="6168" class="solid"></line>
+        <polygon points="448,6164 456,6168 448,6172" class="filled"></polygon>
+        <line x1="436" y1="6184" x2="452" y2="6184" class="solid"></line>
+        <line x1="452" y1="6184" x2="452" y2="6212" class="solid"></line>
+    </g>
+    <g>
+        <line x1="128" y1="5992" x2="140" y2="5992" class="solid"></line>
+        <path d="M 140,5992 A 8,8 0,0,1 148,6000" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="52" y1="6016" x2="52" y2="6040" class="solid"></line>
+        <line x1="52" y1="6040" x2="128" y2="6040" class="solid"></line>
+    </g>
+    <g>
+        <line x1="132" y1="6044" x2="132" y2="6064" class="solid"></line>
+        <line x1="104" y1="6064" x2="160" y2="6064" class="solid"></line>
+    </g>
+    <g>
+        <line x1="348" y1="6108" x2="348" y2="6136" class="solid"></line>
+        <path d="M 344,6136 A 4,4 0,0,0 340,6140" class="nofill"></path>
+        <line x1="340" y1="6140" x2="340" y2="6180" class="solid"></line>
+        <line x1="344" y1="6136" x2="352" y2="6136" class="solid"></line>
+        <path d="M 352,6136 A 4,4 0,0,1 356,6140" class="nofill"></path>
+        <line x1="356" y1="6140" x2="356" y2="6180" class="solid"></line>
+        <path d="M 340,6180 A 4,4 0,0,0 344,6184" class="nofill"></path>
+        <line x1="344" y1="6184" x2="352" y2="6184" class="solid"></line>
+        <line x1="348" y1="6184" x2="348" y2="6212" class="solid"></line>
+        <path d="M 356,6180 A 4,4 0,0,1 352,6184" class="nofill"></path>
+        <path d="M 348,6212 A 4,4 0,0,0 352,6216" class="nofill"></path>
+        <line x1="352" y1="6216" x2="384" y2="6216" class="solid"></line>
+        <line x1="388" y1="6156" x2="388" y2="6212" class="solid"></line>
+        <path d="M 388,6212 A 4,4 0,0,1 384,6216" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="392" y1="6152" x2="428" y2="6152" class="solid"></line>
+        <line x1="428" y1="6144" x2="428" y2="6192" class="solid"></line>
+    </g>
+    <g>
+        <line x1="456" y1="6216" x2="476" y2="6216" class="solid"></line>
+        <line x1="476" y1="6208" x2="476" y2="6224" class="solid"></line>
+    </g>
+    <g>
+        <polygon points="488,6212 480,6216 488,6220" class="filled"></polygon>
+        <line x1="488" y1="6216" x2="496" y2="6216" class="solid"></line>
+    </g>
+    <g>
+        <line x1="124" y1="6272" x2="124" y2="6372" class="solid"></line>
+        <path d="M 124,6372 A 4,4 0,0,0 128,6376" class="nofill"></path>
+        <line x1="128" y1="6376" x2="232" y2="6376" class="solid"></line>
+    </g>
+    <g>
+        <line x1="364" y1="6288" x2="364" y2="6304" class="solid"></line>
+        <line x1="364" y1="6296" x2="384" y2="6296" class="solid"></line>
+        <path d="M 384,6296 A 4,4 0,0,1 388,6300" class="nofill"></path>
+        <line x1="388" y1="6300" x2="388" y2="6340" class="solid"></line>
+    </g>
+    <g>
+        <line x1="500" y1="6348" x2="500" y2="6372" class="solid"></line>
+        <line x1="432" y1="6376" x2="452" y2="6376" class="solid"></line>
+        <line x1="452" y1="6368" x2="452" y2="6384" class="solid"></line>
+        <line x1="452" y1="6384" x2="484" y2="6384" class="solid"></line>
+        <line x1="484" y1="6368" x2="484" y2="6384" class="solid"></line>
+        <line x1="484" y1="6376" x2="496" y2="6376" class="solid"></line>
+        <path d="M 500,6372 A 4,4 0,0,1 496,6376" class="nofill"></path>
+        <line x1="452" y1="6368" x2="484" y2="6368" class="solid"></line>
+    </g>
+    <g>
+        <line x1="240" y1="6376" x2="292" y2="6376" class="solid"></line>
+        <line x1="296" y1="6368" x2="288" y2="6384" class="solid"></line>
+        <line x1="296" y1="6368" x2="304" y2="6384" class="solid"></line>
+        <line x1="312" y1="6368" x2="304" y2="6384" class="solid"></line>
+        <line x1="312" y1="6368" x2="320" y2="6384" class="solid"></line>
+        <line x1="328" y1="6368" x2="320" y2="6384" class="solid"></line>
+        <line x1="324" y1="6376" x2="424" y2="6376" class="solid"></line>
+    </g>
+    <g>
+        <line x1="428" y1="6380" x2="428" y2="6408" class="solid"></line>
+        <path d="M 424,6408 A 4,4 0,0,0 420,6412" class="nofill"></path>
+        <line x1="420" y1="6412" x2="420" y2="6452" class="solid"></line>
+        <line x1="424" y1="6408" x2="432" y2="6408" class="solid"></line>
+        <path d="M 432,6408 A 4,4 0,0,1 436,6412" class="nofill"></path>
+        <line x1="436" y1="6412" x2="436" y2="6452" class="solid"></line>
+        <path d="M 420,6452 A 4,4 0,0,0 424,6456" class="nofill"></path>
+        <line x1="424" y1="6456" x2="432" y2="6456" class="solid"></line>
+        <line x1="428" y1="6456" x2="428" y2="6480" class="solid"></line>
+        <path d="M 436,6452 A 4,4 0,0,1 432,6456" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="8" y1="6552" x2="16" y2="6552" class="solid"></line>
+        <polygon points="16,6548 24,6552 16,6556" class="filled"></polygon>
+    </g>
+    <g>
+        <line x1="80" y1="6672" x2="136" y2="6672" class="solid"></line>
+        <line x1="80" y1="6672" x2="64" y2="6704" class="solid"></line>
+        <line x1="136" y1="6672" x2="152" y2="6704" class="solid"></line>
+        <line x1="64" y1="6704" x2="80" y2="6736" class="solid"></line>
+        <line x1="152" y1="6704" x2="136" y2="6736" class="solid"></line>
+        <line x1="80" y1="6736" x2="136" y2="6736" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 256,6616 A 8,8 0,0,0 250,6620" class="nofill"></path>
+        <line x1="250" y1="6620" x2="248" y2="6624" class="solid"></line>
+        <line x1="256" y1="6616" x2="304" y2="6616" class="solid"></line>
+        <path d="M 304,6616 A 8,8 0,0,1 310,6620" class="nofill"></path>
+        <line x1="310" y1="6620" x2="312" y2="6624" class="solid"></line>
+        <path d="M 248,6624 A 16,16 0,0,0 248,6640" class="nofill"></path>
+        <path d="M 312,6624 A 16,16 0,0,1 312,6640" class="nofill"></path>
+        <line x1="248" y1="6640" x2="250" y2="6644" class="solid"></line>
+        <path d="M 250,6644 A 8,8 0,0,0 256,6648" class="nofill"></path>
+        <line x1="256" y1="6648" x2="304" y2="6648" class="solid"></line>
+        <line x1="312" y1="6640" x2="310" y2="6644" class="solid"></line>
+        <path d="M 310,6644 A 8,8 0,0,1 304,6648" class="nofill"></path>
+    </g>
+    <g>
+        <line x1="232" y1="6672" x2="296" y2="6672" class="solid"></line>
+        <line x1="232" y1="6672" x2="240" y2="6688" class="solid"></line>
+        <line x1="296" y1="6672" x2="304" y2="6688" class="solid"></line>
+        <path d="M 240,6688 A 16,16 0,0,1 240,6704" class="nofill"></path>
+        <path d="M 304,6688 A 16,16 0,0,1 304,6704" class="nofill"></path>
+        <line x1="240" y1="6704" x2="232" y2="6720" class="solid"></line>
+        <line x1="232" y1="6720" x2="296" y2="6720" class="solid"></line>
+        <line x1="304" y1="6704" x2="296" y2="6720" class="solid"></line>
+    </g>
+    <g>
+        <line x1="200" y1="6672" x2="184" y2="6704" class="solid"></line>
+        <line x1="200" y1="6672" x2="216" y2="6704" class="solid"></line>
+        <line x1="184" y1="6704" x2="200" y2="6736" class="solid"></line>
+        <line x1="216" y1="6704" x2="200" y2="6736" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 216,6936 A 3,3 0,0,0 214,6940" class="nofill"></path>
+        <line x1="214" y1="6940" x2="236" y2="6984" class="solid"></line>
+        <line x1="216" y1="6936" x2="256" y2="6936" class="solid"></line>
+        <path d="M 256,6936 A 3,3 0,0,1 258,6940" class="nofill"></path>
+        <line x1="258" y1="6940" x2="236" y2="6984" class="solid"></line>
+    </g>
+    <g>
+        <path d="M 280,6936 A 3,3 0,0,0 278,6940" class="nofill"></path>
+        <line x1="278" y1="6940" x2="298" y2="6980" class="solid"></line>
+        <line x1="280" y1="6936" x2="312" y2="6936" class="solid"></line>
+        <path d="M 312,6936 A 8,8 0,0,1 318,6940" class="nofill"></path>
+        <line x1="318" y1="6940" x2="338" y2="6980" class="solid"></line>
+        <path d="M 298,6980 A 8,8 0,0,0 304,6984" class="nofill"></path>
+        <line x1="304" y1="6984" x2="336" y2="6984" class="solid"></line>
+        <path d="M 338,6980 A 3,3 0,0,1 336,6984" class="nofill"></path>
+    </g>
+    <g>
+        <path d="M 24,7096 A 8,8 0,0,0 18,7100" class="nofill"></path>
+        <line x1="18" y1="7100" x2="6" y2="7124" class="solid"></line>
+        <line x1="24" y1="7096" x2="128" y2="7096" class="solid"></line>
+        <path d="M 128,7096 A 3,3 0,0,1 130,7100" class="nofill"></path>
+        <line x1="130" y1="7100" x2="118" y2="7124" class="solid"></line>
+        <path d="M 6,7124 A 3,3 0,0,0 8,7128" class="nofill"></path>
+        <line x1="8" y1="7128" x2="112" y2="7128" class="solid"></line>
+        <path d="M 118,7124 A 8,8 0,0,1 112,7128" class="nofill"></path>
+    </g>
+</svg>

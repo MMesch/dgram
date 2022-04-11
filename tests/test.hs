@@ -16,7 +16,9 @@ goldenTests =
   testGroup
     "Golden tests"
     [vegaLiteTest,
-     graphvizTest]
+     graphvizTest,
+     mermaidTest,
+     svgbobTest]
 
 convertTest infile outfile = 
           convertWith
@@ -39,6 +41,20 @@ vegaLiteTest =
 graphvizTest =
   let infile = "./examples/graphviz.dot"
       goldenfile = "./examples/graphviz.svg"
-      outfile = "tests/output/vegalite.svg"
+      outfile = "tests/output/graphviz.svg"
   in goldenVsFile "test graphviz example" goldenfile outfile
+      (convertTest infile outfile)
+
+mermaidTest =
+  let infile = "./examples/mermaid.mmd"
+      goldenfile = "./examples/mermaid.svg"
+      outfile = "./tests/output/mermaid.svg"
+  in goldenVsFile "test mermaid example" goldenfile outfile
+      (convertTest infile outfile)
+
+svgbobTest =
+  let infile = "./examples/svgbob.bob"
+      goldenfile = "./examples/svgbob.svg"
+      outfile = "tests/output/svgbob.svg"
+  in goldenVsFile "test svgbob example" goldenfile outfile
       (convertTest infile outfile)

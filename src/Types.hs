@@ -6,7 +6,8 @@ data Command = ConvertCommand ConvertOptions | InitCommand InitOptions
 
 data Format = SVG | PDF | PNG deriving (Read, Show, Enum)
 
-data Runner = VegaLite | Vega | GraphViz deriving (Read, Show, Enum)
+data Runner = VegaLite | Vega | GraphViz | Mermaid | Svgbob | Plantuml
+  deriving (Read, Show, Enum)
 
 data InitOptions = InitOptions
   { example :: String,
