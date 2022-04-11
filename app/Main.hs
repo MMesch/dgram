@@ -1,8 +1,6 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 import Prelude
 import CLI
-import Convert
+import Lib
 import Types
 
 main :: IO ()

@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
 
-module Convert where
+module Lib where
 
 import Data.Maybe (fromMaybe)
 import System.FilePath (takeExtension)

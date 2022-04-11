@@ -1,8 +1,7 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 import Data.List
 import Data.Ord
-import Lib
+import Lib 
+import Types
 import Test.Tasty
 import Test.Tasty.Golden
 import Test.Tasty.HUnit
@@ -24,6 +23,7 @@ goldenTests =
               ConvertOptions
                 { maybeFormat = Nothing,
                   maybeRunner = Nothing,
+                  maybeResolution = Nothing,
                   infile = infile,
                   outfile = outfile,
                   extraOptions = ""

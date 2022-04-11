@@ -16,6 +16,7 @@ data InitOptions = InitOptions
 
 data ConvertOptions = ConvertOptions
   { maybeFormat :: Maybe Format,
+    maybeResolution :: Maybe Int,
     maybeRunner :: Maybe Runner,
     infile :: FilePath,
     outfile :: FilePath,

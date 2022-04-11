@@ -2,7 +2,7 @@ module CLI where
 
 import Data.List (intercalate)
 import Data.Semigroup ((<>))
-import Convert
+import Lib
 import Options.Applicative
 import Prelude
 import Types
@@ -63,6 +63,14 @@ convertOptionParser =
                 ( "The program that is used for conversion. One of: "
                     <> intercalate ", " (show <$> enumFrom VegaLite)
                 )
+          )
+      )
+    <*> optional
+      ( option
+          auto
+          ( long "resolution"
+              <> metavar "INT"
+              <> help "The resolution of the output file"
           )
       )
     <*> argument
