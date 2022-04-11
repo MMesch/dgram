@@ -4,10 +4,10 @@
 module Lib where
 
 import Data.Maybe (fromMaybe)
-import Data.Text
 import System.FilePath (takeExtension)
 import System.Process
 import Prelude
+import Types
 
 {-
    This module contains the converter datatype and associated functions.
@@ -16,21 +16,8 @@ import Prelude
    The actual runners are configured in a YAML file for easy contributions.
 -}
 
-data Format = SVG | PDF | PNG deriving (Read, Show, Enum)
-
-data Runner = VegaLite | Vega | GraphViz deriving (Read, Show, Enum)
-
-data Task = Task
-  { maybeFormat :: Maybe Format,
-    maybeRunner :: Maybe Runner,
-    infile :: FilePath,
-    outfile :: FilePath,
-    extraOptions :: Text
-  }
-  deriving (Show)
-
-convertWith :: Task -> IO ()
-convertWith Task {..} = do
+convertWith :: ConvertOptions -> IO ()
+convertWith ConvertOptions {..} = do
   let runner = case maybeRunner of
         Just x -> x
         Nothing -> case takeExtension infile of

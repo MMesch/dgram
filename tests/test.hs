@@ -21,7 +21,7 @@ goldenTests =
           outfile = "tests/output/vegalite.svg"
        in goldenVsFile "test vega lite example" goldenfile outfile $
             convertWith
-              Task
+              ConvertOptions
                 { maybeFormat = Nothing,
                   maybeRunner = Nothing,
                   infile = infile,
