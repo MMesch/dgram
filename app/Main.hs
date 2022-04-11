@@ -11,13 +11,13 @@ cmdOptions =
     <$> optional (option auto
       ( long "format"
           <> metavar "FORMAT"
-          <> help ("The format of the output file. Possibilities: " 
+          <> help ("The format of the output file. One of: " 
             <> intercalate ", " (show <$> enumFrom SVG))
       ))
     <*> optional (option auto
-      ( long "runnerType"
-          <> metavar "FORMAT"
-          <> help ("The format of the output file. Possibilities: " 
+      ( long "runner"
+          <> metavar "RUNNER"
+          <> help ("The program that is used for conversion. One of: " 
             <> intercalate ", " (show <$> enumFrom VegaLite))
       ))
     <*> argument str (

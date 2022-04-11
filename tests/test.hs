@@ -12,11 +12,12 @@ main = defaultMain tests
 tests :: TestTree
 tests = testGroup "Tests" [goldenTests]
 
+goldenTests :: TestTree
 goldenTests =
   testGroup
     "Golden tests"
-    [ let infile = "./tests/data/vegalite.vl"
-          goldenfile = "./tests/golden/vegalite.svg"
+    [ let infile = "./examples/vegalite.vl"
+          goldenfile = "./examples/vegalite.svg"
           outfile = "tests/output/vegalite.svg"
        in goldenVsFile "test vega lite example" goldenfile outfile $
             convertWith
