@@ -4,6 +4,7 @@ dependencies:
   - base == 4.*
   - hourglass
   - aeson
+  - strict
   - yaml
   - tasty
   - tasty-hunit
@@ -12,6 +13,8 @@ dependencies:
   - hspec
   - HUnit
   - bytestring
+  - megaparsec
+  - replace-megaparsec
   - text
   - filepath
   - optparse-applicative

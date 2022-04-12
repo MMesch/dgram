@@ -4,7 +4,13 @@ import Lib
 import Test.Tasty
 import Test.Tasty.Golden
 import Test.Tasty.HUnit
+import qualified System.IO.Strict as S
 import Types
+import Text.Megaparsec
+import Text.Megaparsec.Char
+import Data.Void
+import qualified Text.Megaparsec.Char.Lexer as L
+import Replace.Megaparsec (streamEdit)
 
 main = defaultMain tests
 
@@ -20,6 +26,7 @@ goldenTests =
      mermaidTest,
      svgbobTest]
 
+convertTest :: FilePath -> FilePath -> IO ()
 convertTest infile outfile = 
           convertWith
             ConvertOptions
@@ -30,6 +37,11 @@ convertTest infile outfile =
                 outfile = outfile,
                 extraOptions = ""
               }
+
+convertTestWithFixUp :: (FilePath -> IO ()) -> FilePath -> FilePath -> IO ()
+convertTestWithFixUp fixup infile outfile = do
+        convertTest infile outfile
+        fixup outfile
 
 vegaLiteTest =
   let infile = "./examples/vegalite.vl"
@@ -45,12 +57,27 @@ graphvizTest =
   in goldenVsFile "test graphviz example" goldenfile outfile
       (convertTest infile outfile)
 
+getSvgIdParser :: Parsec Void String String
+getSvgIdParser =
+        chunk "<svg id=\"" *> manyTill L.charLiteral (chunk "\"")
+
 mermaidTest =
   let infile = "./examples/mermaid.mmd"
       goldenfile = "./examples/mermaid.svg"
       outfile = "./tests/output/mermaid.svg"
+      fixup fp = do
+        print "fixing up svg id"
+        str <- S.readFile fp
+        let eitherId = runParser getSvgIdParser outfile str
+        case eitherId of
+          Left err -> print $ "Can't equalize mermaid id" <> show err
+          Right svgId -> do
+            print $ "found id " <> svgId
+            let pattern = chunk svgId :: Parsec Void String String
+                newstr = streamEdit pattern (const "equalizedId") str
+            writeFile fp newstr
   in goldenVsFile "test mermaid example" goldenfile outfile
-      (convertTest infile outfile)
+      (convertTestWithFixUp fixup infile outfile)
 
 svgbobTest =
   let infile = "./examples/svgbob.bob"
