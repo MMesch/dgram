@@ -4,8 +4,10 @@
 module Lib where
 
 import Data.Maybe (fromMaybe)
-import System.FilePath (takeExtension)
+import System.FilePath (takeExtension, takeBaseName, joinPath)
+import System.IO.Temp
 import System.Process
+import System.Directory
 import Prelude
 import Types
 
@@ -29,44 +31,61 @@ convertWith ConvertOptions {..} = do
            ".png" -> PNG
            _ -> error "unknown output format"
   print $ "RUNNER used: " <> show runner
-  let (exec, args) = case runner of
-        VegaLite ->
+  case runner of
+        VegaLite -> do
           let exec = case format of
                 SVG -> "vl2svg"
                 PDF -> "vl2pdf"
                 PNG -> "vl2png"
               args = [infile, outfile]
-           in (exec, args)
-        Vega ->
-          let executable = case format of
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode exec args ""
+          print (ecode, stdout, stderr)
+        Vega -> do
+          let exec = case format of
                 SVG -> "vg2svg"
                 PDF -> "vg2pdf"
                 PNG -> "vg2png"
               args = [infile, outfile]
-           in (exec, args)
-        GraphViz ->
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode exec args ""
+          print (ecode, stdout, stderr)
+        GraphViz -> do
           let formatOption = case format of
                 SVG -> "-Tsvg"
                 PDF -> "-Tpdf"
                 PNG -> "-Tpng"
               exec = "dot"
               args = [formatOption, infile, "-o" <> outfile]
-           in (exec, args)
-        Mermaid ->
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode exec args ""
+          print (ecode, stdout, stderr)
+        Mermaid -> do
           let
               exec = "mmdc"
               args = ["-i" <> infile, "-o" <> outfile]
-           in (exec, args)
-        Svgbob ->
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode exec args ""
+          print (ecode, stdout, stderr)
+        Svgbob -> do
           let
               exec = "svgbob"
               args = [infile, "-o" <> outfile]
-           in (exec, args)
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode exec args ""
+          print (ecode, stdout, stderr)
         Plantuml ->
-          let
-              exec = "plantuml"
-              args = [infile]
-           in (exec, args)
-  (ecode, stdout, stderr) <-
-    readProcessWithExitCode exec args ""
-  print (ecode, stdout, stderr)
+          withSystemTempDirectory "plantuml" $ \dirname -> do
+            let
+                formatStr = case format of
+                  SVG -> "svg"
+                  PDF -> "pdf"
+                  PNG -> "png"
+                exec = "plantuml"
+                infileBase = takeBaseName infile <> "." <> formatStr
+                outfilePlantuml = joinPath [dirname, infileBase]
+                args = [infile, "-o" <> dirname, "-t" <> formatStr]
+            (ecode, stdout, stderr) <-
+              readProcessWithExitCode exec args ""
+            renamePath outfilePlantuml outfile
+            print (ecode, stdout, stderr)

@@ -22,9 +22,11 @@ goldenTests =
   testGroup
     "Golden tests"
     [vegaLiteTest,
+     vegaTest,
      graphvizTest,
      mermaidTest,
-     svgbobTest]
+     svgbobTest,
+     plantumlTest]
 
 convertTest :: FilePath -> FilePath -> IO ()
 convertTest infile outfile = 
@@ -42,6 +44,13 @@ convertTestWithFixUp :: (FilePath -> IO ()) -> FilePath -> FilePath -> IO ()
 convertTestWithFixUp fixup infile outfile = do
         convertTest infile outfile
         fixup outfile
+
+vegaTest =
+  let infile = "./examples/vega.vg"
+      goldenfile = "./examples/vega.svg"
+      outfile = "tests/output/vega.svg"
+  in goldenVsFile "test vega example" goldenfile outfile
+      (convertTest infile outfile)
 
 vegaLiteTest =
   let infile = "./examples/vegalite.vl"
@@ -84,4 +93,11 @@ svgbobTest =
       goldenfile = "./examples/svgbob.svg"
       outfile = "tests/output/svgbob.svg"
   in goldenVsFile "test svgbob example" goldenfile outfile
+      (convertTest infile outfile)
+
+plantumlTest =
+  let infile = "./examples/plantuml.puml"
+      goldenfile = "./examples/plantuml.svg"
+      outfile = "tests/output/plantuml.svg"
+  in goldenVsFile "test plantuml example" goldenfile outfile
       (convertTest infile outfile)

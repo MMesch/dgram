@@ -10,6 +10,8 @@ dependencies:
   - tasty-hunit
   - tasty-hspec
   - tasty-golden
+  - temporary
+  - directory
   - hspec
   - HUnit
   - bytestring
