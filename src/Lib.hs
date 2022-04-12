@@ -37,7 +37,7 @@ convertWith ConvertOptions {..} = do
                 SVG -> "vl2svg"
                 PDF -> "vl2pdf"
                 PNG -> "vl2png"
-              args = [infile, outfile]
+              args = [infile, outfile, extraOptions]
           (ecode, stdout, stderr) <-
             readProcessWithExitCode exec args ""
           print (ecode, stdout, stderr)
@@ -56,21 +56,21 @@ convertWith ConvertOptions {..} = do
                 PDF -> "-Tpdf"
                 PNG -> "-Tpng"
               exec = "dot"
-              args = [formatOption, infile, "-o" <> outfile]
+              args = [formatOption, infile, "-o" <> outfile, extraOptions]
           (ecode, stdout, stderr) <-
             readProcessWithExitCode exec args ""
           print (ecode, stdout, stderr)
         Mermaid -> do
           let
               exec = "mmdc"
-              args = ["-i" <> infile, "-o" <> outfile]
+              args = ["-i" <> infile, "-o" <> outfile, extraOptions]
           (ecode, stdout, stderr) <-
             readProcessWithExitCode exec args ""
           print (ecode, stdout, stderr)
         Svgbob -> do
           let
               exec = "svgbob"
-              args = [infile, "-o" <> outfile]
+              args = [infile, "-o" <> outfile, extraOptions]
           (ecode, stdout, stderr) <-
             readProcessWithExitCode exec args ""
           print (ecode, stdout, stderr)
@@ -84,8 +84,9 @@ convertWith ConvertOptions {..} = do
                 exec = "plantuml"
                 infileBase = takeBaseName infile <> "." <> formatStr
                 outfilePlantuml = joinPath [dirname, infileBase]
-                args = [infile, "-o" <> dirname, "-t" <> formatStr]
+                args = [infile, "-o" <> dirname, "-t" <> formatStr, extraOptions]
             (ecode, stdout, stderr) <-
               readProcessWithExitCode exec args ""
+            print (ecode, stderr)
+            putStr stdout
             renamePath outfilePlantuml outfile
-            print (ecode, stdout, stderr)
