@@ -4,63 +4,49 @@ import Data.List (intercalate)
 import Data.Semigroup ((<>))
 import Lib
 import Options.Applicative
-import Prelude
 import Types
+import Prelude
 
-cli :: IO Command
-cli =
+topLevelCLI :: IO Command
+topLevelCLI =
   execParser
     ( info
-        (opts <**> helper)
+        (topLevelCommands <**> helper)
         ( fullDesc
             <> progDesc "A diagram file to image converter"
             <> header "convert diagrams to images"
         )
     )
 
-opts :: Parser Command
-opts =
-  subparser $
-    command
-      "convert"
-      ( info
-          (ConvertCommand <$> convertOptionParser <**> helper)
-          ( fullDesc
-              <> progDesc "Convert diagram files to images"
-              <> header "convert diagrams to images"
-          )
-      )
-      <> command
-        "init"
-        ( info
-            (InitCommand <$> initOptionParser <**> helper)
-            ( fullDesc
-                <> progDesc "initialize an example file from library"
-                <> header "init diagram file from library"
-            )
+topLevelCommands :: Parser Command
+topLevelCommands =
+  subparser $ command "convert" convertDesc <> command "init" templateDesc
+  where
+    convertDesc =
+      info
+        (ConvertCommand <$> convertCommandParser <**> helper)
+        ( fullDesc
+            <> progDesc "Convert diagram files to images"
+            <> header "convert diagrams to images"
+        )
+    templateDesc =
+      info
+        (TemplateCommand <$> initCommandParser <**> helper)
+        ( fullDesc
+            <> progDesc "initialize an example file from library"
+            <> header "init diagram file from library"
         )
 
-convertOptionParser :: Parser ConvertOptions
-convertOptionParser =
+convertCommandParser :: Parser ConvertOptions
+convertCommandParser =
   ConvertOptions
     <$> optional
       ( option
           auto
-          ( long "format"
-              <> metavar "FORMAT"
+          ( long "informat"
+              <> metavar "INFORMAT"
               <> help
-                ( "The format of the output file. One of: "
-                    <> intercalate ", " (show <$> enumFrom SVG)
-                )
-          )
-      )
-    <*> optional
-      ( option
-          auto
-          ( long "runner"
-              <> metavar "RUNNER"
-              <> help
-                ( "The program that is used for conversion. One of: "
+                ( "The informat, specifying the program that is used for conversion. One of: "
                     <> intercalate ", " (show <$> enumFrom VegaLite)
                 )
           )
@@ -68,20 +54,25 @@ convertOptionParser =
     <*> optional
       ( option
           auto
-          ( long "resolution"
-              <> metavar "INT"
-              <> help "The resolution of the output file"
+          ( long "outformat"
+              <> metavar "OUTFORMAT"
+              <> help
+                ( "The format of the output file. One of: "
+                    <> intercalate ", " (show <$> enumFrom SVG)
+                )
           )
       )
     <*> argument
       str
-      ( metavar "infile"
+      ( metavar "INPATH"
           <> help "The file path of the input file"
       )
-    <*> argument
-      str
-      ( metavar "outfile"
-          <> help "The file path of the output file"
+    <*> optional
+      ( option
+          auto
+          ( long "outpath" <> metavar "OUTPATH"
+              <> help "The file path of the output file"
+          )
       )
     <*> strOption
       ( long "extraOptions"
@@ -91,9 +82,9 @@ convertOptionParser =
           <> help "extraoptions that will be passed to the executable"
       )
 
-initOptionParser :: Parser InitOptions
-initOptionParser =
-  InitOptions
+initCommandParser :: Parser TemplateOptions
+initCommandParser =
+  TemplateOptions
     <$> argument
       str
       ( metavar "ExampleName"

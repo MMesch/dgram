@@ -2,25 +2,28 @@ module Types where
 
 import Prelude
 
-data Command = ConvertCommand ConvertOptions | InitCommand InitOptions
+data Command
+  = ConvertCommand ConvertOptions
+  | TemplateCommand TemplateOptions
 
-data Format = SVG | PDF | PNG deriving (Read, Show, Enum)
-
-data Runner = VegaLite | Vega | GraphViz | Mermaid | Svgbob | Plantuml
-  deriving (Read, Show, Enum)
-
-data InitOptions = InitOptions
-  { example :: String,
+-- template command
+data TemplateOptions = TemplateOptions
+  { exampleName :: String,
     path :: FilePath
   }
   deriving (Show)
 
+-- convert command
+data OutFormat = SVG | PDF | PNG deriving (Read, Show, Enum)
+
+data InFormat = VegaLite | Vega | GraphViz | Mermaid | Svgbob | Plantuml
+  deriving (Read, Show, Enum)
+
 data ConvertOptions = ConvertOptions
-  { maybeFormat :: Maybe Format,
-    maybeResolution :: Maybe Int,
-    maybeRunner :: Maybe Runner,
-    infile :: FilePath,
-    outfile :: FilePath,
+  { maybeInFormat :: Maybe InFormat,
+    maybeOutFormat :: Maybe OutFormat,
+    inPath :: FilePath,
+    maybeOutPath :: Maybe FilePath,
     extraOptions :: String
   }
   deriving (Show)

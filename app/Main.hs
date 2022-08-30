@@ -5,7 +5,7 @@ import Types
 
 main :: IO ()
 main = do
-  cmd <- cli
+  cmd <- topLevelCLI
   case cmd of
     ConvertCommand convertOptions -> convertWith convertOptions
-    InitCommand initOptions -> print "not implemented yet"
+    TemplateCommand templateOptions -> error "not implemented yet"
