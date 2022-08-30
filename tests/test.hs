@@ -32,11 +32,10 @@ convertTest :: FilePath -> FilePath -> IO ()
 convertTest infile outfile = 
           convertWith
             ConvertOptions
-              { maybeFormat = Nothing,
-                maybeRunner = Nothing,
-                maybeResolution = Nothing,
-                infile = infile,
-                outfile = outfile,
+              { maybeInFormat = Nothing,
+                maybeOutFormat = Nothing,
+                inPath = infile,
+                maybeOutPath = Just outfile,
                 extraOptions = ""
               }
 
