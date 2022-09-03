@@ -2,12 +2,14 @@
 
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.UTF8 as BSU
+import Data.Char (toLower)
 import Data.List
 import Data.Ord
 import Data.Void
 import Data.Word (Word8)
 import Lib
 import Replace.Megaparsec (streamEdit)
+import System.FilePath (takeExtension)
 import qualified System.IO.Strict as S
 import Test.Tasty
 import Test.Tasty.Golden
@@ -27,9 +29,8 @@ goldenTests :: TestTree
 goldenTests =
   testGroup
     "Golden tests"
-    [ vegaLiteTest,
-      vegaTestGenerator ".svg",
-      vegaTestGenerator ".pdf",
+    [ testGenerator VegaLite,
+      testGenerator Vega,
       graphvizTest,
       mermaidTest,
       svgbobTest,
@@ -52,29 +53,25 @@ convertTestWithFixUp fixup infile outfile = do
   convertTest infile outfile
   fixup outfile
 
-vegaTestGenerator :: String -> TestTree
-vegaTestGenerator extension =
-  let infile = "./examples/vega.vg"
-      goldenfile = "./examples/vega" <> extension
-      outfile = "tests/output/vega" <> extension
-
-      -- fixup pdf dates
-      fixup = replaceFixup outfile "/CreationDate (D:" ")" "20220830151034+02'00"
-
-   in goldenVsFile "test vega example" goldenfile outfile $
-        if extension == ".pdf"
-          then convertTestWithFixUp fixup infile outfile
-          else convertTest infile outfile
-
-vegaLiteTest =
-  let infile = "./examples/vegalite.vl"
-      goldenfile = "./examples/vegalite.svg"
-      outfile = "tests/output/vegalite.svg"
-   in goldenVsFile
-        "test vega lite example"
-        goldenfile
-        outfile
-        (convertTest infile outfile)
+testGenerator :: InFormat -> TestTree
+testGenerator inFormat =
+  let basename = toLower <$> show inFormat
+      inPath = "./examples/" <> basename <> toExtension inFormat
+      testPaths =
+        [ ( "./tests/output/" <> basename <> extension,
+            "./examples/" <> basename <> extension
+          )
+          | extension <- allOutExtensions
+        ]
+      fixup fp = case fromExtension $ takeExtension fp of
+        PDF -> replaceFixup "/CreationDate (D:" ")" "20220830151034+02'00" fp
+        SVG -> replaceFixup "<svg id=\"" "\"" "equalizedId" fp
+        _ -> return ()
+   in testGroup (basename <> " tests") $
+        [ goldenVsFile (basename <> " " <> show inFormat <> " test") goldenPath outPath $
+            convertTestWithFixUp fixup inPath outPath
+          | (outPath, goldenPath) <- testPaths
+        ]
 
 graphvizTest =
   let infile = "./examples/graphviz.dot"
@@ -93,7 +90,7 @@ mermaidTest =
 
       -- ids are generated randomly and thus need to be equalized before
       -- comparison
-      fixup = replaceFixup outfile "<svg id=\"" "\"" "equalizedId"
+      fixup = replaceFixup "<svg id=\"" "\"" "equalizedId"
    in goldenVsFile
         "test mermaid example"
         goldenfile
@@ -122,22 +119,20 @@ plantumlTest =
 
 -- helpers
 replaceFixup ::
-  FilePath ->
   BS.ByteString ->
   BS.ByteString ->
   BS.ByteString ->
   FilePath ->
   IO ()
-replaceFixup outfile before after replacement fp = do
+replaceFixup before after replacement fp = do
   print "fixing up non-reproducible elements of file"
   str <- BS.readFile fp
-  let
-    parser = betweenParser before after
-    eitherId = runParser parser outfile str
+  let parser = betweenParser before after
+      eitherId = runParser parser fp str
   case eitherId of
-    Left err -> print $ "Can't equalize mermaid id" <> show err
+    Left err -> print $ "Can't equalize " <> show err
     Right match -> do
-      print $ "found id " <> match
+      print $ "found match: " <> match
       let pattern = chunk match :: Parsec Void BS.ByteString BS.ByteString
           newstr = streamEdit pattern (const replacement) str
       BS.writeFile fp newstr

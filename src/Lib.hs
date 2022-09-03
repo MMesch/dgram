@@ -26,24 +26,13 @@ guessInFormat :: ConvertOptions -> InFormat
 guessInFormat ConvertOptions {maybeInFormat, inPath} =
   case maybeInFormat of
     Just x -> x
-    Nothing -> case takeExtension inPath of
-      ".vl" -> VegaLite
-      ".vg" -> Vega
-      ".dot" -> GraphViz
-      ".mmd" -> Mermaid
-      ".puml" -> Plantuml
-      ".bob" -> Svgbob
-      _ -> error "unknown input format"
+    Nothing -> fromExtension $ takeExtension inPath
 
 guessOutFormat :: ConvertOptions -> OutFormat
 guessOutFormat co@ConvertOptions {maybeOutPath, maybeOutFormat} =
   case maybeOutFormat of
     Just format -> format
-    Nothing -> case takeExtension (guessOutPath co) of
-      ".svg" -> SVG
-      ".pdf" -> PDF
-      ".png" -> PNG
-      _ -> error "unknown output format"
+    Nothing -> fromExtension $ takeExtension (guessOutPath co)
 
 guessOutPath :: ConvertOptions -> FilePath
 guessOutPath ConvertOptions {maybeOutPath, inPath} =

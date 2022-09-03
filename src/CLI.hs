@@ -47,7 +47,7 @@ convertCommandParser =
               <> metavar "INFORMAT"
               <> help
                 ( "The informat, specifying the program that is used for conversion. One of: "
-                    <> intercalate ", " (show <$> enumFrom VegaLite)
+                    <> intercalate ", " (show <$> (allValues :: [InFormat]))
                 )
           )
       )
@@ -58,7 +58,7 @@ convertCommandParser =
               <> metavar "OUTFORMAT"
               <> help
                 ( "The format of the output file. One of: "
-                    <> intercalate ", " (show <$> enumFrom SVG)
+                    <> intercalate ", " (show <$> (allValues :: [OutFormat]))
                 )
           )
       )
