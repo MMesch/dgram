@@ -31,7 +31,7 @@ goldenTests =
     "Golden tests"
     [ testGenerator VegaLite,
       testGenerator Vega,
-      graphvizTest,
+      testGenerator GraphViz,
       mermaidTest,
       svgbobTest,
       plantumlTest
@@ -72,16 +72,6 @@ testGenerator inFormat =
             convertTestWithFixUp fixup inPath outPath
           | (outPath, goldenPath) <- testPaths
         ]
-
-graphvizTest =
-  let infile = "./examples/graphviz.dot"
-      goldenfile = "./examples/graphviz.svg"
-      outfile = "tests/output/graphviz.svg"
-   in goldenVsFile
-        "test graphviz example"
-        goldenfile
-        outfile
-        (convertTest infile outfile)
 
 mermaidTest =
   let infile = "./examples/mermaid.mmd"
