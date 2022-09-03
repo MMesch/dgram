@@ -15,6 +15,7 @@ dependencies:
   - hspec
   - HUnit
   - bytestring
+  - utf8-string
   - megaparsec
   - replace-megaparsec
   - text

@@ -10,12 +10,13 @@ import System.IO.Temp
 import System.Process
 import Types
 import Prelude
+import Debug.Trace(trace)
 
 convertWith :: ConvertOptions -> IO ()
 convertWith co = do
   case guessInFormat co of
     VegaLite -> vegaliteConverter co
-    Vega -> vegaliteConverter co
+    Vega -> vegaConverter co
     GraphViz -> graphvizConverter co
     Mermaid -> mermaidConverter co
     Svgbob -> svgbobConverter co
@@ -72,6 +73,7 @@ vegaConverter co = do
         PDF -> "vg2pdf"
         PNG -> "vg2png"
       args = [inPath co, outPath]
+  print $ "outFormat" <> show outFormat <> " outPath" <> show outPath
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""
   print (ecode, stdout, stderr)

@@ -1,16 +1,22 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+import qualified Data.ByteString as BS
+import qualified Data.ByteString.UTF8 as BSU
 import Data.List
 import Data.Ord
+import Data.Void
+import Data.Word (Word8)
 import Lib
+import Replace.Megaparsec (streamEdit)
+import qualified System.IO.Strict as S
 import Test.Tasty
 import Test.Tasty.Golden
 import Test.Tasty.HUnit
-import qualified System.IO.Strict as S
-import Types
 import Text.Megaparsec
+import qualified Text.Megaparsec.Byte as MPB
 import Text.Megaparsec.Char
-import Data.Void
 import qualified Text.Megaparsec.Char.Lexer as L
-import Replace.Megaparsec (streamEdit)
+import Types
 
 main = defaultMain tests
 
@@ -21,82 +27,123 @@ goldenTests :: TestTree
 goldenTests =
   testGroup
     "Golden tests"
-    [vegaLiteTest,
-     vegaTest,
-     graphvizTest,
-     mermaidTest,
-     svgbobTest,
-     plantumlTest]
+    [ vegaLiteTest,
+      vegaTestGenerator ".svg",
+      vegaTestGenerator ".pdf",
+      graphvizTest,
+      mermaidTest,
+      svgbobTest,
+      plantumlTest
+    ]
 
 convertTest :: FilePath -> FilePath -> IO ()
-convertTest infile outfile = 
-          convertWith
-            ConvertOptions
-              { maybeInFormat = Nothing,
-                maybeOutFormat = Nothing,
-                inPath = infile,
-                maybeOutPath = Just outfile,
-                extraOptions = ""
-              }
+convertTest infile outfile =
+  convertWith
+    ConvertOptions
+      { maybeInFormat = Nothing,
+        maybeOutFormat = Nothing,
+        inPath = infile,
+        maybeOutPath = Just outfile,
+        extraOptions = ""
+      }
 
 convertTestWithFixUp :: (FilePath -> IO ()) -> FilePath -> FilePath -> IO ()
 convertTestWithFixUp fixup infile outfile = do
-        convertTest infile outfile
-        fixup outfile
+  convertTest infile outfile
+  fixup outfile
 
-vegaTest =
+vegaTestGenerator :: String -> TestTree
+vegaTestGenerator extension =
   let infile = "./examples/vega.vg"
-      goldenfile = "./examples/vega.svg"
-      outfile = "tests/output/vega.svg"
-  in goldenVsFile "test vega example" goldenfile outfile
-      (convertTest infile outfile)
+      goldenfile = "./examples/vega" <> extension
+      outfile = "tests/output/vega" <> extension
+
+      -- fixup pdf dates
+      fixup = replaceFixup outfile "/CreationDate (D:" ")" "20220830151034+02'00"
+
+   in goldenVsFile "test vega example" goldenfile outfile $
+        if extension == ".pdf"
+          then convertTestWithFixUp fixup infile outfile
+          else convertTest infile outfile
 
 vegaLiteTest =
   let infile = "./examples/vegalite.vl"
       goldenfile = "./examples/vegalite.svg"
       outfile = "tests/output/vegalite.svg"
-  in goldenVsFile "test vega lite example" goldenfile outfile
-      (convertTest infile outfile)
+   in goldenVsFile
+        "test vega lite example"
+        goldenfile
+        outfile
+        (convertTest infile outfile)
 
 graphvizTest =
   let infile = "./examples/graphviz.dot"
       goldenfile = "./examples/graphviz.svg"
       outfile = "tests/output/graphviz.svg"
-  in goldenVsFile "test graphviz example" goldenfile outfile
-      (convertTest infile outfile)
-
-getSvgIdParser :: Parsec Void String String
-getSvgIdParser =
-        chunk "<svg id=\"" *> manyTill L.charLiteral (chunk "\"")
+   in goldenVsFile
+        "test graphviz example"
+        goldenfile
+        outfile
+        (convertTest infile outfile)
 
 mermaidTest =
   let infile = "./examples/mermaid.mmd"
       goldenfile = "./examples/mermaid.svg"
       outfile = "./tests/output/mermaid.svg"
-      fixup fp = do
-        print "fixing up svg id"
-        str <- S.readFile fp
-        let eitherId = runParser getSvgIdParser outfile str
-        case eitherId of
-          Left err -> print $ "Can't equalize mermaid id" <> show err
-          Right svgId -> do
-            print $ "found id " <> svgId
-            let pattern = chunk svgId :: Parsec Void String String
-                newstr = streamEdit pattern (const "equalizedId") str
-            writeFile fp newstr
-  in goldenVsFile "test mermaid example" goldenfile outfile
-      (convertTestWithFixUp fixup infile outfile)
+
+      -- ids are generated randomly and thus need to be equalized before
+      -- comparison
+      fixup = replaceFixup outfile "<svg id=\"" "\"" "equalizedId"
+   in goldenVsFile
+        "test mermaid example"
+        goldenfile
+        outfile
+        (convertTestWithFixUp fixup infile outfile)
 
 svgbobTest =
   let infile = "./examples/svgbob.bob"
       goldenfile = "./examples/svgbob.svg"
       outfile = "tests/output/svgbob.svg"
-  in goldenVsFile "test svgbob example" goldenfile outfile
-      (convertTest infile outfile)
+   in goldenVsFile
+        "test svgbob example"
+        goldenfile
+        outfile
+        (convertTest infile outfile)
 
 plantumlTest =
   let infile = "./examples/plantuml.puml"
       goldenfile = "./examples/plantuml.svg"
       outfile = "tests/output/plantuml.svg"
-  in goldenVsFile "test plantuml example" goldenfile outfile
-      (convertTest infile outfile)
+   in goldenVsFile
+        "test plantuml example"
+        goldenfile
+        outfile
+        (convertTest infile outfile)
+
+-- helpers
+replaceFixup ::
+  FilePath ->
+  BS.ByteString ->
+  BS.ByteString ->
+  BS.ByteString ->
+  FilePath ->
+  IO ()
+replaceFixup outfile before after replacement fp = do
+  print "fixing up non-reproducible elements of file"
+  str <- BS.readFile fp
+  let
+    parser = betweenParser before after
+    eitherId = runParser parser outfile str
+  case eitherId of
+    Left err -> print $ "Can't equalize mermaid id" <> show err
+    Right match -> do
+      print $ "found id " <> match
+      let pattern = chunk match :: Parsec Void BS.ByteString BS.ByteString
+          newstr = streamEdit pattern (const replacement) str
+      BS.writeFile fp newstr
+
+betweenParser :: BS.ByteString -> BS.ByteString -> Parsec Void BS.ByteString BS.ByteString
+betweenParser before after = do
+  _ <- manyTill anySingle (chunk before)
+  ret <- manyTill anySingle (chunk after)
+  return $ BS.pack ret
