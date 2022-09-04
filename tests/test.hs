@@ -38,7 +38,7 @@ goldenTests =
       testGenerator GraphViz,
       testGenerator Mermaid,
       testGenerator Svgbob,
-      plantumlTest
+      testGenerator Plantuml
     ]
 
 convertTest :: FilePath -> FilePath -> IO ()

@@ -95,23 +95,22 @@ mermaidConverter co = do
       print (ecode, stdout, stderr)
 
 svgbobConverter :: ConvertOptions -> IO ()
-svgbobConverter co = do
-      let
-          outFormat = guessOutFormat co
-          outPath = guessOutPath co
-          exec = "svgbob"
+svgbobConverter co = 
       withSystemTempFile ("svgbob" <> toExtension SVG) (\fp _ -> do
-          print $ "working on temporary file " <> fp
           let
-            args = [inPath co, "-o" <> fp] ++ extraOptions co
+              outFormat = guessOutFormat co
+              outPath = guessOutPath co
+              exec = "svgbob"
+              args = [inPath co, "-o" <> fp] ++ extraOptions co
+              convertExec = "rsvg-convert"
+              convertArgs = [fp, "-f", show outFormat, "-o", outPath]
+          print $ "producing temporary file " <> fp
           (ecode, stdout, stderr) <-
             readProcessWithExitCode exec args ""
           print (ecode, stdout, stderr)
-          print "conversion ..."
-          let
-            convertArgs = [fp, "-f", show outFormat, "-o", outPath]
+          print $ "converting to " <> outPath
           (ecode, stdout, stderr) <-
-            readProcessWithExitCode "rsvg-convert" convertArgs ""
+            readProcessWithExitCode convertExec convertArgs ""
           print (ecode, stdout, stderr)
           )
 
@@ -126,11 +125,18 @@ plantumlConverter co =
               PDF -> "pdf"
               PNG -> "png"
             exec = "plantuml"
-            inPathBase = takeBaseName (inPath co) <> "." <> formatStr
+            inPathBase = takeBaseName (inPath co) <> ".svg"
             outPathPlantuml = joinPath [dirname, inPathBase]
-            args = [inPath co, "-o" <> dirname, "-t" <> formatStr] ++ extraOptions co
+            args = [inPath co, "-o" <> dirname, "-tsvg"] ++ extraOptions co
+            convertExec = "rsvg-convert"
+            convertArgs = [outPathPlantuml, "-f", show outFormat, "-o", outPath]
         (ecode, stdout, stderr) <-
           readProcessWithExitCode exec args ""
-        print (ecode, stderr)
-        putStr stdout
-        renamePath outPathPlantuml outPath
+        print (ecode, stderr, stdout)
+        case outFormat of
+          SVG -> renamePath outPathPlantuml outPath
+          _ -> do 
+            print $ "converting to " <> outPath
+            (ecode, stdout, stderr) <-
+              readProcessWithExitCode convertExec convertArgs ""
+            print (ecode, stdout, stderr)
