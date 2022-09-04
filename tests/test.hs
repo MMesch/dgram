@@ -37,7 +37,7 @@ goldenTests =
       testGenerator Vega,
       testGenerator GraphViz,
       testGenerator Mermaid,
-      svgbobTest,
+      testGenerator Svgbob,
       plantumlTest
     ]
 

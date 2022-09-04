@@ -100,10 +100,20 @@ svgbobConverter co = do
           outFormat = guessOutFormat co
           outPath = guessOutPath co
           exec = "svgbob"
-          args = [inPath co, "-o" <> outPath] ++ extraOptions co
-      (ecode, stdout, stderr) <-
-        readProcessWithExitCode exec args ""
-      print (ecode, stdout, stderr)
+      withSystemTempFile ("svgbob" <> toExtension SVG) (\fp _ -> do
+          print $ "working on temporary file " <> fp
+          let
+            args = [inPath co, "-o" <> fp] ++ extraOptions co
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode exec args ""
+          print (ecode, stdout, stderr)
+          print "conversion ..."
+          let
+            convertArgs = [fp, "-f", show outFormat, "-o", outPath]
+          (ecode, stdout, stderr) <-
+            readProcessWithExitCode "rsvg-convert" convertArgs ""
+          print (ecode, stdout, stderr)
+          )
 
 plantumlConverter :: ConvertOptions -> IO ()
 plantumlConverter co =
