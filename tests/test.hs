@@ -49,7 +49,7 @@ convertTest infile outfile =
         maybeOutFormat = Nothing,
         inPath = infile,
         maybeOutPath = Just outfile,
-        extraOptions = ""
+        extraOptions = []
       }
 
 convertTestWithFixUp :: (FilePath -> IO ()) -> FilePath -> FilePath -> IO ()

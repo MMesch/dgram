@@ -1,6 +1,6 @@
 module CLI where
 
-import Data.List (intercalate)
+import Data.List (intercalate, words)
 import Data.Semigroup ((<>))
 import Lib
 import Options.Applicative
@@ -74,13 +74,16 @@ convertCommandParser =
               <> help "The file path of the output file"
           )
       )
-    <*> strOption
+    <*> option readExtraOptions 
       ( long "extraOptions"
           <> showDefault
-          <> value ""
+          <> value []
           <> metavar "OptionsString"
-          <> help "extraoptions that will be passed to the executable"
+          <> help "extraoptions that will be passed to the executable. E.g. \"-s\""
       )
+
+readExtraOptions :: ReadM [String]
+readExtraOptions = eitherReader $ \s -> Right $ words s 
 
 initCommandParser :: Parser TemplateOptions
 initCommandParser =

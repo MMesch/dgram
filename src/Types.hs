@@ -65,6 +65,6 @@ data ConvertOptions = ConvertOptions
     maybeOutFormat :: Maybe OutFormat,
     inPath :: FilePath,
     maybeOutPath :: Maybe FilePath,
-    extraOptions :: String
+    extraOptions :: [String]
   }
   deriving (Show)

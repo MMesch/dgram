@@ -48,7 +48,7 @@ vegaliteConverter co = do
         SVG -> "vl2svg"
         PDF -> "vl2pdf"
         PNG -> "vl2png"
-      args = [inPath co, outPath, extraOptions co]
+      args = [inPath co, outPath] ++ extraOptions co
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""
   print (ecode, stdout, stderr)
@@ -61,7 +61,7 @@ vegaConverter co = do
         SVG -> "vg2svg"
         PDF -> "vg2pdf"
         PNG -> "vg2png"
-      args = [inPath co, outPath]
+      args = [inPath co, outPath] ++ extraOptions co
   print $ "outFormat" <> show outFormat <> " outPath" <> show outPath
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""
@@ -77,9 +77,7 @@ graphvizConverter co = do
             PDF -> "-Tpdf"
             PNG -> "-Tpng"
           exec = "dot"
-          args = [inPath co, formatOption, "-o" <> outPath] ++
-                  if extraOptions co /= "" then [extraOptions co] else []
-          -- args = formatOption <> " " <> inPath co <> " -o " <> " " <> outPath <> " " <> extraOptions co
+          args = [inPath co, formatOption, "-o" <> outPath] ++ extraOptions co
       print $ "running graphviz with" <> show args
       (ecode, stdout, stderr) <-
         readProcessWithExitCode exec args ""
@@ -91,7 +89,7 @@ mermaidConverter co = do
           outFormat = guessOutFormat co
           outPath = guessOutPath co
           exec = "mmdc"
-          args = ["-i" <> inPath co, "-o" <> outPath, extraOptions co]
+          args = ["-i" <> inPath co, "-o" <> outPath] ++ extraOptions co
       (ecode, stdout, stderr) <-
         readProcessWithExitCode exec args ""
       print (ecode, stdout, stderr)
@@ -102,7 +100,7 @@ svgbobConverter co = do
           outFormat = guessOutFormat co
           outPath = guessOutPath co
           exec = "svgbob"
-          args = [inPath co, "-o" <> outPath, extraOptions co]
+          args = [inPath co, "-o" <> outPath] ++ extraOptions co
       (ecode, stdout, stderr) <-
         readProcessWithExitCode exec args ""
       print (ecode, stdout, stderr)
@@ -120,7 +118,7 @@ plantumlConverter co =
             exec = "plantuml"
             inPathBase = takeBaseName (inPath co) <> "." <> formatStr
             outPathPlantuml = joinPath [dirname, inPathBase]
-            args = [inPath co, "-o" <> dirname, "-t" <> formatStr, extraOptions co]
+            args = [inPath co, "-o" <> dirname, "-t" <> formatStr] ++ extraOptions co
         (ecode, stdout, stderr) <-
           readProcessWithExitCode exec args ""
         print (ecode, stderr)
