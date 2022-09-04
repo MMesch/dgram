@@ -77,7 +77,10 @@ graphvizConverter co = do
             PDF -> "-Tpdf"
             PNG -> "-Tpng"
           exec = "dot"
-          args = [formatOption, inPath co, "-o" <> outPath, extraOptions co]
+          args = [inPath co, formatOption, "-o" <> outPath] ++
+                  if extraOptions co /= "" then [extraOptions co] else []
+          -- args = formatOption <> " " <> inPath co <> " -o " <> " " <> outPath <> " " <> extraOptions co
+      print $ "running graphviz with" <> show args
       (ecode, stdout, stderr) <-
         readProcessWithExitCode exec args ""
       print (ecode, stdout, stderr)
