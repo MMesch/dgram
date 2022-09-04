@@ -1,11 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import qualified Data.ByteString as BS
-import qualified Data.ByteString.UTF8 as BSU
+import qualified Data.ByteString.Char8 as BSC
 import Data.Char (toLower)
-import Data.List
 import Data.Ord
 import Data.Void
+import Data.Maybe (fromMaybe)
+import qualified Data.Map as M
 import Data.Word (Word8)
 import Data.Either (rights)
 import Control.Monad (forM)
@@ -68,6 +69,7 @@ testGenerator inFormat =
         ]
       fixup fp = case fromExtension $ takeExtension fp of
         PDF -> do
+          --  reset all date tags
           str <- BS.readFile fp
           print "date instances in pdf:"
           dates <- findAllBetween "(D:" ")" str
@@ -75,6 +77,24 @@ testGenerator inFormat =
           let anyDate :: ParsecT Void BS.ByteString IO BS.ByteString
               anyDate = choice (try <$> (chunk <$> dates))
           str <- streamEditT anyDate (\a -> return "20220830151034+02'00") str
+
+          -- strictly renumber ID tags to counter race conditions observed in mermaid
+          -- elements are correctly ordered but the IDs can differ from one run to the
+          -- next
+          print "renumber ids to follow strict order"
+          ids <- findAllBetween "/ID (" ")" str
+          print ids
+          let anyId :: ParsecT Void BS.ByteString IO BS.ByteString
+              anyId = choice (try <$> (chunk <$> ids))
+              fixedNames :: M.Map BS.ByteString BS.ByteString
+              fixedNames = M.fromList [
+                  (nodeName,
+                  let int = show nodePosition
+                    in BSC.pack $ "node" <> replicate (8 - length int) '0' <> int
+                  )
+                | (nodePosition , nodeName) <- zip [1..] ids]
+          str <- streamEditT anyId (\a -> return $ fromMaybe "notFound" (M.lookup a fixedNames)) str
+          
           BS.writeFile fp str
 
         SVG -> do
@@ -93,20 +113,6 @@ testGenerator inFormat =
             convertTestWithFixUp fixup inPath outPath
           | (outPath, goldenPath) <- testPaths
         ]
-
--- mermaidTest =
---   let infile = "./examples/mermaid.mmd"
---       goldenfile = "./examples/mermaid.svg"
---       outfile = "./tests/output/mermaid.svg"
--- 
---       -- ids are generated randomly and thus need to be equalized before
---       -- comparison
---       fixup = replaceFixup "<svg id=\"" "\"" "equalizedId"
---    in goldenVsFile
---         "test mermaid example"
---         goldenfile
---         outfile
---         (convertTestWithFixUp fixup infile outfile)
 
 svgbobTest =
   let infile = "./examples/svgbob.bob"
