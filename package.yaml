@@ -18,6 +18,7 @@ dependencies:
   - utf8-string
   - megaparsec
   - replace-megaparsec
+  - parser-combinators
   - text
   - filepath
   - optparse-applicative

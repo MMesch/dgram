@@ -7,8 +7,11 @@ import Data.List
 import Data.Ord
 import Data.Void
 import Data.Word (Word8)
+import Data.Either (rights)
+import Control.Monad (forM)
+import Control.Applicative.Combinators (choice)
 import Lib
-import Replace.Megaparsec (streamEdit)
+import Replace.Megaparsec (streamEditT, sepCap)
 import System.FilePath (takeExtension)
 import qualified System.IO.Strict as S
 import Test.Tasty
@@ -32,7 +35,7 @@ goldenTests =
     [ testGenerator VegaLite,
       testGenerator Vega,
       testGenerator GraphViz,
-      mermaidTest,
+      testGenerator Mermaid,
       svgbobTest,
       plantumlTest
     ]
@@ -64,28 +67,46 @@ testGenerator inFormat =
           | extension <- allOutExtensions
         ]
       fixup fp = case fromExtension $ takeExtension fp of
-        PDF -> replaceFixup "/CreationDate (D:" ")" "20220830151034+02'00" fp
-        SVG -> replaceFixup "<svg id=\"" "\"" "equalizedId" fp
+        PDF -> do
+          str <- BS.readFile fp
+          print "date instances in pdf:"
+          dates <- findAllBetween "(D:" ")" str
+          print dates
+          let anyDate :: ParsecT Void BS.ByteString IO BS.ByteString
+              anyDate = choice (try <$> (chunk <$> dates))
+          str <- streamEditT anyDate (\a -> return "20220830151034+02'00") str
+          BS.writeFile fp str
+
+        SVG -> do
+          str <- BS.readFile fp
+          print "id instances in svg:"
+          ids <- findAllBetween "<svg id=\"" "\"" str
+          print ids
+          let anyId :: ParsecT Void BS.ByteString IO BS.ByteString
+              anyId = choice (try <$> (chunk <$> ids))
+          str <- streamEditT anyId (\a -> return "equalizedId") str
+          BS.writeFile fp str
         _ -> return ()
+
    in testGroup (basename <> " tests") $
         [ goldenVsFile (basename <> " " <> show inFormat <> " test") goldenPath outPath $
             convertTestWithFixUp fixup inPath outPath
           | (outPath, goldenPath) <- testPaths
         ]
 
-mermaidTest =
-  let infile = "./examples/mermaid.mmd"
-      goldenfile = "./examples/mermaid.svg"
-      outfile = "./tests/output/mermaid.svg"
-
-      -- ids are generated randomly and thus need to be equalized before
-      -- comparison
-      fixup = replaceFixup "<svg id=\"" "\"" "equalizedId"
-   in goldenVsFile
-        "test mermaid example"
-        goldenfile
-        outfile
-        (convertTestWithFixUp fixup infile outfile)
+-- mermaidTest =
+--   let infile = "./examples/mermaid.mmd"
+--       goldenfile = "./examples/mermaid.svg"
+--       outfile = "./tests/output/mermaid.svg"
+-- 
+--       -- ids are generated randomly and thus need to be equalized before
+--       -- comparison
+--       fixup = replaceFixup "<svg id=\"" "\"" "equalizedId"
+--    in goldenVsFile
+--         "test mermaid example"
+--         goldenfile
+--         outfile
+--         (convertTestWithFixUp fixup infile outfile)
 
 svgbobTest =
   let infile = "./examples/svgbob.bob"
@@ -112,22 +133,31 @@ replaceFixup ::
   BS.ByteString ->
   BS.ByteString ->
   BS.ByteString ->
-  FilePath ->
-  IO ()
-replaceFixup before after replacement fp = do
+  BS.ByteString ->
+  IO BS.ByteString
+replaceFixup before after replacement str = do
   print "fixing up non-reproducible elements of file"
-  str <- BS.readFile fp
-  let parser = betweenParser before after
-      eitherId = runParser parser fp str
-  case eitherId of
-    Left err -> print $ "Can't equalize " <> show err
-    Right match -> do
-      print $ "found match: " <> match
-      let pattern = chunk match :: Parsec Void BS.ByteString BS.ByteString
-          newstr = streamEdit pattern (const replacement) str
-      BS.writeFile fp newstr
+  let parser = betweenMatcher before after
+  streamEditT parser (\a -> do
+          print $ "parser found " <> show a <> ", replacing with " <> show replacement
+          return $ before <> replacement <> after)
+          str
 
-betweenParser :: BS.ByteString -> BS.ByteString -> Parsec Void BS.ByteString BS.ByteString
+findAllBetween :: BS.ByteString -> BS.ByteString -> BS.ByteString -> IO [BS.ByteString]
+findAllBetween before after str = do
+        let parser = rights <$> sepCap (betweenMatcher before after)
+        parse <- runParserT parser "findAll" str
+        case parse of
+          Left err -> print err >> return []
+          Right results -> return results
+
+betweenMatcher :: BS.ByteString -> BS.ByteString -> ParsecT Void BS.ByteString IO BS.ByteString
+betweenMatcher before after = do
+  _ <- chunk before
+  ret <- manyTill anySingle (chunk after)
+  return $ BS.pack ret
+
+betweenParser :: BS.ByteString -> BS.ByteString -> ParsecT Void BS.ByteString IO BS.ByteString
 betweenParser before after = do
   _ <- manyTill anySingle (chunk before)
   ret <- manyTill anySingle (chunk after)
