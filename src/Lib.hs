@@ -4,13 +4,13 @@
 module Lib where
 
 import Data.Maybe (fromMaybe)
+import Debug.Trace (trace)
 import System.Directory
-import System.FilePath (joinPath, takeBaseName, takeExtension, dropExtension)
+import System.FilePath (dropExtension, joinPath, takeBaseName, takeExtension)
 import System.IO.Temp
 import System.Process
 import Types
 import Prelude
-import Debug.Trace(trace)
 
 convertWith :: ConvertOptions -> IO ()
 convertWith co = do
@@ -69,74 +69,87 @@ vegaConverter co = do
 
 graphvizConverter :: ConvertOptions -> IO ()
 graphvizConverter co = do
-      let
-          outFormat = guessOutFormat co
-          outPath = guessOutPath co
-          formatOption = case outFormat of
-            SVG -> "-Tsvg"
-            PDF -> "-Tpdf"
-            PNG -> "-Tpng"
-          exec = "dot"
-          args = [inPath co, formatOption, "-o" <> outPath] ++ extraOptions co
-      print $ "running graphviz with" <> show args
-      (ecode, stdout, stderr) <-
-        readProcessWithExitCode exec args ""
-      print (ecode, stdout, stderr)
+  let outFormat = guessOutFormat co
+      outPath = guessOutPath co
+      formatOption = case outFormat of
+        SVG -> "-Tsvg"
+        PDF -> "-Tpdf"
+        PNG -> "-Tpng"
+      exec = "dot"
+      args = [inPath co, formatOption, "-o" <> outPath] ++ extraOptions co
+  print $ "running graphviz with" <> show args
+  (ecode, stdout, stderr) <-
+    readProcessWithExitCode exec args ""
+  print (ecode, stdout, stderr)
 
 mermaidConverter :: ConvertOptions -> IO ()
 mermaidConverter co = do
-      let
-          outFormat = guessOutFormat co
-          outPath = guessOutPath co
-          exec = "mmdc"
-          args = ["-i" <> inPath co, "-o" <> outPath] ++ extraOptions co
-      (ecode, stdout, stderr) <-
-        readProcessWithExitCode exec args ""
-      print (ecode, stdout, stderr)
+  withSystemTempDirectory
+    "mermaid"
+    ( \dir -> do
+        let outFormat = guessOutFormat co
+            outPath = guessOutPath co
+            intermediatePath = joinPath [dir, "mermaid.svg"]
+            configPath = joinPath [dir, "config.json"]
+            exec = "mmdc"
+            configStr = "{\"flowchart\": {\"useMaxWidth\": false,\"htmlLabels\": false}}"
+            args = ["-i" <> inPath co, "-o" <> intermediatePath, "-c" <> configPath] ++ extraOptions co
+            convertExec = "rsvg-convert"
+            convertArgs = [intermediatePath, "-f", show outFormat, "-o", outPath]
+        writeFile configPath configStr
+        (ecode, stdout, stderr) <- readProcessWithExitCode exec args ""
+        print (ecode, stdout, stderr)
+        case outFormat of
+          SVG -> renamePath intermediatePath outPath
+          _ -> do
+            print $ "converting to " <> outPath
+            (ecode, stdout, stderr) <- readProcessWithExitCode convertExec convertArgs ""
+            print (ecode, stdout, stderr)
+    )
 
 svgbobConverter :: ConvertOptions -> IO ()
-svgbobConverter co = 
-      withSystemTempFile ("svgbob" <> toExtension SVG) (\fp _ -> do
-          let
-              outFormat = guessOutFormat co
-              outPath = guessOutPath co
-              exec = "svgbob"
-              args = [inPath co, "-o" <> fp] ++ extraOptions co
-              convertExec = "rsvg-convert"
-              convertArgs = [fp, "-f", show outFormat, "-o", outPath]
-          print $ "producing temporary file " <> fp
-          (ecode, stdout, stderr) <-
-            readProcessWithExitCode exec args ""
-          print (ecode, stdout, stderr)
-          print $ "converting to " <> outPath
-          (ecode, stdout, stderr) <-
-            readProcessWithExitCode convertExec convertArgs ""
-          print (ecode, stdout, stderr)
-          )
+svgbobConverter co =
+  withSystemTempFile
+    ("svgbob" <> toExtension SVG)
+    ( \fp _ -> do
+        let outFormat = guessOutFormat co
+            outPath = guessOutPath co
+            exec = "svgbob"
+            args = [inPath co, "-o" <> fp] ++ extraOptions co
+            convertExec = "rsvg-convert"
+            convertArgs = [fp, "-f", show outFormat, "-o", outPath]
+        print $ "producing temporary file " <> fp
+        (ecode, stdout, stderr) <-
+          readProcessWithExitCode exec args ""
+        print (ecode, stdout, stderr)
+        print $ "converting to " <> outPath
+        (ecode, stdout, stderr) <-
+          readProcessWithExitCode convertExec convertArgs ""
+        print (ecode, stdout, stderr)
+    )
 
 plantumlConverter :: ConvertOptions -> IO ()
 plantumlConverter co =
-      withSystemTempDirectory "plantuml" $ \dirname -> do
-        let
-            outFormat = guessOutFormat co
-            outPath = guessOutPath co
-            formatStr = case outFormat of
-              SVG -> "svg"
-              PDF -> "pdf"
-              PNG -> "png"
-            exec = "plantuml"
-            inPathBase = takeBaseName (inPath co) <> ".svg"
-            outPathPlantuml = joinPath [dirname, inPathBase]
-            args = [inPath co, "-o" <> dirname, "-tsvg"] ++ extraOptions co
-            convertExec = "rsvg-convert"
-            convertArgs = [outPathPlantuml, "-f", show outFormat, "-o", outPath]
+  withSystemTempDirectory "plantuml" $ \dirname -> do
+    let outFormat = guessOutFormat co
+        outPath = guessOutPath co
+        formatStr = case outFormat of
+          SVG -> "svg"
+          PDF -> "pdf"
+          PNG -> "png"
+        exec = "plantuml"
+        inPathBase = takeBaseName (inPath co) <> ".svg"
+        outPathPlantuml = joinPath [dirname, inPathBase]
+        args = [inPath co, "-o" <> dirname, "-tsvg"] ++ extraOptions co
+        convertExec = "rsvg-convert"
+        convertArgs = [outPathPlantuml, "-f", show outFormat, "-o", outPath]
+    (ecode, stdout, stderr) <-
+      readProcessWithExitCode exec args ""
+    print (ecode, stderr, stdout)
+    case outFormat of
+      SVG -> renamePath outPathPlantuml outPath
+      _ -> do
+        print $ "converting to " <> outPath
         (ecode, stdout, stderr) <-
-          readProcessWithExitCode exec args ""
-        print (ecode, stderr, stdout)
-        case outFormat of
-          SVG -> renamePath outPathPlantuml outPath
-          _ -> do 
-            print $ "converting to " <> outPath
-            (ecode, stdout, stderr) <-
-              readProcessWithExitCode convertExec convertArgs ""
-            print (ecode, stdout, stderr)
+          readProcessWithExitCode convertExec convertArgs ""
+        print (ecode, stdout, stderr)
