@@ -31,15 +31,7 @@ tests = testGroup "Tests" [goldenTests]
 
 goldenTests :: TestTree
 goldenTests =
-  testGroup
-    "Golden tests"
-    [ testGenerator VegaLite,
-      testGenerator Vega,
-      testGenerator GraphViz,
-      testGenerator Mermaid,
-      testGenerator Svgbob,
-      testGenerator Plantuml
-    ]
+  testGroup "Golden tests" $ testGenerator <$> (allValues :: [InFormat])
 
 convertTest :: FilePath -> FilePath -> IO ()
 convertTest infile outfile =
@@ -113,26 +105,6 @@ testGenerator inFormat =
             convertTestWithFixUp fixup inPath outPath
           | (outPath, goldenPath) <- testPaths
         ]
-
-svgbobTest =
-  let infile = "./examples/svgbob.bob"
-      goldenfile = "./examples/svgbob.svg"
-      outfile = "tests/output/svgbob.svg"
-   in goldenVsFile
-        "test svgbob example"
-        goldenfile
-        outfile
-        (convertTest infile outfile)
-
-plantumlTest =
-  let infile = "./examples/plantuml.puml"
-      goldenfile = "./examples/plantuml.svg"
-      outfile = "tests/output/plantuml.svg"
-   in goldenVsFile
-        "test plantuml example"
-        goldenfile
-        outfile
-        (convertTest infile outfile)
 
 -- helpers
 replaceFixup ::
