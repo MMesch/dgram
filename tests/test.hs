@@ -3,26 +3,40 @@
 import qualified Data.ByteString as BS
 import qualified Data.ByteString.Char8 as BSC
 import Data.Char (toLower)
-import Data.Ord
-import Data.Void
+import Data.Ord ()
+import Data.Void ( Void )
 import Data.Maybe (fromMaybe)
 import qualified Data.Map as M
 import Data.Word (Word8)
 import Data.Either (rights)
 import Control.Monad (forM)
 import Control.Applicative.Combinators (choice)
-import Lib
+import Lib ( convertWith )
 import Replace.Megaparsec (streamEditT, sepCap)
 import System.FilePath (takeExtension)
 import qualified System.IO.Strict as S
-import Test.Tasty
-import Test.Tasty.Golden
-import Test.Tasty.HUnit
+import Test.Tasty ( defaultMain, testGroup, TestTree )
+import Test.Tasty.Golden ( goldenVsFile )
+import Test.Tasty.HUnit ()
 import Text.Megaparsec
+    ( choice,
+      ParsecT,
+      MonadParsec(try),
+      anySingle,
+      chunk,
+      runParserT,
+      manyTill )
 import qualified Text.Megaparsec.Byte as MPB
-import Text.Megaparsec.Char
+import Text.Megaparsec.Char ()
 import qualified Text.Megaparsec.Char.Lexer as L
 import Types
+    ( ConvertOptions(ConvertOptions, maybeInFormat, maybeOutFormat,
+                     inPath, maybeOutPath, extraOptions),
+      InFormat,
+      OutFormat(SVG, PDF),
+      HasExtension(fromExtension, toExtension),
+      allValues,
+      allOutExtensions )
 
 main = defaultMain tests
 
