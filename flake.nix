@@ -50,15 +50,16 @@
               '';
           });
         };
-      packages = forAllSystems (system: {
-         thisPackage = nixpkgsFor.${system}.thisPackage;
+      packages = forAllSystems (system: rec {
+        thisPackage = nixpkgsFor.${system}.thisPackage;
+        default = thisPackage;
       });
-      defaultPackage = forAllSystems (system: self.packages.${system}.thisPackage);
-      apps = forAllSystems (system: {
+      apps = forAllSystems (system: rec {
         ddgram = {
           type = "app";
           program = "${nixpkgsFor.${system}.thisPackage}/bin/ddgram";
         };
+        default = ddgram;
       });
       checks = self.packages;
       devShell = forAllSystems (system:
