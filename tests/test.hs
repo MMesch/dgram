@@ -29,6 +29,7 @@ import Text.Megaparsec
 import qualified Text.Megaparsec.Byte as MPB
 import Text.Megaparsec.Char ()
 import qualified Text.Megaparsec.Char.Lexer as L
+import Paths_lib (getDataDir)
 import Types
     ( ConvertOptions(ConvertOptions, maybeInFormat, maybeOutFormat,
                      inPath, maybeOutPath, extraOptions),
@@ -38,14 +39,16 @@ import Types
       allValues,
       allOutExtensions )
 
-main = defaultMain tests
+main = do
+   dataDir <- getDataDir
+   defaultMain (tests dataDir)
 
-tests :: TestTree
-tests = testGroup "Tests" [goldenTests]
+tests :: FilePath -> TestTree
+tests dataDir = testGroup "Tests" [goldenTests dataDir]
 
-goldenTests :: TestTree
-goldenTests =
-  testGroup "Golden tests" $ testGenerator <$> (allValues :: [InFormat])
+goldenTests :: FilePath -> TestTree
+goldenTests dataDir =
+  testGroup "Golden tests" $ testGenerator dataDir <$> (allValues :: [InFormat])
 
 convertTest :: FilePath -> FilePath -> IO ()
 convertTest infile outfile =
@@ -63,13 +66,13 @@ convertTestWithFixUp fixup infile outfile = do
   convertTest infile outfile
   fixup outfile
 
-testGenerator :: InFormat -> TestTree
-testGenerator inFormat =
+testGenerator :: FilePath -> InFormat -> TestTree
+testGenerator dataDir inFormat =
   let basename = toLower <$> show inFormat
-      inPath = "./examples/" <> basename <> toExtension inFormat
+      inPath = dataDir <> "/examples/" <> basename <> toExtension inFormat
       testPaths =
-        [ ( "./tests/output/" <> basename <> extension,
-            "./examples/" <> basename <> extension
+        [ ( dataDir <> "/tests/output/" <> basename <> extension,
+            dataDir <> "/examples/" <> basename <> extension
           )
           | extension <- allOutExtensions
         ]

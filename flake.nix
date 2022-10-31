@@ -10,6 +10,7 @@
         config = {allowBroken = true;};
         overlays = [ self.overlay ];
       });
+      fonts = pkgs: pkgs.makeFontsConf { fontDirectories = [ pkgs.dejavu_fonts ]; };
       extraBuildInputs = pkgs : with pkgs; [
             librsvg
             nodePackages.vega-cli
@@ -35,10 +36,19 @@
           let
             mypkg = (final.haskellPackages.callCabal2nixWithOptions "lib" ./. "--hpack" {});
           in
-          final.haskell.lib.overrideCabal mypkg (old: {
-            extraLibraries = extraBuildInputs final;
-            testFlags = ["-t 1"];
-            });
+          (
+            final.haskell.lib.dontCheck (final.haskell.lib.overrideCabal mypkg (old: {
+              extraLibraries = extraBuildInputs final;
+              testFlags = ["-t 3"];
+            })
+            )).overrideAttrs (attrs: {
+              nativeBuildInputs = attrs.nativeBuildInputs; # ++ [final.breakpointHook];
+              checkPhase = ''
+                export FONTCONFIG_FILE=${fonts final}
+                export HOME=$(readlink -f ".");
+                ${attrs.checkPhase}
+              '';
+          });
         };
       packages = forAllSystems (system: {
          thisPackage = nixpkgsFor.${system}.thisPackage;
@@ -60,7 +70,10 @@
             haskell-language-server
             cabal-install
           ] ++ extraBuildInputs (nixpkgsFor.${system});
-          shellHook = ''hpack'';
+          shellHook = ''
+          export FONTCONFIG_FILE=${fonts (nixpkgsFor.${system})}
+          hpack
+          '';
         });
   };
 }
