@@ -44,6 +44,7 @@ convertCommandParser =
       ( option
           auto
           ( long "informat"
+              <> short 'i'
               <> metavar "INFORMAT"
               <> help
                 ( "The informat, specifying the program that is used for conversion. One of: "
@@ -55,6 +56,7 @@ convertCommandParser =
       ( option
           auto
           ( long "outformat"
+              <> short 'f'
               <> metavar "OUTFORMAT"
               <> help
                 ( "The format of the output file. One of: "
@@ -68,9 +70,10 @@ convertCommandParser =
           <> help "The file path of the input file"
       )
     <*> optional
-      ( option
-          auto
-          ( long "outpath" <> metavar "OUTPATH"
+      ( strOption
+          ( long "outpath"
+              <> short 'o'
+              <> metavar "OUTPATH"
               <> help "The file path of the output file"
           )
       )
