@@ -1,7 +1,11 @@
 {
   description = "simple Haskell flake";
   inputs.nixpkgs.url = "nixpkgs";
-  outputs = { self, nixpkgs }:
+  inputs.flake-compat = {
+    url = "github:edolstra/flake-compat";
+    flake = false;
+  };
+  outputs = { self, nixpkgs, flake-compat }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
