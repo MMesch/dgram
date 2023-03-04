@@ -52,6 +52,8 @@ local format_extensions = {
         rtf = "png",
         html = "svg"}
 
+local executable_path = "@ddgram@/bin/ddgram"
+
 local default_filetype = format_extensions[FORMAT] or "svg"
 
 local default_mimetype = "image/" .. default_filetype
@@ -64,7 +66,6 @@ end
 
 -- converter
 local function ddgram(content, filetype, attributes)
-  executable = "ddgram"
   local infile = "graph-description"
   local outfile = "out." .. filetype
   local args = {"convert", infile, "-i", attributes.converter, "-o", outfile}
@@ -72,7 +73,7 @@ local function ddgram(content, filetype, attributes)
           args[#args+1] = "--extraOptions" 
           args[#args+1] = attributes.extraOptions
   end
-  return with_tmp_file(content, infile, outfile, executable, args)
+  return with_tmp_file(content, infile, outfile, executable_path, args)
 end
 
 -- This function is executed on every codeblock in the document:

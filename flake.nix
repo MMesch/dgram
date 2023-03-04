@@ -1,5 +1,5 @@
 {
-  description = "simple Haskell flake";
+  description = "Dgram flake";
   inputs.nixpkgs.url = "nixpkgs";
   inputs.flake-compat = {
     url = "github:edolstra/flake-compat";
@@ -14,6 +14,17 @@
         config = {allowBroken = true;};
         overlays = [ self.overlay ];
       });
+      pandocScriptBuilder = pkgs: pkgs.stdenv.mkDerivation {
+        name = "pandoc-script";
+        src = ./pandoc/dgram.lua;
+        phases = [ "installPhase" ];
+        installPhase = ''
+          mkdir -p $out
+          ls -l $src
+          substitute $src $out/dgram.lua \
+              --replace @ddgram@ ${pkgs.thisPackage}
+          '';
+      };
       fonts = pkgs: pkgs.makeFontsConf { fontDirectories = [ pkgs.dejavu_fonts ]; };
       extraBuildInputs = pkgs : with pkgs; [
             librsvg
@@ -56,6 +67,7 @@
         };
       packages = forAllSystems (system: rec {
         thisPackage = nixpkgsFor.${system}.thisPackage;
+        pandocScript = pandocScriptBuilder nixpkgsFor.${system}; 
         default = thisPackage;
       });
       apps = forAllSystems (system: rec {
