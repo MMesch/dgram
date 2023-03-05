@@ -52,7 +52,7 @@ local format_extensions = {
         rtf = "png",
         html = "svg"}
 
-local executable_path = "@ddgram@/bin/ddgram"
+local executable_path = "@dgram@/bin/dgram"
 
 local default_filetype = format_extensions[FORMAT] or "svg"
 
@@ -65,7 +65,7 @@ function Meta(meta)
 end
 
 -- converter
-local function ddgram(content, filetype, attributes)
+local function dgram(content, filetype, attributes)
   local infile = "graph-description"
   local outfile = "out." .. filetype
   local args = {"convert", infile, "-i", attributes.converter, "-o", outfile}
@@ -78,8 +78,8 @@ end
 
 -- This function is executed on every codeblock in the document:
 function CodeBlock(block)
-  -- do nothing if it's not a ddgram block 
-  if not block.classes[1] == "ddgram" then
+  -- do nothing if it's not a dgram block 
+  if not block.classes[1] == "dgram" then
     return nil
   end
 
@@ -89,7 +89,7 @@ function CodeBlock(block)
   print("filetype is " .. filetype)
 
   -- Call the correct converter which belongs to the used class:
-  local success, img = pcall(ddgram, block.text, filetype, block.attributes)
+  local success, img = pcall(dgram, block.text, filetype, block.attributes)
 
   if not (success and img) then
     io.stderr:write(tostring(img or "no image data has been returned."))

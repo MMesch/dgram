@@ -1,25 +1,25 @@
-# DDGRAM
+# DGRAM
 
 ## Overview
 
-DDGRAM is a small command line interface (CLI) tool that provides a unified interface for the conversion of diagrams-as-text files. It also comes with a small template library to get started with different diagrams. In the future it would be nice to have simple unified style library as well. Finally, `ddgram` comes with a pandoc script with which you can embed digrams directly into your Markdown document. This is shown in this [template](https://github.com/MMesch/flakeTemplates/tree/main/pandocmax).
+DGRAM is a small command line interface (CLI) tool that provides a unified interface for the conversion of diagrams-as-text files. It also comes with a small template library to get started with different diagrams. In the future it would be nice to have simple unified style library as well. Finally, `dgram` comes with a pandoc script with which you can embed digrams directly into your Markdown document. This is shown in this [template](https://github.com/MMesch/flakeTemplates/tree/main/pandocmax).
 
 ## Usage
 
 This project relies heavily on the package manager [Nix](https://nixos.org) to solve the challenge of safely pulling together dependencies across ecosystem boundaries. You can run the CLI directly from the repo with:
 
 ```
-nix run github:mmesch/ddgram -- <subcommands/flags>
+nix run github:mmesch/dgram -- <subcommands/flags>
 ```
 
-Conversion is handled by the `ddgram convert` subcommand:
+Conversion is handled by the `dgram convert` subcommand:
 
 ```
-$ ddgram convert --help
+$ dgram convert --help
 
 convert diagrams to images
 
-Usage: ddgram convert [-i|--informat INFORMAT] [-f|--outformat OUTFORMAT] INPATH
+Usage: dgram convert [-i|--informat INFORMAT] [-f|--outformat OUTFORMAT] INPATH
                       [-o|--outpath OUTPATH] [--extraOptions OptionsString]
   Convert diagram files to images
 

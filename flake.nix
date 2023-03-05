@@ -22,7 +22,7 @@
           mkdir -p $out
           ls -l $src
           substitute $src $out/dgram.lua \
-              --replace @ddgram@ ${pkgs.thisPackage}
+              --replace @dgram@ ${pkgs.thisPackage}
           '';
       };
       fonts = pkgs: pkgs.makeFontsConf { fontDirectories = [ pkgs.dejavu_fonts ]; };
@@ -71,11 +71,11 @@
         default = thisPackage;
       });
       apps = forAllSystems (system: rec {
-        ddgram = {
+        dgram = {
           type = "app";
-          program = "${nixpkgsFor.${system}.thisPackage}/bin/ddgram";
+          program = "${nixpkgsFor.${system}.thisPackage}/bin/dgram";
         };
-        default = ddgram;
+        default = dgram;
       });
       checks = self.packages;
       devShell = forAllSystems (system:
