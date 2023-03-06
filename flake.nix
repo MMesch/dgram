@@ -1,9 +1,11 @@
 {
   description = "Dgram flake";
-  inputs.nixpkgs.url = "nixpkgs";
-  inputs.flake-compat = {
-    url = "github:edolstra/flake-compat";
-    flake = false;
+  inputs = {
+    nixpkgs.url = "nixpkgs";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
   };
   outputs = { self, nixpkgs, flake-compat }:
     let
