@@ -37,7 +37,8 @@ local function with_tmp_file(content, infile, outfile, exec, args)
     return system.with_working_directory(tmpdir, function ()
       dump_to_file(content, infile)
       pandoc.pipe(exec, args, '')
-      return read_from_file(convert_to or outfile)
+      convertedDiagram = read_from_file(outfile)
+      return convertedDiagram 
     end)
   end)
 end
@@ -61,7 +62,9 @@ local default_mimetype = "image/" .. default_filetype
 -- parameters
 function Meta(meta)
   save_diagrams = meta.save_diagrams
-  print(save_diagrams)
+  if save_diagrams then
+      print("save diagrams is set to: " .. save_diagrams)
+  end
 end
 
 -- converter
