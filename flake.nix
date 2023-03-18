@@ -64,6 +64,7 @@
             })
             )).overrideAttrs (attrs: {
               nativeBuildInputs = attrs.nativeBuildInputs; # ++ [final.breakpointHook];
+              # propagatedBuildInputs = attrs.propagatedBuildInputs ++ extraBuildInputs final;
               checkPhase = ''
                 export FONTCONFIG_FILE=${fonts final}
                 export HOME=$(readlink -f ".");
