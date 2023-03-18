@@ -8,6 +8,8 @@ import Debug.Trace (trace)
 import System.Directory
 import System.FilePath (dropExtension, joinPath, takeBaseName, takeExtension)
 import System.IO.Temp
+import System.IO (hPutStrLn, stderr)
+import System.Exit (ExitCode(ExitSuccess, ExitFailure))
 import System.Process
 import Types
 import Prelude
@@ -51,7 +53,7 @@ vegaliteConverter co = do
       args = [inPath co, outPath] ++ extraOptions co
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""
-  print (ecode, stdout, stderr)
+  printErrorOrSuccess (ecode, stdout, stderr)
 
 vegaConverter :: ConvertOptions -> IO ()
 vegaConverter co = do
@@ -65,7 +67,7 @@ vegaConverter co = do
   print $ "outFormat" <> show outFormat <> " outPath" <> show outPath
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""
-  print (ecode, stdout, stderr)
+  printErrorOrSuccess (ecode, stdout, stderr)
 
 graphvizConverter :: ConvertOptions -> IO ()
 graphvizConverter co = do
@@ -77,10 +79,10 @@ graphvizConverter co = do
         PNG -> "-Tpng"
       exec = "dot"
       args = [inPath co, formatOption, "-o" <> outPath] ++ extraOptions co
-  print $ "running graphviz with" <> show args
+  print $ "running graphviz with these arguments: " <> show args
   (ecode, stdout, stderr) <-
     readProcessWithExitCode exec args ""
-  print (ecode, stdout, stderr)
+  printErrorOrSuccess (ecode, stdout, stderr)
 
 mermaidConverter :: ConvertOptions -> IO ()
 mermaidConverter co = do
@@ -104,7 +106,7 @@ mermaidConverter co = do
           _ -> do
             print $ "converting to " <> outPath
             (ecode, stdout, stderr) <- readProcessWithExitCode convertExec convertArgs ""
-            print (ecode, stdout, stderr)
+            printErrorOrSuccess (ecode, stdout, stderr)
     )
 
 svgbobConverter :: ConvertOptions -> IO ()
@@ -125,7 +127,7 @@ svgbobConverter co =
         print $ "converting to " <> outPath
         (ecode, stdout, stderr) <-
           readProcessWithExitCode convertExec convertArgs ""
-        print (ecode, stdout, stderr)
+        printErrorOrSuccess (ecode, stdout, stderr)
     )
 
 plantumlConverter :: ConvertOptions -> IO ()
@@ -152,4 +154,14 @@ plantumlConverter co =
         print $ "converting to " <> outPath
         (ecode, stdout, stderr) <-
           readProcessWithExitCode convertExec convertArgs ""
-        print (ecode, stdout, stderr)
+        printErrorOrSuccess (ecode, stdout, stderr)
+
+printErrorOrSuccess :: (ExitCode, String, String) -> IO ()
+printErrorOrSuccess (ecode, log, err) = case ecode of
+    ExitSuccess -> print "succesful conversion"
+    ExitFailure a -> hPutStrLn stderr $ unlines
+            ["graphviz exited with error code: " <> show a,
+             "here is some log output ...",
+             log,
+             "and here the error message",
+             err]
