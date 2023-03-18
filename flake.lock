@@ -33,7 +33,24 @@
     "root": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "styles": "styles"
+      }
+    },
+    "styles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1679059447,
+        "narHash": "sha256-0gcd7gRnZyQBMuZCpv5LNENsHHnYhxMI0FwThbTi8eE=",
+        "owner": "citation-style-language",
+        "repo": "styles",
+        "rev": "048e6641e4d2ec01e6706d64da61a5807f3f4c92",
+        "type": "github"
+      },
+      "original": {
+        "owner": "citation-style-language",
+        "repo": "styles",
+        "type": "github"
       }
     }
   },

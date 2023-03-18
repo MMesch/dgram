@@ -6,8 +6,12 @@
       url = "github:edolstra/flake-compat";
       flake = false;
     };
+    styles = {
+      url = github:citation-style-language/styles;
+      flake = false;
+    };
   };
-  outputs = { self, nixpkgs, flake-compat }:
+  outputs = { self, nixpkgs, flake-compat, styles }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -69,7 +73,29 @@
         };
       packages = forAllSystems (system: rec {
         thisPackage = nixpkgsFor.${system}.thisPackage;
-        pandocScript = pandocScriptBuilder nixpkgsFor.${system}; 
+        pandocScript = pandocScriptBuilder nixpkgsFor.${system};
+        pandocWithDiagrams =
+          (nixpkgsFor.${system}.writeShellApplication {
+            name = "pandoc-dgram";
+            runtimeInputs =
+                with nixpkgsFor.${system}; [
+                  pandoc
+                  haskellPackages.pandoc-crossref
+                  texlive.combined.scheme-small
+                    ];
+            text = ''
+              echo "pandoc with diagrams"
+              pandoc \
+                  --lua-filter=${pandocScript}/dgram.lua \
+                  --filter pandoc-crossref \
+                  -M date="$(date "+%B %e, %Y")" \
+                  --csl ${styles}/chicago-fullnote-bibliography.csl \
+                  --citeproc \
+                  --pdf-engine=xelatex \
+                  "$@"
+              echo "pandoc with diagrams done"
+              '';
+          });
         default = thisPackage;
       });
       apps = forAllSystems (system: rec {
@@ -90,7 +116,6 @@
             cabal-install
           ] ++ extraBuildInputs (nixpkgsFor.${system});
           shellHook = ''
-          export FONTCONFIG_FILE=${fonts (nixpkgsFor.${system})}
           hpack
           '';
         });
