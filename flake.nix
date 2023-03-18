@@ -64,7 +64,6 @@
             })
             )).overrideAttrs (attrs: {
               nativeBuildInputs = attrs.nativeBuildInputs; # ++ [final.breakpointHook];
-              # propagatedBuildInputs = attrs.propagatedBuildInputs ++ extraBuildInputs final;
               checkPhase = ''
                 export FONTCONFIG_FILE=${fonts final}
                 export HOME=$(readlink -f ".");
@@ -83,7 +82,7 @@
                   pandoc
                   haskellPackages.pandoc-crossref
                   texlive.combined.scheme-small
-                    ];
+                    ] ++ (extraBuildInputs nixpkgsFor.${system});
             text = ''
               echo "pandoc with diagrams"
               pandoc \
