@@ -10,8 +10,12 @@
       url = github:citation-style-language/styles;
       flake = false;
     };
+    columns = {
+      url = github:dialoa/columns;
+      flake = false;
+    };
   };
-  outputs = { self, nixpkgs, flake-compat, styles }:
+  outputs = { self, nixpkgs, flake-compat, styles, columns }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -87,6 +91,7 @@
               echo "pandoc with diagrams"
               pandoc \
                   --lua-filter=${pandocScript}/dgram.lua \
+                  --lua-filter=${columns}/columns.lua \
                   --filter pandoc-crossref \
                   -M date="$(date "+%B %e, %Y")" \
                   --csl ${styles}/chicago-fullnote-bibliography.csl \
