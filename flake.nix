@@ -85,7 +85,7 @@
                 with nixpkgsFor.${system}; [
                   pandoc
                   haskellPackages.pandoc-crossref
-                  texlive.combined.scheme-small
+                  texlive.combined.scheme-full
                     ] ++ (extraBuildInputs nixpkgsFor.${system});
             text = ''
               echo "pandoc with diagrams"
