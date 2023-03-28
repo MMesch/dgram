@@ -64,6 +64,7 @@
           (
             final.haskell.lib.dontCheck (final.haskell.lib.overrideCabal mypkg (old: {
               extraLibraries = extraBuildInputs final;
+              executableSystemDepends = extraBuildInputs final;
               testFlags = ["-t 3"];
             })
             )).overrideAttrs (attrs: {
