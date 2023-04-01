@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "columns": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1675265918,
-        "narHash": "sha256-fpNjemSjlKsUd6aBGz+x/U6ADe+5bBxKuFshZrKbDEw=",
-        "owner": "dialoa",
-        "repo": "columns",
-        "rev": "b9702286d02f81b1f94fe8817beda784f0bb44b7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dialoa",
-        "repo": "columns",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -48,26 +32,8 @@
     },
     "root": {
       "inputs": {
-        "columns": "columns",
         "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs",
-        "styles": "styles"
-      }
-    },
-    "styles": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1679059447,
-        "narHash": "sha256-0gcd7gRnZyQBMuZCpv5LNENsHHnYhxMI0FwThbTi8eE=",
-        "owner": "citation-style-language",
-        "repo": "styles",
-        "rev": "048e6641e4d2ec01e6706d64da61a5807f3f4c92",
-        "type": "github"
-      },
-      "original": {
-        "owner": "citation-style-language",
-        "repo": "styles",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

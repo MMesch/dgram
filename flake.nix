@@ -6,16 +6,8 @@
       url = "github:edolstra/flake-compat";
       flake = false;
     };
-    styles = {
-      url = github:citation-style-language/styles;
-      flake = false;
-    };
-    columns = {
-      url = github:dialoa/columns;
-      flake = false;
-    };
   };
-  outputs = { self, nixpkgs, flake-compat, styles, columns }:
+  outputs = { self, nixpkgs, flake-compat }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -24,7 +16,7 @@
         config = {allowBroken = true;};
         overlays = [ self.overlay ];
       });
-      pandocScriptBuilder = pkgs: pkgs.stdenv.mkDerivation {
+      pandocScriptBuilder = dgram: pkgs: pkgs.stdenv.mkDerivation {
         name = "pandoc-script";
         src = ./pandoc/dgram.lua;
         phases = [ "installPhase" ];
@@ -32,7 +24,7 @@
           mkdir -p $out
           ls -l $src
           substitute $src $out/dgram.lua \
-              --replace @dgram@ ${pkgs.thisPackage}
+              --replace @dgram@ ${dgram}
           '';
       };
       fonts = pkgs: pkgs.makeFontsConf { fontDirectories = [ pkgs.dejavu_fonts ]; };
@@ -69,6 +61,7 @@
             })
             )).overrideAttrs (attrs: {
               nativeBuildInputs = attrs.nativeBuildInputs; # ++ [final.breakpointHook];
+              propagatedBuildInputs = attrs.propagatedBuildInputs ++ [(extraBuildInputs final)];
               checkPhase = ''
                 export FONTCONFIG_FILE=${fonts final}
                 export HOME=$(readlink -f ".");
@@ -77,37 +70,22 @@
           });
         };
       packages = forAllSystems (system: rec {
-        thisPackage = nixpkgsFor.${system}.thisPackage;
-        pandocScript = pandocScriptBuilder nixpkgsFor.${system};
-        pandocWithDiagrams =
-          (nixpkgsFor.${system}.writeShellApplication {
-            name = "pandoc-dgram";
-            runtimeInputs =
-                with nixpkgsFor.${system}; [
-                  pandoc
-                  haskellPackages.pandoc-crossref
-                  texlive.combined.scheme-full
-                    ] ++ (extraBuildInputs nixpkgsFor.${system});
-            text = ''
-              echo "pandoc with diagrams"
-              pandoc \
-                  --lua-filter=${pandocScript}/dgram.lua \
-                  --lua-filter=${columns}/columns.lua \
-                  --filter pandoc-crossref \
-                  -M date="$(date "+%B %e, %Y")" \
-                  --csl ${styles}/chicago-fullnote-bibliography.csl \
-                  --citeproc \
-                  --pdf-engine=xelatex \
-                  "$@"
-              echo "pandoc with diagrams done"
-              '';
-          });
-        default = thisPackage;
+        dgramRaw = nixpkgsFor.${system}.thisPackage;
+        dgramWrapped = nixpkgsFor.${system}.writeShellApplication {
+          name = "dgram";
+          runtimeInputs = extraBuildInputs nixpkgsFor.${system};
+          text = ''
+            echo "running wrapped dgram"
+            ${dgramRaw}/bin/dgram "$@"
+            '';
+        };
+        pandocScript = pandocScriptBuilder dgramWrapped nixpkgsFor.${system};
+        default = dgramWrapped;
       });
       apps = forAllSystems (system: rec {
         dgram = {
           type = "app";
-          program = "${nixpkgsFor.${system}.thisPackage}/bin/dgram";
+          program = "${self.packages.${system}.dgramWrapped}/bin/dgram";
         };
         default = dgram;
       });
@@ -115,7 +93,7 @@
       devShell = forAllSystems (system:
         let haskellPackages = nixpkgsFor.${system}.haskellPackages;
         in haskellPackages.shellFor {
-          packages = p: [self.packages.${system}.thisPackage];
+          packages = p: [self.packages.${system}.dgramRaw];
           withHoogle = true;
           buildInputs = with haskellPackages; [
             haskell-language-server

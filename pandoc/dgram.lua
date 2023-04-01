@@ -81,8 +81,10 @@ end
 
 -- This function is executed on every codeblock in the document:
 function CodeBlock(block)
-  -- do nothing if it's not a dgram block 
-  if not block.classes[1] == "dgram" then
+  -- do nothing if it's not a dgram block
+  local isDgramBlock = block.classes[1] == "dgram"
+  print("block is dgram " .. tostring(isDgramBlock))
+  if not isDgramBlock then
     return nil
   end
 
